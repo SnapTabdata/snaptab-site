@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html class="dark" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>下载 - SnapTab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#0db9f2",
+        "background-light": "#f5f8f8",
+        "background-dark": "#101e22",
+        "surface-dark": "#162a30",
+        "border-dark": "#223f49",
+      },
+      fontFamily: { "display": ["Inter", "Noto Sans SC", "sans-serif"] },
+      borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+    },
+  },
+}
+</script>
+<style>
+body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-border-dark bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2 text-primary">
+<img src="assets/snaptab-mark.svg" alt="SnapTab" class="h-8 w-8"/>
+<h2 class="text-xl font-bold tracking-tight text-white">SnapTab</h2>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="index.html">首页</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="features.html">功能介绍</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="pricing.html">价格方案</a>
+<a class="text-primary text-sm font-medium" href="download.html">下载</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="about.html">关于</a>
+</nav>
+<div class="flex items-center gap-3">
+<a href="trial.html" class="bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">免费试用</a>
+</div>
+<button class="md:hidden text-slate-100" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-nav" class="hidden md:hidden px-6 pb-4 space-y-2">
+<a class="block text-slate-300 text-sm font-medium py-2" href="index.html">首页</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="features.html">功能介绍</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="pricing.html">价格方案</a>
+<a class="block text-primary text-sm font-medium py-2" href="download.html">下载</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="about.html">关于</a>
+<a class="block text-primary text-sm font-bold py-2" href="trial.html">免费试用</a>
+</div>
+</header>
+
+<main class="flex-1 max-w-7xl mx-auto w-full px-6 py-12">
+<!-- Hero Section -->
+<section class="mb-16">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-surface-dark to-background-dark border border-border-dark p-8 md:p-16 text-center">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, #0db9f2 1px, transparent 0); background-size: 32px 32px;"></div>
+<div class="relative z-10">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-6 border border-primary/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+最新版本 v1.0 现已发布
+</span>
+<h1 class="text-4xl md:text-6xl font-black text-slate-100 mb-6 tracking-tight">
+下载 SnapTab 桌面端
+</h1>
+<p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">
+专为中国市场研究设计的自动化报表工具。秒级处理海量数据，完美兼容各类制表需求，让研究员重回洞察核心。
+</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+<a href="https://gitee.com/liujing5573/snaptab-update/releases/download/v1.0/SnapTab_onedir_clean_cython_20260315_194353.zip" class="w-full sm:w-auto flex items-center justify-center gap-3 min-w-[220px] rounded-xl h-14 px-8 bg-primary text-background-dark font-bold text-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">desktop_windows</span>
+Windows 版下载
+</a>
+</div>
+<div class="mt-8 flex items-center justify-center gap-6 text-slate-500 text-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified_user</span>
+安全加密传输
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">shield</span>
+无广告纯净版
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">verified</span>
+官方正版授权
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Left Column: Details -->
+<div class="lg:col-span-2 space-y-12">
+<!-- System Requirements -->
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">info</span>
+<h2 class="text-2xl font-bold text-slate-100">系统要求</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-border-dark border border-border-dark rounded-xl overflow-hidden">
+<div class="bg-surface-dark/50 p-6">
+<p class="text-primary/70 text-xs font-bold uppercase tracking-wider mb-1">操作系统</p>
+<p class="text-slate-100 font-medium">Windows 10 / 11（64 位）</p>
+</div>
+<div class="bg-surface-dark/50 p-6">
+<p class="text-primary/70 text-xs font-bold uppercase tracking-wider mb-1">内存</p>
+<p class="text-slate-100 font-medium">建议 4GB 及以上</p>
+</div>
+<div class="bg-surface-dark/50 p-6">
+<p class="text-primary/70 text-xs font-bold uppercase tracking-wider mb-1">处理器</p>
+<p class="text-slate-100 font-medium">Intel / AMD 64 位处理器</p>
+</div>
+<div class="bg-surface-dark/50 p-6">
+<p class="text-primary/70 text-xs font-bold uppercase tracking-wider mb-1">磁盘空间</p>
+<p class="text-slate-100 font-medium">至少 500MB 可用空间</p>
+</div>
+</div>
+</div>
+
+<!-- Update Logs -->
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary">history</span>
+<h2 class="text-2xl font-bold text-slate-100">更新日志</h2>
+</div>
+<div class="space-y-4">
+<div class="p-6 rounded-xl border border-border-dark bg-surface-dark/30">
+<div class="flex items-center justify-between mb-3">
+<span class="text-lg font-bold text-slate-100">v1.0</span>
+<span class="text-slate-500 text-sm">2026-03-15</span>
+</div>
+<ul class="space-y-2 text-slate-400 text-sm">
+<li class="flex items-start gap-2">
+<span class="text-primary mt-1">&bull;</span>
+<span>首个正式版本发布</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary mt-1">&bull;</span>
+<span>支持 SPSS .sav 格式直接导入</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary mt-1">&bull;</span>
+<span>AI 智能补全问卷规格</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary mt-1">&bull;</span>
+<span>一键生成专业级交叉表 Excel 报表</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary mt-1">&bull;</span>
+<span>内置应用内自动更新功能</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Right Column: Sidebar -->
+<div class="space-y-8">
+<!-- Installation Guide -->
+<div class="p-6 rounded-xl border border-border-dark bg-surface-dark/20">
+<h3 class="text-lg font-bold text-slate-100 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">description</span>
+安装指引
+</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-6 h-6 rounded-full bg-border-dark flex items-center justify-center text-xs font-bold text-primary">1</div>
+<div>
+<p class="text-sm font-bold text-slate-200 mb-1">下载 ZIP 压缩包</p>
+<p class="text-xs text-slate-500">点击上方按钮下载最新版本</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-6 h-6 rounded-full bg-border-dark flex items-center justify-center text-xs font-bold text-primary">2</div>
+<div>
+<p class="text-sm font-bold text-slate-200 mb-1">解压到任意目录</p>
+<p class="text-xs text-slate-500">右键解压 ZIP 文件到您选择的文件夹</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-6 h-6 rounded-full bg-border-dark flex items-center justify-center text-xs font-bold text-primary">3</div>
+<div>
+<p class="text-sm font-bold text-slate-200 mb-1">运行 SnapTab.exe</p>
+<p class="text-xs text-slate-500">双击运行即可使用，无需安装</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Auto Update -->
+<div class="p-6 rounded-xl border border-border-dark bg-surface-dark/20">
+<h3 class="text-lg font-bold text-slate-100 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">system_update</span>
+自动更新
+</h3>
+<p class="text-xs text-slate-500 mb-4">SnapTab 内置自动更新功能，启动时会自动检测新版本。您也可以在菜单中手动检查更新，更新过程全自动完成。</p>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3 rounded-lg bg-background-dark/50 border border-border-dark/50">
+<span class="material-symbols-outlined text-primary text-sm">cloud_download</span>
+<span class="text-xs text-slate-300">自动下载新版本</span>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-lg bg-background-dark/50 border border-border-dark/50">
+<span class="material-symbols-outlined text-primary text-sm">restart_alt</span>
+<span class="text-xs text-slate-300">一键重启即完成更新</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-900/50 border-t border-slate-800 pt-16 pb-8 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+<div class="col-span-2 lg:col-span-2 flex flex-col gap-6">
+<a href="index.html" class="flex items-center gap-2 text-primary">
+<img src="assets/snaptab-mark.svg" alt="SnapTab" class="h-8 w-8"/>
+<h2 class="text-xl font-bold tracking-tight text-white">SnapTab</h2>
+</a>
+<p class="text-slate-400 max-w-sm">专业的市场研究自动化工具，让调研分析回归洞察本身。</p>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">产品</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="features.html">功能介绍</a></li>
+<li><a class="hover:text-primary transition-colors" href="pricing.html">价格方案</a></li>
+<li><a class="hover:text-primary transition-colors" href="download.html">下载中心</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">支持</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="trial.html">免费试用</a></li>
+<li><a class="hover:text-primary transition-colors" href="about.html">关于我们</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">联系方式</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li>微信：Changtouyaoguai</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+<p>&copy; 2026 SnapTab. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

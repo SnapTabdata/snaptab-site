@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html class="dark" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>价格方案 - SnapTab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#0db9f2",
+        "background-light": "#f5f8f8",
+        "background-dark": "#101e22",
+        "surface-dark": "#162a30",
+        "border-dark": "#223f49",
+      },
+      fontFamily: { "display": ["Inter", "Noto Sans SC", "sans-serif"] },
+      borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+    },
+  },
+}
+</script>
+<style>
+body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-border-dark bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2 text-primary">
+<img src="assets/snaptab-mark.svg" alt="SnapTab" class="h-8 w-8"/>
+<h2 class="text-xl font-bold tracking-tight text-white">SnapTab</h2>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="index.html">首页</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="features.html">功能介绍</a>
+<a class="text-primary text-sm font-medium" href="pricing.html">价格方案</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="download.html">下载</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="about.html">关于</a>
+</nav>
+<div class="flex items-center gap-3">
+<a href="trial.html" class="bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">免费试用</a>
+</div>
+<button class="md:hidden text-slate-100" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-nav" class="hidden md:hidden px-6 pb-4 space-y-2">
+<a class="block text-slate-300 text-sm font-medium py-2" href="index.html">首页</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="features.html">功能介绍</a>
+<a class="block text-primary text-sm font-medium py-2" href="pricing.html">价格方案</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="download.html">下载</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="about.html">关于</a>
+<a class="block text-primary text-sm font-bold py-2" href="trial.html">免费试用</a>
+</div>
+</header>
+
+<main class="flex flex-col items-center px-4 md:px-20 lg:px-40 py-16">
+<!-- Hero Title Section -->
+<div class="w-full max-w-5xl mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="flex flex-col gap-4">
+<h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">选择适合您的计划</h1>
+<p class="text-slate-400 text-lg max-w-lg">助力您的市场调研自动化，从这里开始。无论您是个人研究员还是大型企业，我们都有匹配的方案。</p>
+</div>
+<a href="trial.html" class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-slate-800 border border-slate-700 text-white text-sm font-bold hover:bg-slate-700 transition-all">
+<span class="material-symbols-outlined mr-2 text-xl">headset_mic</span>
+联系咨询
+</a>
+</div>
+
+<!-- Pricing Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4 py-8">
+<!-- Basic Plan -->
+<div class="flex flex-col gap-6 rounded-xl border border-slate-800 bg-slate-900/50 p-8 hover:border-primary/50 transition-colors shadow-sm">
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-400 text-sm font-bold uppercase tracking-wider">基础版</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-white text-5xl font-black">¥199</span>
+<span class="text-slate-400 text-base font-medium">/月</span>
+</div>
+<p class="text-slate-400 text-sm mt-2">适合个人调研员和小微项目</p>
+</div>
+<a href="trial.html" class="w-full py-3 rounded-lg bg-slate-800 text-white font-bold text-sm hover:bg-slate-700 transition-all text-center">
+立即订阅
+</a>
+<div class="space-y-4 pt-4 border-t border-slate-800">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">单用户使用权限</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">50+ 基础调研模版</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">标准数据分析报表</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">微信客服支持</span>
+</div>
+</div>
+</div>
+
+<!-- Professional Plan -->
+<div class="relative flex flex-col gap-6 rounded-xl border-2 border-primary bg-slate-900 p-8 shadow-[0_0_30px_rgba(13,185,242,0.15)] scale-105 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-background-dark text-[11px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full">
+推荐方案
+</div>
+<div class="flex flex-col gap-2">
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider">专业版</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-white text-5xl font-black">¥599</span>
+<span class="text-slate-400 text-base font-medium">/月</span>
+</div>
+<p class="text-slate-400 text-sm mt-2">专为成长型团队设计的全功能方案</p>
+</div>
+<a href="trial.html" class="w-full py-3 rounded-lg bg-primary text-background-dark font-black text-sm hover:brightness-110 transition-all text-center">
+开始 14 天免费试用
+</a>
+<div class="space-y-4 pt-4 border-t border-slate-800">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm font-medium">包含基础版所有功能</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">团队协作（最多10人）</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">AI 驱动的高级数据洞察</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">企业级自定义品牌化</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">优先技术支持</span>
+</div>
+</div>
+</div>
+
+<!-- Enterprise Plan -->
+<div class="flex flex-col gap-6 rounded-xl border border-slate-800 bg-slate-900/50 p-8 hover:border-primary/50 transition-colors shadow-sm">
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-400 text-sm font-bold uppercase tracking-wider">企业版</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-white text-5xl font-black">定制</span>
+</div>
+<p class="text-slate-400 text-sm mt-2">面向大型组织的定制化部署与支持</p>
+</div>
+<a href="trial.html" class="w-full py-3 rounded-lg bg-slate-800 text-white font-bold text-sm hover:bg-slate-700 transition-all text-center">
+联系我们获取报价
+</a>
+<div class="space-y-4 pt-4 border-t border-slate-800">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">不限用户数量</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">私有化本地部署选项</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">专属 1 对 1 客户经理</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">企业级 SLA 运行保障</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">单点登录 (SSO) 集成</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- FAQ Section -->
+<div class="w-full max-w-4xl mt-24">
+<div class="text-center mb-12">
+<h2 class="text-white text-3xl font-black mb-4">常见问题解答</h2>
+<p class="text-slate-400">针对激活码与订阅管理的详细说明</p>
+</div>
+<div class="space-y-4">
+<details class="group border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden" open="">
+<summary class="flex cursor-pointer items-center justify-between p-6 list-none">
+<span class="text-white font-bold">如何激活我的订阅码？</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+登录 SnapTab 后，进入"个人中心" -&gt; "我的订单"页面。在页面顶部的激活框内输入您收到的 16 位激活码（通常形式为 XXXX-XXXX-XXXX-XXXX），点击激活即可立即生效。
+</div>
+</details>
+<details class="group border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden">
+<summary class="flex cursor-pointer items-center justify-between p-6 list-none">
+<span class="text-white font-bold">激活码有效期是多久？</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+普通激活码自购买之日起 1 年内有效。激活后的订阅时长根据您购买的套餐（月度/年度）计算。如果您的激活码已过期或显示已被使用，请及时联系我们。
+</div>
+</details>
+<details class="group border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden">
+<summary class="flex cursor-pointer items-center justify-between p-6 list-none">
+<span class="text-white font-bold">可以先试用再决定吗？</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+当然可以！我们提供 14 天全功能免费试用，无需绑定任何支付方式。试用期结束后您可以选择订阅或继续使用基础功能。
+</div>
+</details>
+<details class="group border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden">
+<summary class="flex cursor-pointer items-center justify-between p-6 list-none">
+<span class="text-white font-bold">如何联系获取企业版报价？</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+请通过<a href="trial.html" class="text-primary hover:underline">免费试用页面</a>提交您的需求，或直接添加微信 <strong>Changtouyaoguai</strong> 与我们联系，我们会在 24 小时内回复。
+</div>
+</details>
+</div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-900/50 border-t border-slate-800 pt-16 pb-8 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+<div class="col-span-2 lg:col-span-2 flex flex-col gap-6">
+<a href="index.html" class="flex items-center gap-2 text-primary">
+<img src="assets/snaptab-mark.svg" alt="SnapTab" class="h-8 w-8"/>
+<h2 class="text-xl font-bold tracking-tight text-white">SnapTab</h2>
+</a>
+<p class="text-slate-400 max-w-sm">专业的市场研究自动化工具，让调研分析回归洞察本身。</p>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">产品</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="features.html">功能介绍</a></li>
+<li><a class="hover:text-primary transition-colors" href="pricing.html">价格方案</a></li>
+<li><a class="hover:text-primary transition-colors" href="download.html">下载中心</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">支持</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="trial.html">免费试用</a></li>
+<li><a class="hover:text-primary transition-colors" href="about.html">关于我们</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">联系方式</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li>微信：Changtouyaoguai</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+<p>&copy; 2026 SnapTab. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body>
+</html>
