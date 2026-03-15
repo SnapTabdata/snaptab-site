@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="dark" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>关于 - SnapTab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#0db9f2",
+        "background-light": "#f5f8f8",
+        "background-dark": "#101e22",
+        "neutral-dark": "#1a2e35",
+        "neutral-border": "#223f49",
+        "surface-dark": "#162a30",
+        "border-dark": "#223f49",
+      },
+      fontFamily: { "display": ["Inter", "Noto Sans SC", "sans-serif"] },
+      borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+    },
+  },
+}
+</script>
+<style>
+body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-border-dark bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2 text-primary">
+<img src="assets/snaptab-mark.svg" alt="SnapTab" class="h-8 w-8"/>
+<h2 class="text-xl font-bold tracking-tight text-white">SnapTab</h2>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="index.html">首页</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="features.html">功能介绍</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="pricing.html">价格方案</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="download.html">下载</a>
+<a class="text-primary text-sm font-medium" href="about.html">关于</a>
+</nav>
+<div class="flex items-center gap-3">
+<a href="trial.html" class="bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">免费试用</a>
+</div>
+<button class="md:hidden text-slate-100" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-nav" class="hidden md:hidden px-6 pb-4 space-y-2">
+<a class="block text-slate-300 text-sm font-medium py-2" href="index.html">首页</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="features.html">功能介绍</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="pricing.html">价格方案</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="download.html">下载</a>
+<a class="block text-primary text-sm font-medium py-2" href="about.html">关于</a>
+<a class="block text-primary text-sm font-bold py-2" href="trial.html">免费试用</a>
+</div>
+</header>
+
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-6 md:px-20 py-12 md:py-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1 flex flex-col gap-8">
+<div class="space-y-4">
+<span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-wider uppercase">我们的使命</span>
+<h1 class="text-slate-100 text-4xl md:text-6xl font-black leading-tight tracking-tight">
+重塑市场研究的<span class="text-primary">未来</span>
+</h1>
+<p class="text-slate-400 text-lg md:text-xl leading-relaxed">
+我们致力于通过 AI 自动化技术，解决传统市场调研中效率低、成本高、周期长的痛点。让每一位研究员都能拥有高效的工具。
+</p>
+</div>
+<div class="flex gap-4">
+<a href="trial.html" class="bg-primary text-background-dark px-8 py-3 rounded-lg font-bold hover:bg-primary/90 transition-colors">申请试用</a>
+<a href="features.html" class="border border-neutral-border text-slate-100 px-8 py-3 rounded-lg font-bold hover:bg-white/5 transition-colors">了解功能</a>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<div class="aspect-video lg:aspect-square bg-cover bg-center rounded-2xl shadow-2xl border border-neutral-border" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4cyF_deJFaectfHKeOtg1RlR1Z3KdKILEOkKpuQCJTvbLk7Y_UgFEKCsruP00GH8WGn6sDxJ2hjU3U31LX-B5OvsT5yBNRTRhCkXgPw1pYt4Q_W43ZAY7wC2ICXy8AFPaUQQEKsQyMuaFYSdU1yaIY6JXOvThznCaxYr82wDL9j0Nx3cBcY7WSJ26Cx6H6pJiby8Lgbf9kP1bcjxsb997wi0BAacgb1Df8azjZIbUXlBKTcMaQPNvpNceVjR0xBxkGIzMCyO2Jg0');">
+</div>
+</div>
+</div>
+</section>
+
+<!-- Story Section -->
+<section class="bg-neutral-dark/30 py-20">
+<div class="max-w-5xl mx-auto px-6 md:px-20">
+<div class="text-center mb-16 space-y-4">
+<h2 class="text-slate-100 text-3xl font-bold">为什么创立 SnapTab？</h2>
+<div class="w-16 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-xl bg-background-dark border border-neutral-border space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl">hourglass_empty</span>
+<h3 class="text-slate-100 font-bold text-xl">打破低效周期</h3>
+<p class="text-slate-400 text-sm leading-relaxed">传统调研往往需要数天时间处理数据，我们利用 AI 将流程缩短至分钟级，让决策不再等待。</p>
+</div>
+<div class="p-8 rounded-xl bg-background-dark border border-neutral-border space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl">database</span>
+<h3 class="text-slate-100 font-bold text-xl">释放数据价值</h3>
+<p class="text-slate-400 text-sm leading-relaxed">自动化处理海量问卷数据，精准生成交叉表，避免人工分析带来的偏差和遗漏。</p>
+</div>
+<div class="p-8 rounded-xl bg-background-dark border border-neutral-border space-y-4">
+<span class="material-symbols-outlined text-primary text-4xl">monetization_on</span>
+<h3 class="text-slate-100 font-bold text-xl">降低使用门槛</h3>
+<p class="text-slate-400 text-sm leading-relaxed">大幅降低专业制表的技术门槛，让每一位研究员都能快速产出高质量的分析报告。</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Founder Section -->
+<section class="max-w-7xl mx-auto px-6 md:px-20 py-24">
+<div class="bg-neutral-dark border border-neutral-border rounded-3xl overflow-hidden p-8 md:p-16">
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="w-full lg:w-1/3">
+<div class="aspect-square bg-cover bg-center rounded-2xl grayscale hover:grayscale-0 transition-all duration-500 shadow-xl" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCceM7BhB9nY9Usn8DK3Mmk7oW-1inBL2kfAvfM45gYU31jRICACsc-5foqIV62jafkAIoo_4A7KUbEOFkSg7VfLB8XxdGMq2wObpjc3yKRrMVO517jK6gHOJA5Weyy4rC39aU0IUq8bbMWtEUlku23LQj6ojTETVcLs7nKoCCpmCbFEG9OLBkFeiCz5Ssdm6mEGH8-Y-MAu0nRaI_di12SoIlCrQVyh0hA1HsoCbmvtr2BXxojoyYE4PF4elKWI3xAwKZcrOaLutY');">
+</div>
+</div>
+<div class="w-full lg:w-2/3 flex flex-col gap-6">
+<div class="space-y-2">
+<h3 class="text-slate-100 text-3xl font-bold">刘靖</h3>
+<p class="text-primary text-lg font-medium">SnapTab 创始人</p>
+</div>
+<blockquote class="text-slate-300 text-xl italic leading-relaxed">
+"在深耕市场研究行业多年间，我目睹了无数研究员在海量数据和繁琐的手工流程中挣扎。SnapTab 的诞生，正是为了让调研回归洞察本质。"
+</blockquote>
+<div class="space-y-4">
+<p class="text-slate-400">
+资深用户研究专家，拥有多年市场调研与数据分析经验。深刻理解研究员在日常制表工作中的痛点，致力于用技术手段提升调研效率。
+</p>
+<div class="flex gap-4">
+<a href="trial.html" class="flex items-center gap-2 px-6 py-2 bg-primary text-background-dark rounded-lg font-bold hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-sm">mail</span>
+联系我
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Vision Section -->
+<section class="max-w-7xl mx-auto px-6 md:px-20 py-24 border-t border-neutral-border">
+<div class="text-center max-w-3xl mx-auto space-y-6">
+<h2 class="text-slate-100 text-4xl font-bold">AI 赋能每一位研究者</h2>
+<p class="text-slate-400 text-lg leading-relaxed">
+我们相信，AI 不会替代研究者，而是会将他们从重复性工作中解放出来。SnapTab 将成为每一位分析师的超级助手，让他们能够投入更多精力在战略构思与商业决策上。
+</p>
+</div>
+</section>
+
+<!-- Contact Section -->
+<section class="max-w-7xl mx-auto px-6 md:px-20 pb-24">
+<div class="bg-surface-dark border border-border-dark rounded-2xl p-8 md:p-12 text-center">
+<h2 class="text-slate-100 text-3xl font-bold mb-4">联系我们</h2>
+<p class="text-slate-400 mb-8">有任何问题或合作意向，欢迎随时联系</p>
+<div class="flex flex-wrap justify-center gap-8">
+<div class="flex items-center gap-3 text-slate-300">
+<span class="material-symbols-outlined text-primary">chat</span>
+<span>微信：Changtouyaoguai</span>
+</div>
+<div class="flex items-center gap-3 text-slate-300">
+<a href="trial.html" class="flex items-center gap-3 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span>提交试用申请</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-900/50 border-t border-slate-800 pt-16 pb-8 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+<div class="col-span-2 lg:col-span-2 flex flex-col gap-6">
+<a href="index.html" class="flex items-center gap-2 text-primary">
+<img src="assets/snaptab-mark.svg" alt="SnapTab" class="h-8 w-8"/>
+<h2 class="text-xl font-bold tracking-tight text-white">SnapTab</h2>
+</a>
+<p class="text-slate-400 max-w-sm">专业的市场研究自动化工具，让调研分析回归洞察本身。</p>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">产品</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="features.html">功能介绍</a></li>
+<li><a class="hover:text-primary transition-colors" href="pricing.html">价格方案</a></li>
+<li><a class="hover:text-primary transition-colors" href="download.html">下载中心</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">支持</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="trial.html">免费试用</a></li>
+<li><a class="hover:text-primary transition-colors" href="about.html">关于我们</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">联系方式</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li>微信：Changtouyaoguai</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+<p>&copy; 2026 SnapTab. All rights reserved.</p>
+</div>
+</footer>
+</div>
+</body>
+</html>

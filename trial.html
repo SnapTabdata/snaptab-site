@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="dark" lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>免费试用 - SnapTab</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#0db9f2",
+        "background-light": "#f5f8f8",
+        "background-dark": "#101e22",
+        "neutral-dark": "#182d34",
+        "border-dark": "#315a68",
+        "surface-dark": "#162a30",
+      },
+      fontFamily: { "display": ["Inter", "Noto Sans SC", "sans-serif"] },
+      borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+    },
+  },
+}
+</script>
+<style>
+body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-border-dark/30 bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<a href="index.html" class="flex items-center gap-2 text-primary">
+<img src="assets/snaptab-mark.svg" alt="SnapTab" class="h-8 w-8"/>
+<h2 class="text-xl font-bold tracking-tight text-white">SnapTab</h2>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="index.html">首页</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="features.html">功能介绍</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="pricing.html">价格方案</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="download.html">下载</a>
+<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="about.html">关于</a>
+</nav>
+<div class="flex items-center gap-3">
+<a href="trial.html" class="bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">免费试用</a>
+</div>
+<button class="md:hidden text-slate-100" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div id="mobile-nav" class="hidden md:hidden px-6 pb-4 space-y-2">
+<a class="block text-slate-300 text-sm font-medium py-2" href="index.html">首页</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="features.html">功能介绍</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="pricing.html">价格方案</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="download.html">下载</a>
+<a class="block text-slate-300 text-sm font-medium py-2" href="about.html">关于</a>
+<a class="block text-primary text-sm font-bold py-2" href="trial.html">免费试用</a>
+</div>
+</header>
+
+<main class="flex-1 flex flex-col lg:flex-row items-stretch justify-center px-6 md:px-20 py-12 lg:py-20 gap-12 max-w-[1440px] mx-auto w-full">
+<!-- Left: Content & Benefits -->
+<div class="flex flex-col flex-1 justify-center space-y-8 lg:pr-12">
+<div class="space-y-4">
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
+限时体验
+</span>
+<h1 class="text-4xl md:text-6xl font-black text-slate-100 leading-[1.1] tracking-tight">
+立即开启 SnapTab <br/><span class="text-primary">免费试用</span>
+</h1>
+<p class="text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed">
+专为中国市场优化的自动化调研分析工具。极速处理，精准洞察，让您的市场研究效率大幅提升。
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex items-start gap-4 p-4 rounded-xl bg-neutral-dark/40 border border-border-dark/20">
+<div class="bg-primary/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<div>
+<h3 class="text-slate-100 font-bold mb-1">全面支持 SPSS</h3>
+<p class="text-slate-400 text-sm">深度兼容 .sav 格式，完美保留变量标签与数值标签。</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-neutral-dark/40 border border-border-dark/20">
+<div class="bg-primary/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<h3 class="text-slate-100 font-bold mb-1">自动化报告生成</h3>
+<p class="text-slate-400 text-sm">AI 辅助自动生成专业级交叉表，一键导出 Excel。</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-neutral-dark/40 border border-border-dark/20">
+<div class="bg-primary/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">security</span>
+</div>
+<div>
+<h3 class="text-slate-100 font-bold mb-1">数据隐私保障</h3>
+<p class="text-slate-400 text-sm">本地化数据处理，数据不上传云端，确保商业机密安全。</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-neutral-dark/40 border border-border-dark/20">
+<div class="bg-primary/20 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h3 class="text-slate-100 font-bold mb-1">微信客服支持</h3>
+<p class="text-slate-400 text-sm">添加微信即可获得一对一技术支持与使用指导。</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Right: Form -->
+<div class="flex-1 max-w-lg w-full">
+<div class="bg-neutral-dark p-8 md:p-10 rounded-2xl border border-border-dark shadow-2xl">
+<h2 class="text-2xl font-bold text-slate-100 mb-2">申请免费试用</h2>
+<p class="text-slate-400 text-sm mb-8">填写下方表单提交申请，我们会尽快与您联系。</p>
+<form class="space-y-5" data-trial-form data-webhook="https://open.feishu.cn/open-apis/bot/v2/hook/10629c6f-c4b4-41b0-be26-4368da4b9e64" data-recipient="378252581@qq.com">
+<div class="space-y-2">
+<label class="text-slate-300 text-sm font-medium">姓名</label>
+<input name="name" class="w-full h-12 bg-background-dark border border-border-dark rounded-lg px-4 text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-600" placeholder="请输入您的姓名" type="text" required/>
+</div>
+<div class="space-y-2">
+<label class="text-slate-300 text-sm font-medium">公司/团队</label>
+<input name="company" class="w-full h-12 bg-background-dark border border-border-dark rounded-lg px-4 text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-600" placeholder="请输入公司或团队名称" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-slate-300 text-sm font-medium">联系方式（微信/手机/邮箱）</label>
+<input name="contact" class="w-full h-12 bg-background-dark border border-border-dark rounded-lg px-4 text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-600" placeholder="方便我们联系您的方式" type="text" required/>
+</div>
+<div class="space-y-2">
+<label class="text-slate-300 text-sm font-medium">团队类型</label>
+<select name="teamType" class="w-full h-12 bg-background-dark border border-border-dark rounded-lg px-4 text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+<option value="">请选择</option>
+<option value="个人研究员">个人研究员</option>
+<option value="小型调研团队">小型调研团队（2-10人）</option>
+<option value="中型研究部门">中型研究部门（10-50人）</option>
+<option value="大型企业">大型企业（50人以上）</option>
+<option value="咨询公司">咨询公司</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-slate-300 text-sm font-medium">最想解决的问题</label>
+<textarea name="goal" class="w-full h-24 bg-background-dark border border-border-dark rounded-lg px-4 py-3 text-slate-100 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-600 resize-none" placeholder="简单描述您希望 SnapTab 帮您解决的问题"></textarea>
+</div>
+<div class="pt-4">
+<button type="submit" class="w-full h-14 bg-primary text-background-dark text-lg font-black rounded-xl hover:opacity-90 active:scale-[0.98] transition-all shadow-lg shadow-primary/20">
+提交试用申请
+</button>
+</div>
+<p class="text-center text-slate-500 text-xs mt-4">
+提交后我们将第一时间收到您的申请并与您联系。<br/>
+也可直接添加微信 <strong class="text-slate-300">Changtouyaoguai</strong> 联系我们。
+</p>
+</form>
+<div data-trial-result class="mt-4"></div>
+</div>
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-900/50 border-t border-slate-800 pt-16 pb-8 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+<div class="col-span-2 lg:col-span-2 flex flex-col gap-6">
+<a href="index.html" class="flex items-center gap-2 text-primary">
+<img src="assets/snaptab-mark.svg" alt="SnapTab" class="h-8 w-8"/>
+<h2 class="text-xl font-bold tracking-tight text-white">SnapTab</h2>
+</a>
+<p class="text-slate-400 max-w-sm">专业的市场研究自动化工具，让调研分析回归洞察本身。</p>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">产品</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="features.html">功能介绍</a></li>
+<li><a class="hover:text-primary transition-colors" href="pricing.html">价格方案</a></li>
+<li><a class="hover:text-primary transition-colors" href="download.html">下载中心</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">支持</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li><a class="hover:text-primary transition-colors" href="trial.html">免费试用</a></li>
+<li><a class="hover:text-primary transition-colors" href="about.html">关于我们</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-white mb-6">联系方式</h6>
+<ul class="space-y-4 text-slate-400 text-sm">
+<li>微信：Changtouyaoguai</li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+<p>&copy; 2026 SnapTab. All rights reserved.</p>
+</div>
+</footer>
+</div>
+<script src="assets/site.js"></script>
+</body>
+</html>
