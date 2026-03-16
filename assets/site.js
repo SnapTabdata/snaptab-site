@@ -1,4 +1,33 @@
+function initTheme() {
+  const saved = localStorage.getItem("snaptab-theme");
+  if (saved === "dark") {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+  updateThemeIcon();
+}
+
+function toggleTheme() {
+  const html = document.documentElement;
+  html.classList.toggle("dark");
+  localStorage.setItem("snaptab-theme", html.classList.contains("dark") ? "dark" : "light");
+  updateThemeIcon();
+}
+
+function updateThemeIcon() {
+  const icons = document.querySelectorAll(".theme-toggle-icon");
+  const isDark = document.documentElement.classList.contains("dark");
+  icons.forEach(icon => {
+    icon.textContent = isDark ? "light_mode" : "dark_mode";
+  });
+}
+
+initTheme();
+
 document.addEventListener("DOMContentLoaded", () => {
+  updateThemeIcon();
+
   const navToggle = document.querySelector("[data-nav-toggle]");
   const nav = document.querySelector("[data-nav]");
   if (navToggle && nav) {

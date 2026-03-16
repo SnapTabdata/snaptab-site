@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html class="dark" lang="zh-CN">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>SnapTab - 市场研究交叉表自动化工具</title>
+<link rel="icon" type="image/svg+xml" href="assets/snaptab-mark.svg"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/theme.css" rel="stylesheet"/>
 <script>
 tailwind.config = {
   darkMode: "class",
@@ -25,6 +27,7 @@ tailwind.config = {
   },
 }
 </script>
+<script src="assets/site.js"></script>
 <style>
 body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
@@ -48,6 +51,9 @@ body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 <a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="about.html">关于</a>
 </nav>
 <div class="flex items-center gap-3">
+<button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+<span class="material-symbols-outlined theme-toggle-icon">dark_mode</span>
+</button>
 <a href="trial.html" class="bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">免费试用</a>
 </div>
 <button class="md:hidden text-slate-100" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
@@ -80,7 +86,7 @@ AI 驱动的交叉表自动化
 SnapTab: 重新定义市场研究<span class="text-primary underline decoration-primary/30 decoration-8 underline-offset-4">交叉表自动化</span>
 </h1>
 <p class="text-lg text-slate-400 max-w-xl leading-relaxed">
-专为中国市场调研设计的自动化工具。深度支持 SPSS .sav 文件，AI 辅助问卷处理，一键生成专业级交叉表，效率提升 10 倍以上。
+专为市场调研设计的桌面端自动化制表工具。深度支持 SPSS .sav 文件，AI 辅助生成 Tables 与 Header 规格，一键导出专业级 Excel 交叉表。
 </p>
 <div class="flex flex-col sm:flex-row gap-4">
 <a href="trial.html" class="bg-primary hover:bg-primary/90 text-background-dark px-8 py-4 rounded-xl text-lg font-bold transition-all flex items-center justify-center gap-2">
@@ -108,8 +114,62 @@ SnapTab: 重新定义市场研究<span class="text-primary underline decoration-
 <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
 <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
 </div>
+<span class="text-slate-500 text-xs ml-2">SnapTab 1.0</span>
 </div>
-<div class="p-4 h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpDWgyMXhaA9qCXtHg-LBJImXjSH9DAZxnhD-_LFEeH2i8Dh2fjLmBX-yNAYsueQibE_yHwz9PRh3O-zjc16cH5zWpqFftxC2nr6lFON3RmuFVPybV_Xqstd3GFLSHftl7reV8BJLvDphdLWZkdcGKonDmZk4l3yzHD85DbQltJ_ZM6L_k3UcHhHEs5QoJDD57zBjtbY-qozTxzz4i8-36OT90ebNSWlBCfvdIsg9R7QvKrZTJF0OaVIKx9VHZoujGQphyLX8ugvc')">
+<div class="p-0 h-full">
+<div class="app-mockup h-full">
+<div class="app-mockup-sidebar">
+<div class="flex items-center gap-1.5 mb-3">
+<img src="assets/snaptab-mark.svg" alt="" class="w-4 h-4"/>
+<span class="text-[10px] font-bold" style="color:#0db9f2">SnapTab</span>
+</div>
+<div class="mock-label">当前项目</div>
+<div class="mock-line"></div>
+<div class="mock-line short"></div>
+<div class="mock-btn" style="width:100%;margin:4px 0">生成草稿 Spec</div>
+<div class="mock-line medium"></div>
+<div class="mock-line short"></div>
+<div class="mock-label" style="margin-top:8px">快速上手</div>
+<div class="mock-line"></div>
+<div class="mock-line medium"></div>
+<div class="mock-line short"></div>
+</div>
+<div class="app-mockup-main">
+<div class="flex items-center justify-between">
+<span class="mock-label">分析参数与任务设置</span>
+</div>
+<div class="mock-table">
+<div class="mock-table-header"></div>
+<div class="mock-table-header">男 (A)</div>
+<div class="mock-table-header">女 (B)</div>
+<div class="mock-table-header">合计</div>
+<div class="mock-table-cell">Q1 满意度</div>
+<div class="mock-table-cell">68%</div>
+<div class="mock-table-cell">72% <span style="color:#ef4444;font-weight:700;font-size:8px">A</span></div>
+<div class="mock-table-cell font-semibold">70%</div>
+<div class="mock-table-cell">Q2 推荐度</div>
+<div class="mock-table-cell">54%</div>
+<div class="mock-table-cell">61% <span style="color:#ef4444;font-weight:700;font-size:8px">A</span></div>
+<div class="mock-table-cell font-semibold">57%</div>
+<div class="mock-table-cell">Q3 复购率</div>
+<div class="mock-table-cell">45% <span style="color:#ef4444;font-weight:700;font-size:8px">B</span></div>
+<div class="mock-table-cell">42%</div>
+<div class="mock-table-cell font-semibold">43%</div>
+<div class="mock-table-cell">Q4 知名度</div>
+<div class="mock-table-cell">81%</div>
+<div class="mock-table-cell">85%</div>
+<div class="mock-table-cell font-semibold">83%</div>
+<div class="mock-table-cell">Q5 NPS</div>
+<div class="mock-table-cell">32</div>
+<div class="mock-table-cell">38 <span style="color:#ef4444;font-weight:700;font-size:8px">A</span></div>
+<div class="mock-table-cell font-semibold">35</div>
+</div>
+<div class="flex gap-2 mt-auto">
+<div class="mock-btn">开始跑表</div>
+<div class="mock-btn" style="background:#475569">导出 Excel</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -133,7 +193,7 @@ SnapTab: 重新定义市场研究<span class="text-primary underline decoration-
 </div>
 <h4 class="text-xl font-bold mb-4 text-white">全面支持 SPSS</h4>
 <p class="text-slate-400 leading-relaxed">
-深度兼容 .sav 格式，完美保留变量标签、数值标签、多选题集及逻辑跳转，无需二次清洗。
+深度兼容 SPSS .sav 格式，完整读取变量标签与数值标签，自动识别题型结构，直接用于制表。
 </p>
 </div>
 <div class="p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-primary/50 transition-all shadow-sm group">
@@ -151,7 +211,7 @@ AI 智能识别题目类型，自动匹配统计口径，自动完成交叉表�
 </div>
 <h4 class="text-xl font-bold mb-4 text-white">专业 Excel 导出</h4>
 <p class="text-slate-400 leading-relaxed">
-一键导出符合行业标准的交叉表，自带美观格式与自动冻结窗口，直接用于汇报演示或数据分析。
+一键导出符合行业标准的 Excel 交叉表，自带显著性字母标记与专业排版格式，直接用于汇报或分析。
 </p>
 </div>
 </div>
@@ -163,40 +223,52 @@ AI 智能识别题目类型，自动匹配统计口径，自动完成交叉表�
 <div class="max-w-7xl mx-auto">
 <div class="flex flex-col lg:flex-row gap-16 items-center">
 <div class="lg:w-1/2">
-<h3 class="text-4xl font-black text-white mb-8">三步开启自动化制表之旅</h3>
+<h3 class="text-4xl font-black text-white mb-8">三步完成自动化制表</h3>
 <div class="space-y-8">
 <div class="flex gap-6">
 <div class="flex-none w-10 h-10 rounded-full bg-primary text-background-dark flex items-center justify-center font-bold">1</div>
 <div>
-<h5 class="text-xl font-bold mb-2">上传原始数据</h5>
-<p class="text-slate-400">支持上传 .sav 或 .csv 格式，系统将自动识别数据结构。</p>
+<h5 class="text-xl font-bold mb-2">选择项目数据</h5>
+<p class="text-slate-400">打开本地 .sav 数据文件，SnapTab 自动识别变量与数值标签。</p>
 </div>
 </div>
 <div class="flex gap-6">
 <div class="flex-none w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold">2</div>
 <div>
-<h5 class="text-xl font-bold mb-2">AI 智能解析</h5>
-<p class="text-slate-400">利用 AI 自动定义交叉维度与题目分组，只需简单确认即可。</p>
+<h5 class="text-xl font-bold mb-2">AI 生成规格</h5>
+<p class="text-slate-400">AI 自动生成交叉表规格（Spec），包含题目分组与交叉维度定义，一键完成设置。</p>
 </div>
 </div>
 <div class="flex gap-6">
 <div class="flex-none w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold">3</div>
 <div>
-<h5 class="text-xl font-bold mb-2">一键导出结果</h5>
-<p class="text-slate-400">毫秒级生成报表，支持下载包含显著性检验的多张交叉表。</p>
+<h5 class="text-xl font-bold mb-2">一键跑表导出</h5>
+<p class="text-slate-400">点击开始跑表，分钟内生成带显著性标记的专业 Excel 交叉表。</p>
 </div>
 </div>
 </div>
 </div>
 <div class="lg:w-1/2 w-full">
 <div class="bg-slate-800 p-8 rounded-2xl shadow-xl border border-slate-700">
-<div class="aspect-square bg-slate-900 rounded-xl border-2 border-dashed border-slate-700 flex flex-col items-center justify-center gap-4 text-slate-400 group cursor-pointer hover:border-primary transition-colors">
-<span class="material-symbols-outlined text-6xl group-hover:text-primary transition-colors">cloud_upload</span>
-<div class="text-center">
-<p class="text-lg font-bold text-slate-300">拖拽上传您的数据文件</p>
-<p class="text-sm">支持 .sav, .xlsx, .csv 格式</p>
+<div class="flex flex-col gap-5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">desktop_windows</span>
+<span class="text-white font-bold">SnapTab 桌面端工作流</span>
 </div>
-<span class="mt-4 px-6 py-2 bg-slate-700 text-slate-200 rounded-lg font-bold group-hover:bg-primary group-hover:text-background-dark transition-all">选择文件</span>
+<div class="flex items-center gap-3 p-4 bg-slate-900 rounded-xl border border-slate-700">
+<span class="material-symbols-outlined text-primary">folder_open</span>
+<div><div class="text-slate-300 text-sm font-bold">打开本地 .sav 文件</div><div class="text-slate-500 text-xs">自动解析变量标签与数值标签</div></div>
+</div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-primary/50 text-lg">arrow_downward</span></div>
+<div class="flex items-center gap-3 p-4 bg-slate-900 rounded-xl border border-slate-700">
+<span class="material-symbols-outlined text-primary">psychology</span>
+<div><div class="text-slate-300 text-sm font-bold">AI 自动生成 Spec 规格</div><div class="text-slate-500 text-xs">智能识别题型，定义交叉维度</div></div>
+</div>
+<div class="flex justify-center"><span class="material-symbols-outlined text-primary/50 text-lg">arrow_downward</span></div>
+<div class="flex items-center gap-3 p-4 bg-slate-900 rounded-xl border border-primary/50">
+<span class="material-symbols-outlined text-primary">table_chart</span>
+<div><div class="text-slate-300 text-sm font-bold">导出 Excel 交叉表</div><div class="text-slate-500 text-xs">带显著性标记（红色 AB 字母）</div></div>
+</div>
 </div>
 </div>
 </div>
@@ -209,7 +281,7 @@ AI 智能识别题目类型，自动匹配统计口径，自动完成交叉表�
 <div class="max-w-5xl mx-auto bg-primary rounded-3xl p-12 lg:p-20 text-center relative overflow-hidden">
 <div class="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent pointer-events-none"></div>
 <div class="relative z-10 flex flex-col items-center gap-8">
-<h2 class="text-4xl md:text-5xl font-black text-background-dark">准备好提升 10 倍调研效率了吗？</h2>
+<h2 class="text-4xl md:text-5xl font-black text-background-dark">准备好告别手工制表了吗？</h2>
 <p class="text-background-dark/80 text-xl max-w-2xl font-medium">
 立即加入专业调研分析师行列，开启您的智能制表新时代。
 </p>
