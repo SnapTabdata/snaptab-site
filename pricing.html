@@ -70,12 +70,12 @@ body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 </div>
 </header>
 
-<main class="flex flex-col items-center px-4 md:px-20 lg:px-40 py-16">
+<main class="flex flex-col items-center px-4 md:px-10 lg:px-20 py-16">
 <!-- Hero Title Section -->
-<div class="w-full max-w-5xl mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="w-full max-w-6xl mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
 <div class="flex flex-col gap-4">
-<h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">选择适合您的计划</h1>
-<p class="text-slate-400 text-lg max-w-lg">助力您的市场调研自动化，从这里开始。无论您是个人研究员还是大型企业，我们都有匹配的方案。</p>
+<h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">选择适合您的方案</h1>
+<p class="text-slate-400 text-lg max-w-lg">无论是单次项目还是长期合作，SnapTab 都有匹配的方案。所有方案均提供 14 天免费试用。</p>
 </div>
 <a href="trial.html" class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-slate-800 border border-slate-700 text-white text-sm font-bold hover:bg-slate-700 transition-all">
 <span class="material-symbols-outlined mr-2 text-xl">headset_mic</span>
@@ -83,145 +83,226 @@ body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 </a>
 </div>
 
-<!-- Pricing Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl px-4 py-8">
-<!-- Basic Plan -->
-<div class="flex flex-col gap-6 rounded-xl border border-slate-800 bg-slate-900/50 p-8 hover:border-primary/50 transition-colors shadow-sm">
-<div class="flex flex-col gap-2">
-<h3 class="text-slate-400 text-sm font-bold uppercase tracking-wider">基础版</h3>
-<div class="flex items-baseline gap-1">
-<span class="text-white text-5xl font-black">¥199</span>
-<span class="text-slate-400 text-base font-medium">/月</span>
+<!-- Free Trial Banner -->
+<div class="w-full max-w-6xl mb-8 rounded-xl border border-primary/30 bg-primary/5 p-6 flex flex-col sm:flex-row items-center gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">card_giftcard</span>
+<div>
+<h3 class="text-white font-bold">体验版 — 免费</h3>
+<p class="text-slate-400 text-sm">14 天全功能试用，不需绑定支付方式。交叉表 ≤20 个，数据行 ≤500 行。</p>
 </div>
-<p class="text-slate-400 text-sm mt-2">适合个人调研员和小微项目</p>
+</div>
+<a href="trial.html" class="shrink-0 bg-primary/20 border border-primary/30 text-primary px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/30 transition-all">
+申请试用
+</a>
+</div>
+
+<!-- Pricing Grid: 4 paid tiers -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 w-full max-w-6xl py-4">
+
+<!-- 项目版 -->
+<div class="flex flex-col gap-6 rounded-xl border border-slate-800 bg-slate-900/50 p-7 hover:border-primary/50 transition-colors shadow-sm">
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-400 text-sm font-bold uppercase tracking-wider">项目版</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-white text-4xl font-black">¥4,999</span>
+<span class="text-slate-400 text-sm font-medium">/项目</span>
+</div>
+<p class="text-slate-400 text-sm mt-2">适合单次或短周期项目需求</p>
 </div>
 <a href="trial.html" class="w-full py-3 rounded-lg bg-slate-800 text-white font-bold text-sm hover:bg-slate-700 transition-all text-center">
-立即订阅
+立即购买
 </a>
-<div class="space-y-4 pt-4 border-t border-slate-800">
+<div class="space-y-3.5 pt-4 border-t border-slate-800">
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">单用户使用权限</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">单机 1 席位授权</span>
 </div>
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">完整 SPSS .sav 数据导入</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">90 天有效期</span>
 </div>
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">AI 辅助生成交叉表规格</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">无限交叉表和数据行</span>
 </div>
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">标准 Excel 交叉表导出</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">完整 SPSS 导入导出</span>
 </div>
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">微信客服支持</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">项目周期内基础答疑</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-slate-600 text-lg">remove</span>
+<span class="text-sm text-slate-500">不含 AI 功能</span>
 </div>
 </div>
 </div>
 
-<!-- Professional Plan -->
-<div class="relative flex flex-col gap-6 rounded-xl border-2 border-primary bg-slate-900 p-8 shadow-[0_0_30px_rgba(13,185,242,0.15)] scale-105 z-10">
-<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-background-dark text-[11px] font-black uppercase tracking-widest px-4 py-1.5 rounded-full">
+<!-- 标准版 (推荐) -->
+<div class="relative flex flex-col gap-6 rounded-xl border-2 border-primary bg-slate-900 p-7 shadow-[0_0_30px_rgba(13,185,242,0.15)] z-10">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-background-dark text-[11px] font-black uppercase tracking-widest px-4 py-1 rounded-full">
 推荐方案
 </div>
 <div class="flex flex-col gap-2">
-<h3 class="text-primary text-sm font-bold uppercase tracking-wider">专业版</h3>
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider">标准版</h3>
 <div class="flex items-baseline gap-1">
-<span class="text-white text-5xl font-black">¥599</span>
-<span class="text-slate-400 text-base font-medium">/月</span>
+<span class="text-white text-4xl font-black">¥12,800</span>
+<span class="text-slate-400 text-sm font-medium">/年</span>
 </div>
-<p class="text-slate-400 text-sm mt-2">专为成长型团队设计的全功能方案</p>
+<p class="text-slate-400 text-sm mt-2">有连续项目需求的团队首选</p>
 </div>
 <a href="trial.html" class="w-full py-3 rounded-lg bg-primary text-background-dark font-black text-sm hover:brightness-110 transition-all text-center">
 开始 14 天免费试用
 </a>
-<div class="space-y-4 pt-4 border-t border-slate-800">
+<div class="space-y-3.5 pt-4 border-t border-slate-800">
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm font-medium">包含基础版所有功能</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm font-medium">包含项目版所有功能</span>
 </div>
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">团队协作（最多 3 人）</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">12 个月授权</span>
 </div>
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">显著性检验（Z-Test / T-Test）</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">AI 辅助生成（50 次/月）</span>
 </div>
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">权重加权计算</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">功能更新与问题修复</span>
 </div>
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">优先技术支持</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">远程培训 1 次</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">工作日支持（48h 响应）</span>
 </div>
 </div>
 </div>
 
-<!-- Enterprise Plan -->
-<div class="flex flex-col gap-6 rounded-xl border border-slate-800 bg-slate-900/50 p-8 hover:border-primary/50 transition-colors shadow-sm">
+<!-- 专业版 -->
+<div class="flex flex-col gap-6 rounded-xl border border-slate-800 bg-slate-900/50 p-7 hover:border-primary/50 transition-colors shadow-sm">
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-400 text-sm font-bold uppercase tracking-wider">专业版</h3>
+<div class="flex items-baseline gap-1">
+<span class="text-white text-4xl font-black">¥19,800</span>
+<span class="text-slate-400 text-sm font-medium">/年</span>
+</div>
+<p class="text-slate-400 text-sm mt-2">更快支持和上线陪跑</p>
+</div>
+<a href="trial.html" class="w-full py-3 rounded-lg bg-slate-800 text-white font-bold text-sm hover:bg-slate-700 transition-all text-center">
+立即升级
+</a>
+<div class="space-y-3.5 pt-4 border-t border-slate-800">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm font-medium">包含标准版所有功能</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">AI 无限使用</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">AI NET 分组 / AI DP-Spec</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">优先支持（24h 响应）</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">远程培训 2 次</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">项目配置协助 2 次</span>
+</div>
+</div>
+</div>
+
+<!-- 企业版 -->
+<div class="flex flex-col gap-6 rounded-xl border border-slate-800 bg-slate-900/50 p-7 hover:border-primary/50 transition-colors shadow-sm">
 <div class="flex flex-col gap-2">
 <h3 class="text-slate-400 text-sm font-bold uppercase tracking-wider">企业版</h3>
 <div class="flex items-baseline gap-1">
-<span class="text-white text-5xl font-black">定制</span>
+<span class="text-white text-3xl font-black">¥30,000</span>
+<span class="text-slate-400 text-sm font-medium">~ ¥80,000/年</span>
 </div>
-<p class="text-slate-400 text-sm mt-2">面向大型组织的定制化部署与支持</p>
+<p class="text-slate-400 text-sm mt-2">多席位团队定制化部署</p>
 </div>
 <a href="trial.html" class="w-full py-3 rounded-lg bg-slate-800 text-white font-bold text-sm hover:bg-slate-700 transition-all text-center">
-联系我们获取报价
+联系获取报价
 </a>
-<div class="space-y-4 pt-4 border-t border-slate-800">
+<div class="space-y-3.5 pt-4 border-t border-slate-800">
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">包含专业版所有功能</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm font-medium">包含专业版所有功能</span>
 </div>
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">不限用户数量</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">2-10+ 席位授权</span>
 </div>
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">专属服务群</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+<span class="text-sm">集中培训 + 上线协助</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
 <span class="text-sm">定制化功能开发</span>
 </div>
 <div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
 <span class="text-sm">专属 1 对 1 技术支持</span>
 </div>
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">批量授权优惠价格</span>
+</div>
+</div>
+</div>
+
+<!-- ROI Section -->
+<div class="w-full max-w-6xl mt-16 mb-8">
+<div class="bg-slate-900/50 border border-slate-800 rounded-xl p-8 md:p-10">
+<h3 class="text-white text-2xl font-black mb-6 text-center">投资回报参考</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+<div>
+<div class="text-primary text-4xl font-black mb-2">¥2,500</div>
+<p class="text-slate-400 text-sm">人工制表平均单次成本</p>
+</div>
+<div>
+<div class="text-primary text-4xl font-black mb-2">4~5 次</div>
+<p class="text-slate-400 text-sm">年费 ¥12,800 约等于 5 次人工成本</p>
+</div>
+<div>
+<div class="text-primary text-4xl font-black mb-2">分钟级</div>
+<p class="text-slate-400 text-sm">SnapTab 自动完成原本数天的工作</p>
 </div>
 </div>
 </div>
 </div>
 
 <!-- FAQ Section -->
-<div class="w-full max-w-4xl mt-24">
+<div class="w-full max-w-4xl mt-16">
 <div class="text-center mb-12">
 <h2 class="text-white text-3xl font-black mb-4">常见问题解答</h2>
-<p class="text-slate-400">针对激活码与订阅管理的详细说明</p>
+<p class="text-slate-400">关于授权、试用和服务的详细说明</p>
 </div>
 <div class="space-y-4">
 <details class="group border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden" open="">
 <summary class="flex cursor-pointer items-center justify-between p-6 list-none">
-<span class="text-white font-bold">如何激活我的订阅码？</span>
+<span class="text-white font-bold">如何激活我的授权码？</span>
 <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
 </summary>
 <div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
-登录 SnapTab 后，进入"个人中心" -&gt; "我的订单"页面。在页面顶部的激活框内输入您收到的 16 位激活码（通常形式为 XXXX-XXXX-XXXX-XXXX），点击激活即可立即生效。
-</div>
-</details>
-<details class="group border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden">
-<summary class="flex cursor-pointer items-center justify-between p-6 list-none">
-<span class="text-white font-bold">激活码有效期是多久？</span>
-<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
-普通激活码自购买之日起 1 年内有效。激活后的订阅时长根据您购买的套餐（月度/年度）计算。如果您的激活码已过期或显示已被使用，请及时联系我们。
+打开 SnapTab 后，在授权管理页面输入您收到的 16 位激活码（形式为 XXXX-XXXX-XXXX-XXXX），点击激活即可立即生效。
 </div>
 </details>
 <details class="group border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden">
@@ -230,7 +311,25 @@ body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 <span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
 </summary>
 <div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
-当然可以！我们提供 14 天全功能免费试用，无需绑定任何支付方式。试用期结束后您可以选择订阅或继续使用基础功能。
+当然可以！我们提供 14 天全功能免费试用，不需绑定任何支付方式。试用期内可体验全部功能（交叉表 ≤20 个，数据行 ≤500 行）。
+</div>
+</details>
+<details class="group border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden">
+<summary class="flex cursor-pointer items-center justify-between p-6 list-none">
+<span class="text-white font-bold">项目版和标准版有什么区别？</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+项目版适合单次短期项目，有效期 90 天，不含 AI 功能。标准版为年费制，包含 AI 辅助生成（每月 50 次）、持续更新和远程培训。如果年项目频次超过 4-5 次，标准版更划算。
+</div>
+</details>
+<details class="group border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden">
+<summary class="flex cursor-pointer items-center justify-between p-6 list-none">
+<span class="text-white font-bold">项目版能升级到标准版吗？</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-primary">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-slate-400 text-sm leading-relaxed">
+可以！项目版用户在 30 天内升级标准版可抵扣 ¥2,000。建议先用项目版试跑一个项目，满意后再升级年费。
 </div>
 </details>
 <details class="group border border-slate-800 rounded-xl bg-slate-900/30 overflow-hidden">
