@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html class="dark" lang="zh-CN">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>价格方案 - SnapTab</title>
+<link rel="icon" type="image/svg+xml" href="assets/snaptab-mark.svg"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/theme.css" rel="stylesheet"/>
 <script>
 tailwind.config = {
   darkMode: "class",
@@ -25,6 +27,7 @@ tailwind.config = {
   },
 }
 </script>
+<script src="assets/site.js"></script>
 <style>
 body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
@@ -48,6 +51,9 @@ body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 <a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="about.html">关于</a>
 </nav>
 <div class="flex items-center gap-3">
+<button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+<span class="material-symbols-outlined theme-toggle-icon">dark_mode</span>
+</button>
 <a href="trial.html" class="bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">免费试用</a>
 </div>
 <button class="md:hidden text-slate-100" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
@@ -99,11 +105,15 @@ body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">50+ 基础调研模版</span>
+<span class="text-sm">完整 SPSS .sav 数据导入</span>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">标准数据分析报表</span>
+<span class="text-sm">AI 辅助生成交叉表规格</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">标准 Excel 交叉表导出</span>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
@@ -135,15 +145,15 @@ body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">团队协作（最多10人）</span>
+<span class="text-sm">团队协作（最多 3 人）</span>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">AI 驱动的高级数据洞察</span>
+<span class="text-sm">显著性检验（Z-Test / T-Test）</span>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">企业级自定义品牌化</span>
+<span class="text-sm">权重加权计算</span>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
@@ -167,23 +177,23 @@ body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 <div class="space-y-4 pt-4 border-t border-slate-800">
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="text-sm">包含专业版所有功能</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
 <span class="text-sm">不限用户数量</span>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">私有化本地部署选项</span>
+<span class="text-sm">定制化功能开发</span>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">专属 1 对 1 客户经理</span>
+<span class="text-sm">专属 1 对 1 技术支持</span>
 </div>
 <div class="flex items-start gap-3">
 <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">企业级 SLA 运行保障</span>
-</div>
-<div class="flex items-start gap-3">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span class="text-sm">单点登录 (SSO) 集成</span>
+<span class="text-sm">批量授权优惠价格</span>
 </div>
 </div>
 </div>

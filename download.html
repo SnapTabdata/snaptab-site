@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html class="dark" lang="zh-CN">
+<html lang="zh-CN">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>下载 - SnapTab</title>
+<link rel="icon" type="image/svg+xml" href="assets/snaptab-mark.svg"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="assets/theme.css" rel="stylesheet"/>
 <script>
 tailwind.config = {
   darkMode: "class",
@@ -25,6 +27,7 @@ tailwind.config = {
   },
 }
 </script>
+<script src="assets/site.js"></script>
 <style>
 body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
@@ -48,6 +51,9 @@ body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 <a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="about.html">关于</a>
 </nav>
 <div class="flex items-center gap-3">
+<button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
+<span class="material-symbols-outlined theme-toggle-icon">dark_mode</span>
+</button>
 <a href="trial.html" class="bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">免费试用</a>
 </div>
 <button class="md:hidden text-slate-100" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
