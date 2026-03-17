@@ -20,8 +20,14 @@ html:not(.dark) .border-border-dark\/30 {
 html:not(.dark) .border-border-dark\/20 {
   border-color: rgba(221, 230, 240, 0.3) !important;
 }
+html:not(.dark) .border-border-dark\/50 {
+  border-color: rgba(221, 230, 240, 0.6) !important;
+}
 
 /* ===== Background colors ===== */
+html:not(.dark) .bg-border-dark {
+  background-color: #dde6f0 !important;
+}
 html:not(.dark) .bg-background-dark {
   background-color: #f5f9ff !important;
 }
@@ -152,6 +158,15 @@ html:not(.dark) .hover\:bg-white\/5:hover {
 }
 html:not(.dark) .hover\:bg-white\/30:hover {
   background-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Download page hero gradient (from-surface-dark to-background-dark) */
+html:not(.dark) .from-surface-dark {
+  --tw-gradient-from: #ffffff !important;
+  --tw-gradient-to: rgba(255, 255, 255, 0) !important;
+}
+html:not(.dark) .to-background-dark {
+  --tw-gradient-to: #f5f9ff !important;
 }
 
 /* Gradient overlays */
