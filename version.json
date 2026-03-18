@@ -1,0 +1,6 @@
+{
+  "version": "1.0",
+  "release_date": "2026-03-17",
+  "download_url_onedir": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip",
+  "notes": "- 全新 WebUI 界面\n- AI 补全 Tables / 质检 / Header 生成 / NET 分组\n- 输出格式设置（小数位、百分号、编码列、TGI）\n- 授权激活支持"
+}
