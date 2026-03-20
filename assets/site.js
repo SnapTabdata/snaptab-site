@@ -88,11 +88,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       if (result) {
-        if (sent || webhook) {
-          result.innerHTML = '<div class="notice" style="background:#0db9f233;border:1px solid #0db9f2;border-radius:12px;padding:16px;color:#c8eaf6;text-align:center;"><strong>' + (name || "您") + '</strong>，感谢申请！您的信息已成功提交，我们会尽快与您联系。</div>';
-        } else {
-          result.innerHTML = '<div class="notice" style="background:#0db9f233;border:1px solid #0db9f2;border-radius:12px;padding:16px;color:#c8eaf6;text-align:center;"><strong>' + (name || "您") + '</strong>，感谢申请！请添加微信 <strong>Changtouyaoguai</strong> 并发送您的信息，我们会尽快回复。</div>';
-        }
+        const successHtml = '<div style="background:#0db9f220;border:1px solid #0db9f2;border-radius:16px;padding:24px;text-align:center;">'
+          + '<div style="color:#c8eaf6;font-size:16px;font-weight:bold;margin-bottom:12px">'
+          + (name || "您") + '，感谢申请！</div>'
+          + '<p style="color:#94a3b8;font-size:13px;margin-bottom:16px">请扫码添加微信好友，我们会尽快为您发放激活码</p>'
+          + '<img src="assets/wechat-qr.png" alt="微信二维码" style="width:180px;height:180px;border-radius:12px;margin:0 auto 16px auto;display:block"/>'
+          + '<p style="color:#64748b;font-size:12px;margin-bottom:20px">微信号：Changtouyaoguai</p>'
+          + '<div style="border-top:1px solid #223f49;padding-top:16px;margin-top:8px">'
+          + '<p style="color:#c8eaf6;font-size:14px;font-weight:bold;margin-bottom:12px">立即下载 SnapTab</p>'
+          + '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">'
+          + '<a href="https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#0db9f2;color:#101e22;border-radius:8px;text-decoration:none;font-weight:bold;font-size:13px">GitHub 下载</a>'
+          + '<a href="https://gitee.com/liujing5573/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip" style="display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:#334155;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;font-size:13px;border:1px solid #475569">Gitee 镜像</a>'
+          + '</div></div></div>';
+        result.innerHTML = successHtml;
       }
 
       trialForm.reset();
