@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
           + '<div style="border-top:1px solid #223f49;padding-top:16px;margin-top:8px">'
           + '<p style="color:#c8eaf6;font-size:14px;font-weight:bold;margin-bottom:12px">立即下载 SnapTab</p>'
           + '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">'
-          + '<a id="trial-dl-btn" href="#" onclick="(function(e){e.preventDefault();var b=document.getElementById(\'trial-dl-btn\');b.textContent=\'检测网络...\';var gh=\'https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip\',gt=\'https://gitee.com/liujing5573/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip\',d=false,img=new Image();img.onload=function(){if(!d){d=true;b.textContent=\'开始下载...\';location.href=gh}};img.onerror=function(){if(!d){d=true;b.textContent=\'镜像下载...\';location.href=gt}};setTimeout(function(){if(!d){d=true;b.textContent=\'镜像下载...\';location.href=gt}},3000);img.src=\'https://github.com/favicon.ico?\'+Date.now()})(event);return false" style="display:inline-flex;align-items:center;gap:6px;padding:10px 24px;background:#0db9f2;color:#101e22;border-radius:8px;text-decoration:none;font-weight:bold;font-size:14px">Windows 版下载</a>'
+          + '<a href="https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip" style="display:inline-flex;align-items:center;gap:6px;padding:10px 24px;background:#0db9f2;color:#101e22;border-radius:8px;text-decoration:none;font-weight:bold;font-size:14px">Windows 版下载</a>'
           + '</div></div></div>';
         result.innerHTML = successHtml;
       }

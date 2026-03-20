@@ -100,15 +100,9 @@ function smartDownload(e) {
   var btn = document.getElementById('smart-download-btn');
   var txt = document.getElementById('smart-download-text');
   var gh = 'https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip';
-  var gt = 'https://gitee.com/liujing5573/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip';
   e.preventDefault();
-  txt.textContent = '正在检测网络...';
-  var img = new Image();
-  var done = false;
-  img.onload = function() { if (!done) { done = true; txt.textContent = '开始下载...'; window.location.href = gh; } };
-  img.onerror = function() { if (!done) { done = true; txt.textContent = '切换镜像下载...'; window.location.href = gt; } };
-  setTimeout(function() { if (!done) { done = true; txt.textContent = '切换镜像下载...'; window.location.href = gt; } }, 3000);
-  img.src = 'https://github.com/favicon.ico?' + Date.now();
+  txt.textContent = '开始下载...';
+  window.location.href = gh;
 }
 </script>
 <div class="mt-8 flex items-center justify-center gap-6 text-slate-500 text-sm">
