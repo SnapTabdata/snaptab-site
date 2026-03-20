@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
           + '<div style="color:#c8eaf6;font-size:16px;font-weight:bold;margin-bottom:12px">'
           + (name || "您") + '，感谢申请！</div>'
           + '<p style="color:#94a3b8;font-size:13px;margin-bottom:16px">请扫码添加微信好友，我们会尽快为您发放激活码</p>'
-          + '<img src="assets/wechat-qr.png" alt="微信二维码" style="width:180px;height:180px;border-radius:12px;margin:0 auto 16px auto;display:block"/>'
+          + '<img src="assets/wechat-qr.jpg" alt="微信二维码" style="width:180px;height:180px;border-radius:12px;margin:0 auto 16px auto;display:block"/>'
           + '<p style="color:#64748b;font-size:12px;margin-bottom:20px">微信号：Changtouyaoguai</p>'
           + '<div style="border-top:1px solid #223f49;padding-top:16px;margin-top:8px">'
           + '<p style="color:#c8eaf6;font-size:14px;font-weight:bold;margin-bottom:12px">立即下载 SnapTab</p>'
