@@ -90,21 +90,15 @@ body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
 专为中国市场研究设计的自动化报表工具。秒级处理海量数据，完美兼容各类制表需求，让研究员重回洞察核心。
 </p>
 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
-<a id="smart-download-btn" href="https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip" class="w-full sm:w-auto flex items-center justify-center gap-3 min-w-[220px] rounded-xl h-14 px-8 bg-primary text-background-dark font-bold text-lg hover:scale-105 transition-transform" onclick="return smartDownload(event)">
-<span class="material-symbols-outlined">desktop_windows</span>
-<span id="smart-download-text">Windows 版下载</span>
+<a id="smart-download-btn" href="https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0/SnapTab_Setup_1.0.exe" class="w-full sm:w-auto flex items-center justify-center gap-3 min-w-[220px] rounded-xl h-14 px-8 bg-primary text-background-dark font-bold text-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">install_desktop</span>
+<span>安装版下载（177 MB）</span>
+</a>
+<a href="https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip" class="w-full sm:w-auto flex items-center justify-center gap-3 min-w-[220px] rounded-xl h-14 px-8 bg-slate-800 text-slate-100 font-bold text-lg hover:bg-slate-700 transition-all border border-slate-700">
+<span class="material-symbols-outlined">folder_zip</span>
+<span>便携版下载（281 MB）</span>
 </a>
 </div>
-<script>
-function smartDownload(e) {
-  var btn = document.getElementById('smart-download-btn');
-  var txt = document.getElementById('smart-download-text');
-  var gh = 'https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip';
-  e.preventDefault();
-  txt.textContent = '开始下载...';
-  window.location.href = gh;
-}
-</script>
 <div class="mt-8 flex items-center justify-center gap-6 text-slate-500 text-sm">
 <div class="flex items-center gap-1">
 <span class="material-symbols-outlined text-xs">verified_user</span>
@@ -174,28 +168,32 @@ function smartDownload(e) {
 <div class="p-6 rounded-xl border border-border-dark bg-surface-dark/30">
 <div class="flex items-center justify-between mb-3">
 <span class="text-lg font-bold text-slate-100">v1.0</span>
-<span class="text-slate-500 text-sm">2026-03-15</span>
+<span class="text-slate-500 text-sm">2026-03-25</span>
 </div>
 <ul class="space-y-2 text-slate-400 text-sm">
 <li class="flex items-start gap-2">
 <span class="text-primary mt-1">&bull;</span>
-<span>首个正式版本发布</span>
+<span>全新 WebUI 界面，现代化操作体验</span>
 </li>
 <li class="flex items-start gap-2">
 <span class="text-primary mt-1">&bull;</span>
-<span>支持 SPSS .sav 格式直接导入</span>
+<span>深度支持 SPSS .sav 格式，自动识别变量与标签</span>
 </li>
 <li class="flex items-start gap-2">
 <span class="text-primary mt-1">&bull;</span>
-<span>AI 智能补全问卷规格</span>
+<span>AI 智能补全 Tables / AI 智能审查 / Header 生成 / NET 分组</span>
 </li>
 <li class="flex items-start gap-2">
 <span class="text-primary mt-1">&bull;</span>
-<span>一键生成专业级交叉表 Excel 报表</span>
+<span>一键生成专业级 Excel 交叉表（含显著性、TGI、机会分数）</span>
 </li>
 <li class="flex items-start gap-2">
 <span class="text-primary mt-1">&bull;</span>
-<span>内置应用内自动更新功能</span>
+<span>完整授权管理体系：加密 Token、远程心跳验证、安全审计</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary mt-1">&bull;</span>
+<span>运行前预检、完整性校验、授权到期预警</span>
 </li>
 </ul>
 </div>
@@ -215,22 +213,22 @@ function smartDownload(e) {
 <div class="flex gap-4">
 <div class="flex-shrink-0 w-6 h-6 rounded-full bg-border-dark flex items-center justify-center text-xs font-bold text-primary">1</div>
 <div>
-<p class="text-sm font-bold text-slate-200 mb-1">下载 ZIP 压缩包</p>
-<p class="text-xs text-slate-500">点击上方按钮下载最新版本</p>
+<p class="text-sm font-bold text-slate-200 mb-1">选择下载方式</p>
+<p class="text-xs text-slate-500">安装版（推荐）或便携版 ZIP</p>
 </div>
 </div>
 <div class="flex gap-4">
 <div class="flex-shrink-0 w-6 h-6 rounded-full bg-border-dark flex items-center justify-center text-xs font-bold text-primary">2</div>
 <div>
-<p class="text-sm font-bold text-slate-200 mb-1">解压到任意目录</p>
-<p class="text-xs text-slate-500">右键解压 ZIP 文件到您选择的文件夹</p>
+<p class="text-sm font-bold text-slate-200 mb-1">安装或解压</p>
+<p class="text-xs text-slate-500">安装版双击运行安装向导；便携版解压到任意目录</p>
 </div>
 </div>
 <div class="flex gap-4">
 <div class="flex-shrink-0 w-6 h-6 rounded-full bg-border-dark flex items-center justify-center text-xs font-bold text-primary">3</div>
 <div>
 <p class="text-sm font-bold text-slate-200 mb-1">运行 SnapTab.exe</p>
-<p class="text-xs text-slate-500">双击运行即可使用，无需安装</p>
+<p class="text-xs text-slate-500">双击运行即可使用</p>
 </div>
 </div>
 </div>
