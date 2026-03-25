@@ -2,5 +2,5 @@
   "version": "1.0",
   "release_date": "2026-03-25",
   "download_url_onedir": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0/SnapTab_v1.0_webui.zip",
-  "notes": "- 全新 WebUI 界面\n- AI 补全 Tables / AI 智能审查 / Header 生成 / NET 分组\n- 输出格式设置（小数位、百分号、编码列、TGI）\n- 授权激活支持\n- 快速模式 / 权重设置 / CalcOpportunity 机会分数"
+  "notes": "- 心跳授权验证 + Token 加密存储\n- 离线宽限期 + 远程撤销支持\n- 运行前预检 + 完整性校验\n- 安全审计日志 + AI 使用统计\n- 授权到期预警 + 计划限制"
 }
