@@ -1,382 +1,159 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>功能介绍 - SnapTab</title>
-<link rel="icon" type="image/svg+xml" href="assets/snaptab-mark.svg"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link href="assets/theme.css" rel="stylesheet"/>
-<script>
-tailwind.config = {
-  darkMode: "class",
-  theme: {
-    extend: {
-      colors: {
-        "primary": "#0db9f2",
-        "background-light": "#f5f8f8",
-        "background-dark": "#101e22",
-        "surface": "#182d34",
-        "surface-dark": "#162a30",
-        "border-color": "#223f49",
-        "border-dark": "#223f49",
-      },
-      fontFamily: { "display": ["Inter", "Noto Sans SC", "sans-serif"] },
-      borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-    },
-  },
-}
-</script>
-<script src="assets/site.js"></script>
-<style>
-body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
-.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-</style>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>功能介绍 - SnapTab | SPSS 交叉表、AI 生成 Tables、显著性检验、权重加权</title>
+    <meta name="description" content="详细了解 SnapTab 功能：深度支持 SPSS .sav、AI 智能生成交叉表规格（Tables/Header）、Z-Test/T-Test 显著性检验、BONFERRONI 校正、权重加权计算、TGI 分析、专业 Excel 交叉表导出。本地化处理，数据不上云。"/>
+    <meta name="keywords" content="SPSS交叉表功能, AI生成Tables, 显著性检验, Bonferroni校正, 权重加权, TGI分析, 市场调研制表"/>
+    <meta name="author" content="SnapTab"/>
+    <meta name="robots" content="index, follow"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://snaptabdata.github.io/snaptab-site/features.html"/>
+    <meta property="og:title" content="SnapTab 功能详解：AI 驱动的市场调研自动化"/>
+    <meta property="og:description" content="深度支持 SPSS .sav，AI 自动生成交叉表规格，一键导出带显著性标记的专业 Excel 交叉表。"/>
+    <meta property="og:image" content="https://snaptabdata.github.io/snaptab-site/assets/og-image.png"/>
+    <meta property="og:locale" content="zh_CN"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="https://snaptabdata.github.io/snaptab-site/features.html"/>
+    <meta name="twitter:title" content="SnapTab 功能详解：AI 驱动的市场调研自动化"/>
+    <meta name="twitter:description" content="AI 自动生成交叉表规格，一键导出专业 Excel 交叉表。"/>
+    <meta name="twitter:image" content="https://snaptabdata.github.io/snaptab-site/assets/og-image.png"/>
+    <link rel="canonical" href="https://snaptabdata.github.io/snaptab-site/features.html"/>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-
-<!-- Navigation -->
-<header class="sticky top-0 z-50 w-full border-b border-border-dark bg-background-dark/80 backdrop-blur-md">
-<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-<a href="index.html" class="flex items-center gap-2 text-primary">
-<img src="assets/snaptab-mark.svg" alt="SnapTab" class="h-8 w-8"/>
-<h2 class="text-xl font-bold tracking-tight text-white">SnapTab</h2>
-</a>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="index.html">首页</a>
-<a class="text-primary text-sm font-medium" href="features.html">功能介绍</a>
-<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="pricing.html">价格方案</a>
-<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="download.html">下载</a>
-<a class="text-slate-300 hover:text-primary text-sm font-medium transition-colors" href="about.html">关于</a>
-</nav>
-<div class="flex items-center gap-3">
-<button class="theme-toggle" onclick="toggleTheme()" title="切换主题">
-<span class="material-symbols-outlined theme-toggle-icon">dark_mode</span>
-</button>
-<a href="trial.html" class="bg-primary hover:bg-primary/90 text-background-dark px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">免费试用</a>
-</div>
-<button class="md:hidden text-slate-100" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
-<div id="mobile-nav" class="hidden md:hidden px-6 pb-4 space-y-2">
-<a class="block text-slate-300 text-sm font-medium py-2" href="index.html">首页</a>
-<a class="block text-primary text-sm font-medium py-2" href="features.html">功能介绍</a>
-<a class="block text-slate-300 text-sm font-medium py-2" href="pricing.html">价格方案</a>
-<a class="block text-slate-300 text-sm font-medium py-2" href="download.html">下载</a>
-<a class="block text-slate-300 text-sm font-medium py-2" href="about.html">关于</a>
-<a class="block text-primary text-sm font-bold py-2" href="trial.html">免费试用</a>
-</div>
-</header>
-
-<main class="flex-1 max-w-7xl mx-auto w-full px-6 md:px-20">
-<!-- Hero Section -->
-<section class="py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<div class="flex flex-col gap-8">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider">
-<span class="relative flex h-2 w-2">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-</span>
-AI 驱动的市场调研
-</div>
-<h1 class="text-slate-100 text-5xl md:text-6xl font-black leading-tight tracking-tight">
-SnapTab 功能详解：<br/><span class="text-primary">重新定义调研自动化</span>
-</h1>
-<p class="text-slate-400 text-lg md:text-xl leading-relaxed max-w-xl">
-从原始 .sav 数据导入到专业 Excel 交叉表导出，AI 辅助全流程自动化，大幅提升市场调研制表效率。
-</p>
-<div class="flex flex-wrap gap-4">
-<a href="trial.html" class="flex items-center justify-center rounded-xl h-14 px-8 bg-primary text-background-dark text-lg font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">
-立即开始
-</a>
-<a href="download.html" class="flex items-center justify-center rounded-xl h-14 px-8 bg-surface border border-border-color text-slate-100 text-lg font-bold hover:bg-border-color transition-colors">
-下载体验
-</a>
-</div>
-</div>
-<div class="relative">
-<div class="w-full aspect-[4/3] bg-surface rounded-2xl border border-border-color overflow-hidden shadow-2xl flex items-center justify-center p-8">
-<div class="text-center space-y-4">
-<img src="assets/snaptab-mark.svg" alt="SnapTab" class="w-20 h-20 mx-auto opacity-80"/>
-<div class="text-slate-400 text-sm">AI 驱动的交叉表自动化引擎</div>
-<div class="grid grid-cols-3 gap-3 mt-4">
-<div class="bg-background-dark/50 p-3 rounded-lg text-center"><div class="text-primary text-lg font-bold">.sav</div><div class="text-slate-500 text-xs">SPSS 原生支持</div></div>
-<div class="bg-background-dark/50 p-3 rounded-lg text-center"><div class="text-primary text-lg font-bold">AI</div><div class="text-slate-500 text-xs">智能规格生成</div></div>
-<div class="bg-background-dark/50 p-3 rounded-lg text-center"><div class="text-primary text-lg font-bold">Excel</div><div class="text-slate-500 text-xs">专业交叉表导出</div></div>
-</div>
-</div>
-</div>
-<div class="absolute -bottom-6 -left-6 p-6 bg-background-dark border border-border-color rounded-xl shadow-xl hidden md:block">
-<div class="flex items-center gap-4">
-<div class="size-12 rounded-full bg-primary/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-primary">bolt</span>
-</div>
-<div>
-<p class="text-slate-100 font-bold">桌面端本地处理</p>
-<p class="text-slate-500 text-xs">数据不离开您的电脑</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Section 1: Intelligent Processing -->
-<section class="py-20 border-t border-border-color">
-<div class="mb-12">
-<div class="flex items-center gap-3 text-primary mb-4">
-<span class="material-symbols-outlined">auto_fix_high</span>
-<span class="text-sm font-bold uppercase tracking-widest">01 / 数据处理</span>
-</div>
-<h2 class="text-slate-100 text-4xl font-bold mb-6">AI 辅助：告别繁琐的手工制表</h2>
-<p class="text-slate-400 text-lg max-w-3xl">利用大语言模型自动识别问卷题型，一键生成 Tables 与 Header 规格，大幅降低人为错误风险。</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="group flex flex-col gap-6 p-8 rounded-2xl bg-surface border border-border-color hover:border-primary/50 transition-all">
-<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-3xl">format_list_bulleted_add</span>
-</div>
-<div>
-<h3 class="text-slate-100 text-xl font-bold mb-3">AI 生成 Tables</h3>
-<p class="text-slate-400 text-sm leading-relaxed">AI 自动识别题型（Single/Multi/Scale），补全标题、T2B、Mean、排序、NET 分组等字段，一键生成完整 Tables 规格。</p>
-</div>
-</div>
-<div class="group flex flex-col gap-6 p-8 rounded-2xl bg-surface border border-border-color hover:border-primary/50 transition-all">
-<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-3xl">chat</span>
-</div>
-<div>
-<h3 class="text-slate-100 text-xl font-bold mb-3">AI 生成 Header</h3>
-<p class="text-slate-400 text-sm leading-relaxed">用自然语言描述交叉维度需求（如"按性别和年龄段分组"），AI 自动从数据中查找变量名和编码生成 Header。</p>
-</div>
-</div>
-<div class="group flex flex-col gap-6 p-8 rounded-2xl bg-surface border border-border-color hover:border-primary/50 transition-all">
-<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-3xl">verified</span>
-</div>
-<div>
-<h3 class="text-slate-100 text-xl font-bold mb-3">AI 规格质检</h3>
-<p class="text-slate-400 text-sm leading-relaxed">AI 自动审查 Tables 规格的题型、T2B/Mean 配置、NET 分组归属等逻辑问题，给出修复建议。</p>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Section 2: Statistical Validity -->
-<section class="py-20 bg-primary/5 rounded-[2rem] px-8 md:px-12 my-10 border border-primary/10">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="order-2 lg:order-1">
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-<div class="bg-background-dark p-6 rounded-xl border border-border-color">
-<span class="material-symbols-outlined text-primary mb-4">analytics</span>
-<h4 class="text-slate-100 font-bold mb-2">显著性检验</h4>
-<p class="text-slate-400 text-sm">内置 Z-Test（比例检验）与 T-Test（均值检验），自动标注显著差异字母标记，一目了然。</p>
-</div>
-<div class="bg-background-dark p-6 rounded-xl border border-border-color">
-<span class="material-symbols-outlined text-primary mb-4">balance</span>
-<h4 class="text-slate-100 font-bold mb-2">权重加权计算</h4>
-<p class="text-slate-400 text-sm">支持单变量加权与 Raking 多维加权，按目标比例计算加权系数，矫正样本偏差，提升数据代表性。</p>
-</div>
-<div class="bg-background-dark p-6 rounded-xl border border-border-color">
-<span class="material-symbols-outlined text-primary mb-4">table_view</span>
-<h4 class="text-slate-100 font-bold mb-2">复杂交叉表</h4>
-<p class="text-slate-400 text-sm">多层嵌套交叉表秒级生成，支持净值(Net)计算与百分比分布。</p>
-</div>
-<div class="bg-background-dark p-6 rounded-xl border border-border-color">
-<span class="material-symbols-outlined text-primary mb-4">query_stats</span>
-<h4 class="text-slate-100 font-bold mb-2">Bonferroni 校正</h4>
-<p class="text-slate-400 text-sm">支持多重比较校正，可选开启 Bonferroni 修正，控制整体错误率，确保结论可靠。</p>
-</div>
-</div>
-</div>
-<div class="order-1 lg:order-2">
-<div class="flex items-center gap-3 text-primary mb-4">
-<span class="material-symbols-outlined">psychology</span>
-<span class="text-sm font-bold uppercase tracking-widest">02 / 统计效度</span>
-</div>
-<h2 class="text-slate-100 text-4xl font-bold mb-6">严谨的研究方法论，内置专业模型</h2>
-<p class="text-slate-400 text-lg leading-relaxed mb-8">
-SnapTab 不仅仅是制表工具，更是内置了深厚行业知识的统计引擎。我们自动化了复杂的计算流程，确保每一个输出结论都具备严谨的统计学支持。
-</p>
-<ul class="space-y-4">
-<li class="flex items-center gap-3 text-slate-300">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-Z-Test / T-Test 显著性检验与 Bonferroni 校正
-</li>
-<li class="flex items-center gap-3 text-slate-300">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-修改规格后一键重新跑表，快速迭代
-</li>
-<li class="flex items-center gap-3 text-slate-300">
-<span class="material-symbols-outlined text-primary text-sm">check_circle</span>
-支持加权 Base 与未加权 Base 同时输出
-</li>
-</ul>
-</div>
-</div>
-</section>
-
-<!-- Section 3: Rapid Output -->
-<section class="py-20 border-t border-border-color">
-<div class="text-center mb-16">
-<div class="inline-flex items-center gap-3 text-primary mb-4">
-<span class="material-symbols-outlined">rocket_launch</span>
-<span class="text-sm font-bold uppercase tracking-widest">03 / 极速输出</span>
-</div>
-<h2 class="text-slate-100 text-4xl font-bold mb-6">分钟级交付专业报告</h2>
-<p class="text-slate-400 text-lg max-w-2xl mx-auto">
-一键将繁杂的原始数据转换为排版精美、可直接展示的可视化报告。
-</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-<div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-color transition-all">
-<div class="p-8">
-<h3 class="text-slate-100 text-2xl font-bold mb-4">痛点：专业工具贵，免费方案低效</h3>
-<p class="text-slate-400 mb-6">市场调研交叉表通常由 Quantum、Q Research 等专业制表软件完成。但正版年费动辄上万元，中小团队难以负担；用 Excel 手工或盗版工具制表又耗时长、易出错，一个项目往往需要数天甚至一周。</p>
-<div class="w-full aspect-video rounded-lg bg-background-dark/50 border border-border-color overflow-hidden flex items-center justify-center p-6">
-<div class="text-center space-y-3">
-<div class="flex items-center justify-center gap-4 text-slate-500">
-<div class="text-center"><span class="material-symbols-outlined text-3xl">payments</span><div class="text-xs mt-1">Quantum/Q Research</div></div>
-<span class="material-symbols-outlined text-primary">arrow_forward</span>
-<div class="text-center"><span class="material-symbols-outlined text-3xl">savings</span><div class="text-xs mt-1">年费上万</div></div>
-<span class="material-symbols-outlined text-primary">arrow_forward</span>
-<div class="text-center"><span class="material-symbols-outlined text-3xl">content_copy</span><div class="text-xs mt-1">Excel 手工</div></div>
-</div>
-<div class="text-red-400 text-xs font-bold mt-2">专业工具贵 · 免费方案低效 · 工具真空</div>
-</div>
-</div>
-</div>
-</div>
-<div class="group relative overflow-hidden rounded-2xl bg-surface border border-border-color transition-all">
-<div class="p-8">
-<h3 class="text-slate-100 text-2xl font-bold mb-4">解决方案：SnapTab 自动化</h3>
-<p class="text-slate-400 mb-6">SnapTab 填补专业工具与免费方案之间的空白。一键读取 .sav 数据、AI 自动生成规格，直接导出带 Base、显著性标记的专业 Excel 交叉表，将原本数天的工作压缩至分钟，价格亲民。</p>
-<div class="w-full aspect-video rounded-lg bg-background-dark/50 border border-border-color overflow-hidden flex items-center justify-center p-6">
-<div class="w-full space-y-2">
-<div class="flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-primary text-sm">table_chart</span><span class="text-slate-400 text-xs font-bold">SnapTab 实际输出格式 · 交叉表示例</span></div>
-<div class="w-full overflow-x-auto">
-<div class="grid gap-px bg-slate-700 rounded-lg overflow-hidden text-[10px] min-w-[260px]" style="grid-template-columns: 1fr 1fr 1fr 1fr;">
-<div class="bg-slate-800 p-1.5 text-slate-400 font-bold col-span-4">TABLE 1 满意度 *BY* 性别</div>
-<div class="bg-slate-800 p-1.5 text-slate-400 font-bold"></div>
-<div class="bg-slate-800 p-1.5 text-slate-400 font-bold text-center">男性 (A)</div>
-<div class="bg-slate-800 p-1.5 text-slate-400 font-bold text-center">女性 (B)</div>
-<div class="bg-slate-800 p-1.5 text-slate-400 font-bold text-center">合计</div>
-<div class="bg-slate-900 p-1.5 text-slate-300 font-bold">Base</div>
-<div class="bg-slate-900 p-1.5 text-slate-400 text-center">302</div>
-<div class="bg-slate-900 p-1.5 text-slate-400 text-center">298</div>
-<div class="bg-slate-900 p-1.5 text-slate-400 text-center font-bold">600</div>
-<div class="bg-slate-900 p-1.5 text-slate-300">非常满意</div>
-<div class="bg-slate-900 p-1.5 text-slate-400 text-center">42%</div>
-<div class="bg-slate-900 p-1.5 text-center"><span class="text-slate-400">56%</span> <span class="text-red-500 font-bold">A</span></div>
-<div class="bg-slate-900 p-1.5 text-slate-400 text-center">49%</div>
-<div class="bg-slate-900 p-1.5 text-slate-300">比较满意</div>
-<div class="bg-slate-900 p-1.5 text-center"><span class="text-slate-400">35%</span> <span class="text-red-500 font-bold">B</span></div>
-<div class="bg-slate-900 p-1.5 text-slate-400 text-center">22%</div>
-<div class="bg-slate-900 p-1.5 text-slate-400 text-center">28%</div>
-</div>
-</div>
-<div class="text-slate-500 text-[10px] mt-2">含 Base 行、百分比、显著性字母（A/B 表示 p&lt;0.05 显著高于对照列）— 与 SnapTab 导出 Excel 一致</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Section 4: Security & Compliance -->
-<section class="py-20 border-t border-border-color mb-20">
-<div class="bg-surface rounded-2xl p-8 md:p-12 border border-border-color flex flex-col md:flex-row items-center gap-12">
-<div class="size-32 flex-shrink-0 bg-primary/10 rounded-full flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-6xl">shield_lock</span>
-</div>
-<div>
-<div class="flex items-center gap-3 text-primary mb-2">
-<span class="text-sm font-bold uppercase tracking-widest">04 / 安全合规</span>
-</div>
-<h2 class="text-slate-100 text-3xl font-bold mb-4">数据隐私保障</h2>
-<p class="text-slate-400 text-lg leading-relaxed mb-6">
-SnapTab 采用本地化数据处理机制，所有计算均在您的电脑上完成。数据不上传云端，确保您的商业机密安全无虞。
-</p>
-<div class="flex flex-wrap gap-6">
-<div class="flex items-center gap-2 text-slate-300">
-<span class="material-symbols-outlined text-primary">verified_user</span>
-本地化处理
-</div>
-<div class="flex items-center gap-2 text-slate-300">
-<span class="material-symbols-outlined text-primary">cloud_off</span>
-离线可用
-</div>
-<div class="flex items-center gap-2 text-slate-300">
-<span class="material-symbols-outlined text-primary">shield</span>
-数据不上传
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- CTA Footer -->
-<section class="mb-20 text-center">
-<div class="relative py-16 px-6 bg-gradient-to-br from-primary to-blue-600 rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/20">
-<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl"></div>
-<div class="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
-<div class="relative z-10">
-<h2 class="text-background-dark text-4xl md:text-5xl font-black mb-6">准备好告别手工制表了吗？</h2>
-<p class="text-background-dark/80 text-lg md:text-xl font-medium max-w-2xl mx-auto mb-10">
-立即体验 SnapTab，开启 AI 时代的市场调研自动化。
-</p>
-<div class="flex flex-wrap justify-center gap-4">
-<a href="trial.html" class="bg-background-dark text-slate-100 px-10 py-4 rounded-xl font-bold text-lg hover:bg-slate-900 transition-colors shadow-xl">
-立即免费试用
-</a>
-<a href="download.html" class="bg-white/20 backdrop-blur-sm text-background-dark border border-white/30 px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-colors">
-下载体验
-</a>
-</div>
-</div>
-</div>
-</section>
-</main>
-
-<!-- Footer -->
-<footer class="bg-slate-900/50 border-t border-slate-800 pt-16 pb-8 px-6">
-<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
-<div class="col-span-2 lg:col-span-2 flex flex-col gap-6">
-<a href="index.html" class="flex items-center gap-2 text-primary">
-<img src="assets/snaptab-mark.svg" alt="SnapTab" class="h-8 w-8"/>
-<h2 class="text-xl font-bold tracking-tight text-white">SnapTab</h2>
-</a>
-<p class="text-slate-400 max-w-sm">专业的市场研究自动化工具，让调研分析回归洞察本身。</p>
-</div>
-<div>
-<h6 class="font-bold text-white mb-6">产品</h6>
-<ul class="space-y-4 text-slate-400 text-sm">
-<li><a class="hover:text-primary transition-colors" href="features.html">功能介绍</a></li>
-<li><a class="hover:text-primary transition-colors" href="pricing.html">价格方案</a></li>
-<li><a class="hover:text-primary transition-colors" href="download.html">下载中心</a></li>
-</ul>
-</div>
-<div>
-<h6 class="font-bold text-white mb-6">支持</h6>
-<ul class="space-y-4 text-slate-400 text-sm">
-<li><a class="hover:text-primary transition-colors" href="trial.html">免费试用</a></li>
-<li><a class="hover:text-primary transition-colors" href="about.html">关于我们</a></li>
-</ul>
-</div>
-<div>
-<h6 class="font-bold text-white mb-6">联系方式</h6>
-<ul class="space-y-4 text-slate-400 text-sm">
-<li>微信：Changtouyaoguai</li>
-</ul>
-</div>
-</div>
-<div class="max-w-7xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
-<p>&copy; 2026 SnapTab. All rights reserved.</p>
-</div>
-</footer>
-</div>
+<body class="bg-background-light dark:bg-background-dark">
+  <nav class="sticky top-0 z-50 bg-white/90 dark:bg-surface-dark/90 backdrop-blur border-b border-gray-200 dark:border-border-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center gap-2"><span class="text-primary text-2xl font-bold tracking-tight">SnapTab</span></div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">首页</a>
+          <a href="features.html" class="text-sm font-medium text-primary">功能介绍</a>
+          <a href="pricing.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">价格方案</a>
+          <a href="download.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">下载</a>
+          <a href="about.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">关于</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-surface-dark"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span></button>
+          <a href="trial.html" class="hidden sm:inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary/90 transition">免费试用</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 dark:text-gray-300"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+      <div class="flex flex-col gap-2">
+        <a href="index.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">首页</a>
+        <a href="features.html" class="text-sm font-medium text-primary px-3 py-2">功能介绍</a>
+        <a href="pricing.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">价格方案</a>
+        <a href="download.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">下载</a>
+        <a href="about.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">关于</a>
+        <a href="trial.html" class="inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-full w-fit">免费试用</a>
+      </div>
+    </div>
+  </nav>
+  <section class="py-20 bg-gradient-to-br from-background-light to-blue-50 dark:from-background-dark dark:to-surface-dark">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">SnapTab 功能详解<br/>重新定义调研自动化</h1>
+      <p class="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">从原始 .sav 数据导入到专业 Excel 交叉表导出，AI 辅助全流程自动化，大幅提升市场调研制表效率。</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="trial.html" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary text-white font-medium rounded-full hover:bg-primary/90 transition shadow-lg">立即开始</a>
+        <a href="download.html" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white dark:bg-surface-dark text-gray-700 dark:text-gray-200 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-border-dark transition border border-gray-200 dark:border-border-dark">下载体验</a>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-white dark:bg-background-dark">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-surface-dark border border-gray-100 dark:border-border-dark"><span class="text-3xl">📊</span><h3 class="font-semibold text-gray-900 dark:text-white mt-2 mb-1">.sav SPSS 原生支持</h3><p class="text-sm text-gray-500 dark:text-gray-400">完整保留变量标签与数值标签</p></div>
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-surface-dark border border-gray-100 dark:border-border-dark"><span class="text-3xl">🤖</span><h3 class="font-semibold text-gray-900 dark:text-white mt-2 mb-1">AI 智能规格生成</h3><p class="text-sm text-gray-500 dark:text-gray-400">自动识别题型，一键生成 Tables</p></div>
+        <div class="p-6 rounded-2xl bg-gray-50 dark:bg-surface-dark border border-gray-100 dark:border-border-dark"><span class="text-3xl">📑</span><h3 class="font-semibold text-gray-900 dark:text-white mt-2 mb-1">Excel 专业交叉表导出</h3><p class="text-sm text-gray-500 dark:text-gray-400">带显著性标记，可直接汇报</p></div>
+      </div>
+      <div class="mt-10 p-6 bg-blue-50 dark:bg-primary/5 rounded-2xl flex items-center gap-4">
+        <span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+        <div><h3 class="font-semibold text-gray-900 dark:text-white">桌面端本地处理</h3><p class="text-sm text-gray-500 dark:text-gray-400">数据不离开您的电脑，安全可靠</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-gray-50 dark:bg-surface-dark">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">01 / 数据处理</h2>
+        <h3 class="text-xl text-gray-600 dark:text-gray-300 mb-4">AI 辅助：告别繁琐的手工制表</h3>
+        <p class="text-gray-500 dark:text-gray-400">利用大语言模型自动识别问卷题型，一键生成 Tables 与 Header 规格，大幅降低人为错误风险。</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white dark:bg-background-dark rounded-2xl p-6 border border-gray-100 dark:border-border-dark"><span class="material-symbols-outlined text-primary text-2xl">format_list_bulleted_add</span><h4 class="font-semibold text-gray-900 dark:text-white mt-3 mb-2">AI 生成 Tables</h4><p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">AI 自动识别题型（Single/Multi/Scale），补全标题、T2B、Mean、排序、NET 分组等字段，一键生成完整 Tables 规格。</p></div>
+        <div class="bg-white dark:bg-background-dark rounded-2xl p-6 border border-gray-100 dark:border-border-dark"><span class="material-symbols-outlined text-primary text-2xl">chat</span><h4 class="font-semibold text-gray-900 dark:text-white mt-3 mb-2">AI 生成 Header</h4><p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">用自然语言描述交叉维度需求（如"按性别和年龄段分组"），AI 自动从数据中查找变量名和编码生成 Header。</p></div>
+        <div class="bg-white dark:bg-background-dark rounded-2xl p-6 border border-gray-100 dark:border-border-dark"><span class="material-symbols-outlined text-primary text-2xl">verified</span><h4 class="font-semibold text-gray-900 dark:text-white mt-3 mb-2">AI 规格质检</h4><p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">AI 自动审查 Tables 规格的题型、T2B/Mean 配置、NET 分组归属等逻辑问题，给出修复建议。</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-white dark:bg-background-dark">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="text-center"><span class="material-symbols-outlined text-primary text-3xl">analytics</span><h4 class="font-semibold text-gray-900 dark:text-white mt-2 mb-1 text-sm">显著性检验</h4><p class="text-xs text-gray-500 dark:text-gray-400">Z-Test / T-Test，自动标注字母</p></div>
+        <div class="text-center"><span class="material-symbols-outlined text-primary text-3xl">balance</span><h4 class="font-semibold text-gray-900 dark:text-white mt-2 mb-1 text-sm">权重加权计算</h4><p class="text-xs text-gray-500 dark:text-gray-400">单变量 + Raking 多维加权</p></div>
+        <div class="text-center"><span class="material-symbols-outlined text-primary text-3xl">table_view</span><h4 class="font-semibold text-gray-900 dark:text-white mt-2 mb-1 text-sm">复杂交叉表</h4><p class="text-xs text-gray-500 dark:text-gray-400">多层嵌套、净值计算与百分比分布</p></div>
+        <div class="text-center"><span class="material-symbols-outlined text-primary text-3xl">query_stats</span><h4 class="font-semibold text-gray-900 dark:text-white mt-2 mb-1 text-sm">Bonferroni 校正</h4><p class="text-xs text-gray-500 dark:text-gray-400">控制整体错误率，确保结论可靠</p></div>
+      </div>
+      <div class="mt-16 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">02 / 统计效度</h2>
+        <p class="text-gray-500 dark:text-gray-400 mb-10 max-w-2xl mx-auto">严谨的研究方法论，内置专业模型。SnapTab 不仅仅是制表工具，更是内置了深厚行业知识的统计引擎。</p>
+        <div class="flex flex-col gap-3 max-w-md mx-auto text-left">
+          <div class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300"><span class="material-symbols-outlined text-success text-lg">check_circle</span> Z-Test / T-Test 显著性检验与 Bonferroni 校正</div>
+          <div class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300"><span class="material-symbols-outlined text-success text-lg">check_circle</span> 修改规格后一键重新跑表，快速迭代</div>
+          <div class="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-300"><span class="material-symbols-outlined text-success text-lg">check_circle</span> 支持加权 Base 与未加权 Base 同时输出</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-gray-50 dark:bg-surface-dark">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">03 / 极速输出</h2>
+      <h3 class="text-xl text-gray-600 dark:text-gray-300 mb-12">分钟级交付专业报告</h3>
+      <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto mb-12 leading-relaxed">一键将繁杂的原始数据转换为排版精美、可直接展示的可视化报告。</p>
+    </div>
+  </section>
+  <section class="py-16 bg-white dark:bg-background-dark">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-10 flex items-center gap-3"><span class="material-symbols-outlined text-primary">shield_lock</span> 04 / 安全合规</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center p-6 bg-gray-50 dark:bg-surface-dark rounded-2xl"><span class="material-symbols-outlined text-success text-3xl">verified_user</span><h4 class="font-semibold text-gray-900 dark:text-white mt-3 mb-1">本地化处理</h4><p class="text-sm text-gray-500 dark:text-gray-400">所有计算均在本地完成</p></div>
+        <div class="text-center p-6 bg-gray-50 dark:bg-surface-dark rounded-2xl"><span class="material-symbols-outlined text-success text-3xl">cloud_off</span><h4 class="font-semibold text-gray-900 dark:text-white mt-3 mb-1">离线可用</h4><p class="text-sm text-gray-500 dark:text-gray-400">无需网络连接即可完成全部工作</p></div>
+        <div class="text-center p-6 bg-gray-50 dark:bg-surface-dark rounded-2xl"><span class="material-symbols-outlined text-success text-3xl">shield</span><h4 class="font-semibold text-gray-900 dark:text-white mt-3 mb-1">数据不上传</h4><p class="text-sm text-gray-500 dark:text-gray-400">确保商业机密安全无虞</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-gradient-to-r from-primary to-blue-400">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">准备好告别手工制表了吗？</h2>
+      <p class="text-blue-100 mb-8">立即体验 SnapTab，开启 AI 时代的市场调研自动化。</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="trial.html" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-primary font-medium rounded-full hover:bg-blue-50 transition shadow-lg">立即免费试用</a>
+        <a href="download.html" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-transparent border border-white/40 text-white font-medium rounded-full hover:bg-white/10 transition">下载体验</a>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-white dark:bg-surface-dark border-t border-gray-200 dark:border-border-dark py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+        <div><div class="flex items-center gap-2 mb-3"><span class="text-primary text-xl font-bold">SnapTab</span></div><p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs">专业的市场研究自动化工具，让调研分析回归洞察本身。</p></div>
+        <div class="grid grid-cols-2 gap-8">
+          <div><h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-3">产品</h4><div class="flex flex-col gap-2"><a href="features.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">功能介绍</a><a href="pricing.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">价格方案</a><a href="download.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">下载中心</a></div></div>
+          <div><h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-3">支持</h4><div class="flex flex-col gap-2"><a href="trial.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">免费试用</a><a href="about.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">关于我们</a></div></div>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-gray-100 dark:border-border-dark flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-gray-400">&copy; 2026 SnapTab. All rights reserved.</p>
+        <p class="text-sm text-gray-400">联系方式：微信：Changtouyaoguai</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const themeToggle = document.getElementById('theme-toggle'); const html = document.documentElement;
+    themeToggle.addEventListener('click', () => { html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) { html.classList.add('dark'); }
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('hidden'); });
+  </script>
 </body>
 </html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://snaptabdata.github.io/snaptab-site/sitemap.xml
