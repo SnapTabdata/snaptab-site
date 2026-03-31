@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (trialForm) {
     trialForm.addEventListener("submit", async (event) => {
       event.preventDefault();
-      const webhook = trialForm.getAttribute("data-webhook") || "https://snaptab-trial-submit.your-subdomain.workers.dev";
+      const webhook = trialForm.getAttribute("data-webhook") || "https://snaptab-trial-submit.liujing1359.workers.dev";
       const name = trialForm.querySelector('input[name="name"]')?.value?.trim() || "";
       const company = trialForm.querySelector('input[name="company"]')?.value?.trim() || "";
       const contact = trialForm.querySelector('input[name="contact"]')?.value?.trim() || "";
