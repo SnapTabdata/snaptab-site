@@ -66,6 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 "\n**团队类型：** " + (teamType || "-") +
                 "\n**最想解决的问题：**\n" + (goal || "-")
             }
+          }, { tag: "hr" }, {
+            tag: "note",
+            elements: [{ tag: "plain_text", content: "来自 SnapTab 官网试用表单" }]
           }]
         }
       };
