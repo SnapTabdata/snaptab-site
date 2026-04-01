@@ -2,13 +2,13 @@
   "version": "1.0.1",
   "release_date": "2026-04-01",
   "download_url": "https://snaptabdata.github.io/snaptab-site/download.html",
-  "download_url_installer": "https://api.gitcode.com/SnapTab/snaptab-downloads/releases/download/v1.0.1/SnapTab_Setup_1.0.1.exe",
-  "download_url_onedir": "https://api.gitcode.com/SnapTab/snaptab-downloads/releases/download/v1.0.1/SnapTab_v1.0.1_webui.zip",
+  "download_url_installer": "https://api.gitcode.com/api/v5/repos/SnapTab/snaptab-downloads/releases/v1.0.1/attach_files/SnapTab_Setup_1.0.1.exe/download",
+  "download_url_onedir": "https://api.gitcode.com/api/v5/repos/SnapTab/snaptab-downloads/releases/v1.0.1/attach_files/SnapTab_v1.0.1_webui.zip/download",
   "downloads": {
     "installer": {
       "title": "安装版下载",
       "size": "202 MB",
-      "primary_url": "https://api.gitcode.com/SnapTab/snaptab-downloads/releases/download/v1.0.1/SnapTab_Setup_1.0.1.exe",
+      "primary_url": "https://api.gitcode.com/api/v5/repos/SnapTab/snaptab-downloads/releases/v1.0.1/attach_files/SnapTab_Setup_1.0.1.exe/download",
       "primary_label": "GitCode 主下载",
       "backup_url": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1/SnapTab_Setup_1.0.1.exe",
       "backup_label": "GitHub 备用"
@@ -16,11 +16,11 @@
     "portable": {
       "title": "便携版下载",
       "size": "282 MB",
-      "primary_url": "https://api.gitcode.com/SnapTab/snaptab-downloads/releases/download/v1.0.1/SnapTab_v1.0.1_webui.zip",
+      "primary_url": "https://api.gitcode.com/api/v5/repos/SnapTab/snaptab-downloads/releases/v1.0.1/attach_files/SnapTab_v1.0.1_webui.zip/download",
       "primary_label": "GitCode 主下载",
       "backup_url": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1/SnapTab_v1.0.1_webui.zip",
       "backup_label": "GitHub 备用"
     }
   },
-  "notes": "- 安装包与便携版已重新构建\n- 官网主下载线路已切换到 GitCode\n- GitHub 保留为备用下载线路\n- 飞书通知、授权校验与下载链路保持兼容"
+  "notes": "- 安装包与便携版已重新构建\n- 官网主下载线路已修正为 GitCode API v5 附件下载地址\n- GitHub 保留为备用下载线路\n- 飞书通知、授权校验与下载链路保持兼容"
 }
