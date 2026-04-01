@@ -1,26 +1,26 @@
 {
   "version": "1.0.1",
-  "release_date": "2026-03-30",
+  "release_date": "2026-04-01",
   "download_url": "https://snaptabdata.github.io/snaptab-site/download.html",
-  "download_url_installer": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1/SnapTab_Setup_1.0.1.exe",
-  "download_url_onedir": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1/SnapTab_v1.0.1_webui.zip",
+  "download_url_installer": "https://api.gitcode.com/SnapTab/snaptab-downloads/releases/download/v1.0.1/SnapTab_Setup_1.0.1.exe",
+  "download_url_onedir": "https://api.gitcode.com/SnapTab/snaptab-downloads/releases/download/v1.0.1/SnapTab_v1.0.1_webui.zip",
   "downloads": {
     "installer": {
       "title": "安装版下载",
-      "size": "81 MB",
-      "primary_url": "",
-      "primary_label": "七牛主线路",
+      "size": "202 MB",
+      "primary_url": "https://api.gitcode.com/SnapTab/snaptab-downloads/releases/download/v1.0.1/SnapTab_Setup_1.0.1.exe",
+      "primary_label": "GitCode 主下载",
       "backup_url": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1/SnapTab_Setup_1.0.1.exe",
       "backup_label": "GitHub 备用"
     },
     "portable": {
       "title": "便携版下载",
       "size": "282 MB",
-      "primary_url": "",
-      "primary_label": "七牛主线路",
+      "primary_url": "https://api.gitcode.com/SnapTab/snaptab-downloads/releases/download/v1.0.1/SnapTab_v1.0.1_webui.zip",
+      "primary_label": "GitCode 主下载",
       "backup_url": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1/SnapTab_v1.0.1_webui.zip",
       "backup_label": "GitHub 备用"
     }
   },
-  "notes": "- 安装包体积优化（精简依赖，自包含）\n- 发货面板功能增强（单一发货 + 批量发货）\n- 飞书通知集成\n- 心跳授权验证 + Token 加密存储\n- 离线宽限期 + 远程撤销支持\n- 运行前预检 + 完整性校验\n- 安全审计日志 + AI 使用统计\n- 授权到期预警 + 计划限制"
+  "notes": "- 安装包与便携版已重新构建\n- 官网主下载线路已切换到 GitCode\n- GitHub 保留为备用下载线路\n- 飞书通知、授权校验与下载链路保持兼容"
 }

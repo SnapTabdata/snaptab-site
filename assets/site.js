@@ -145,7 +145,7 @@ function normalizeReleaseConfig(data) {
     downloadPageUrl: trimString(data?.download_url) || LOCAL_DOWNLOAD_PAGE,
     installer: normalizeDownloadEntry(data?.downloads?.installer, installerFallback, {
       title: "安装版下载",
-      size: "81 MB",
+      size: "202 MB",
     }),
     portable: normalizeDownloadEntry(data?.downloads?.portable, portableFallback, {
       title: "便携版下载",
