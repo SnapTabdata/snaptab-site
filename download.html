@@ -91,17 +91,21 @@ body { font-family: "Inter", "-apple-system", "Segoe UI", "Microsoft YaHei", "No
   <section class="py-16 bg-gradient-to-br from-background-light to-blue-50 dark:from-background-dark dark:to-surface-dark">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-50 dark:bg-green-900/20 text-green-600 dark:text-green-400 text-xs font-medium mb-6">
-        <span class="material-symbols-outlined text-sm">bolt</span> 最新版本 v1.0.1 现已发布
+        <span class="material-symbols-outlined text-sm">bolt</span> <span data-release-version-badge>最新版本 v1.0.1 现已发布</span>
       </div>
       <h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">下载 SnapTab 桌面端</h1>
       <p class="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">专为中国市场研究设计的自动化报表工具。秒级处理海量数据，完美兼容各类制表需求，让研究员重回洞察核心。</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-        <a href="https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1/SnapTab_Setup_1.0.1.exe" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-medium rounded-full hover:bg-primary/90 transition shadow-lg shadow-primary/25 text-base">
-          <span class="material-symbols-outlined">install_desktop</span> 安装版下载（81 MB）
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-5">
+        <a href="#download-installer" data-download-link="installer" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-white font-medium rounded-full hover:bg-primary/90 transition shadow-lg shadow-primary/25 text-base">
+          <span class="material-symbols-outlined">install_desktop</span> <span data-download-link-label="installer">安装版下载（81 MB）</span>
         </a>
-        <a href="https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1/SnapTab_v1.0.1_webui.zip" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white dark:bg-surface-dark text-gray-700 dark:text-gray-200 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-border-dark transition border border-gray-200 dark:border-border-dark text-base">
-          <span class="material-symbols-outlined">folder_zip</span> 便携版下载（282 MB）
+        <a href="#download-portable" data-download-link="portable" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white dark:bg-surface-dark text-gray-700 dark:text-gray-200 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-border-dark transition border border-gray-200 dark:border-border-dark text-base">
+          <span class="material-symbols-outlined">folder_zip</span> <span data-download-link-label="portable">便携版下载（282 MB）</span>
         </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-3xl mx-auto mb-12">
+        <div data-download-meta="installer" class="rounded-2xl border border-gray-200 dark:border-border-dark bg-white/80 dark:bg-surface-dark/70 px-4 py-3 text-left text-xs text-gray-500 dark:text-gray-400">安装版：当前提供官方下载线路。</div>
+        <div data-download-meta="portable" class="rounded-2xl border border-gray-200 dark:border-border-dark bg-white/80 dark:bg-surface-dark/70 px-4 py-3 text-left text-xs text-gray-500 dark:text-gray-400">便携版：当前提供官方下载线路。</div>
       </div>
       <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 dark:text-gray-400">
         <div class="flex items-center gap-2"><span class="material-symbols-outlined text-success">verified_user</span> 安全加密传输</div>
