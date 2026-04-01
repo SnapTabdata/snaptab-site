@@ -48,9 +48,527 @@
       }
     </script>
     <script src="assets/site.js"></script>
-    <style>
+<style>
 body { font-family: "Inter", "-apple-system", "Segoe UI", "Microsoft YaHei", "Noto Sans SC", sans-serif; }
 .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
+.pricing-hero {
+  display: grid;
+  gap: 24px;
+  align-items: end;
+}
+.pricing-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(13, 185, 242, 0.18);
+  background: rgba(255, 255, 255, 0.72);
+  color: #0c87c8;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.pricing-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.pricing-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(255, 255, 255, 0.76);
+  color: #334155;
+  font-size: 14px;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.06);
+}
+.pricing-guide {
+  position: relative;
+  overflow: hidden;
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid rgba(13, 185, 242, 0.2);
+  background: linear-gradient(155deg, rgba(13, 185, 242, 0.14), rgba(255, 255, 255, 0.9));
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+.pricing-guide::after {
+  content: "";
+  position: absolute;
+  right: -48px;
+  top: -48px;
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(13, 185, 242, 0.24), rgba(13, 185, 242, 0));
+}
+.pricing-guide-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0c87c8;
+}
+.pricing-guide-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+.pricing-guide-item {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.pricing-guide-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #0c87c8;
+  font-weight: 800;
+  box-shadow: inset 0 0 0 1px rgba(13, 185, 242, 0.12);
+}
+.pricing-shell {
+  position: relative;
+  overflow: hidden;
+}
+.pricing-shell::before,
+.pricing-shell::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+.pricing-shell::before {
+  width: 360px;
+  height: 360px;
+  top: -180px;
+  right: -120px;
+  background: radial-gradient(circle, rgba(13, 185, 242, 0.12), rgba(13, 185, 242, 0));
+}
+.pricing-shell::after {
+  width: 280px;
+  height: 280px;
+  bottom: -180px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(17, 135, 246, 0.09), rgba(17, 135, 246, 0));
+}
+.pricing-ribbon {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  margin-bottom: 28px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.05);
+}
+.pricing-ribbon-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #334155;
+  font-size: 14px;
+}
+.pricing-ribbon-item .material-symbols-outlined {
+  font-size: 20px;
+  color: #0db9f2;
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 20;
+}
+.plan-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(16px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.plan-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(13, 185, 242, 0.8), transparent);
+  opacity: 0.75;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 72px rgba(15, 23, 42, 0.1);
+}
+.plan-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(13, 185, 242, 0.1);
+  color: #0c87c8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.plan-title {
+  margin-top: 18px;
+  color: #0f172a;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.plan-caption {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.plan-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 22px;
+}
+.plan-price {
+  color: #0f172a;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.plan-period {
+  color: #64748b;
+  font-size: 14px;
+}
+.plan-note {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 13px;
+}
+.plan-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+.plan-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.plan-list .material-symbols-outlined {
+  margin-top: 1px;
+  font-size: 18px;
+  color: #14b87d;
+  font-variation-settings: "FILL" 1, "wght" 560, "GRAD" 0, "opsz" 20;
+}
+.plan-list .is-muted {
+  color: #94a3b8;
+}
+.plan-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+.plan-meta-chip {
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(13, 185, 242, 0.14);
+  background: rgba(255, 255, 255, 0.78);
+}
+.plan-meta-chip strong {
+  display: block;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 700;
+}
+.plan-meta-chip span {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px;
+}
+.plan-foot {
+  margin-top: auto;
+  padding-top: 24px;
+}
+.plan-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.plan-button:hover {
+  transform: translateY(-1px);
+}
+.plan-button--ghost {
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(255, 255, 255, 0.7);
+  color: #0f172a;
+}
+.plan-button--secondary {
+  border: 1px solid rgba(13, 185, 242, 0.22);
+  background: rgba(13, 185, 242, 0.12);
+  color: #0c6b9c;
+}
+.plan-button--primary {
+  background: linear-gradient(135deg, #0db9f2, #1187f6);
+  color: #ffffff;
+  box-shadow: 0 16px 36px rgba(17, 135, 246, 0.28);
+}
+.plan-card--trial {
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(255, 255, 255, 0.92));
+}
+.plan-card--project {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.92));
+}
+.plan-card--featured {
+  border-color: rgba(13, 185, 242, 0.34);
+  background: linear-gradient(160deg, rgba(13, 185, 242, 0.14), rgba(255, 255, 255, 0.96) 44%, rgba(13, 185, 242, 0.08) 100%);
+  box-shadow: 0 28px 72px rgba(13, 185, 242, 0.18);
+}
+.plan-card--featured .plan-title {
+  font-size: 30px;
+}
+.plan-card--pro {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(239, 248, 255, 0.94));
+}
+.plan-card--enterprise {
+  border-color: rgba(17, 135, 246, 0.24);
+  background: linear-gradient(135deg, rgba(17, 135, 246, 0.08), rgba(255, 255, 255, 0.96) 32%, rgba(13, 185, 242, 0.14) 100%);
+}
+.enterprise-layout {
+  display: grid;
+  gap: 22px;
+}
+.enterprise-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.enterprise-pills span {
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 135, 246, 0.16);
+  background: rgba(255, 255, 255, 0.78);
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 600;
+}
+.enterprise-side {
+  padding: 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(255, 255, 255, 0.72);
+}
+.enterprise-side h4 {
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 700;
+}
+.enterprise-side ul {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+.enterprise-side li {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.roi-shell {
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  border-radius: 32px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(240, 249, 255, 0.9));
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+}
+.roi-grid {
+  display: grid;
+  gap: 18px;
+}
+.roi-stats {
+  display: grid;
+  gap: 16px;
+}
+.roi-stat {
+  padding: 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(255, 255, 255, 0.76);
+}
+.roi-stat strong {
+  display: block;
+  color: #0f172a;
+  font-size: 34px;
+  line-height: 1.1;
+}
+.roi-stat span {
+  display: block;
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+html.dark .pricing-eyebrow,
+html.dark .pricing-pill,
+html.dark .pricing-ribbon,
+html.dark .pricing-guide,
+html.dark .plan-card,
+html.dark .plan-meta-chip,
+html.dark .enterprise-pills span,
+html.dark .enterprise-side,
+html.dark .roi-shell,
+html.dark .roi-stat {
+  border-color: rgba(85, 118, 128, 0.42);
+}
+html.dark .pricing-eyebrow {
+  background: rgba(13, 185, 242, 0.16);
+  color: #88ddff;
+}
+html.dark .pricing-pill,
+html.dark .pricing-ribbon {
+  background: rgba(22, 42, 48, 0.62);
+  color: #d4e7eb;
+}
+html.dark .pricing-guide {
+  background: linear-gradient(150deg, rgba(13, 185, 242, 0.2), rgba(22, 42, 48, 0.92));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+}
+html.dark .pricing-guide-label,
+html.dark .pricing-guide-step {
+  color: #88ddff;
+}
+html.dark .pricing-guide-step {
+  background: rgba(255, 255, 255, 0.08);
+}
+html.dark .pricing-ribbon-item {
+  color: #d4e7eb;
+}
+html.dark .plan-card {
+  background: linear-gradient(180deg, rgba(22, 42, 48, 0.94), rgba(16, 30, 34, 0.92));
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.28);
+}
+html.dark .plan-kicker {
+  background: rgba(13, 185, 242, 0.18);
+  color: #88ddff;
+}
+html.dark .plan-title,
+html.dark .plan-price,
+html.dark .plan-meta-chip strong,
+html.dark .enterprise-pills span,
+html.dark .enterprise-side h4,
+html.dark .roi-stat strong {
+  color: #f8fbff;
+}
+html.dark .plan-caption,
+html.dark .plan-period,
+html.dark .plan-note,
+html.dark .plan-meta-chip span,
+html.dark .roi-stat span {
+  color: #a9c1c8;
+}
+html.dark .plan-list li,
+html.dark .enterprise-side li {
+  color: #d6e4e8;
+}
+html.dark .plan-list .is-muted {
+  color: #7f98a1;
+}
+html.dark .plan-meta-chip,
+html.dark .enterprise-side,
+html.dark .roi-stat {
+  background: rgba(255, 255, 255, 0.06);
+}
+html.dark .plan-button--ghost {
+  border-color: rgba(126, 158, 168, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8fbff;
+}
+html.dark .plan-button--secondary {
+  border-color: rgba(13, 185, 242, 0.3);
+  background: rgba(13, 185, 242, 0.14);
+  color: #88ddff;
+}
+html.dark .plan-card--featured {
+  border-color: rgba(72, 184, 225, 0.46);
+  background: linear-gradient(160deg, rgba(10, 123, 160, 0.42), rgba(18, 34, 40, 0.95) 50%, rgba(18, 34, 40, 0.96));
+}
+html.dark .plan-card--pro {
+  background: linear-gradient(180deg, rgba(24, 39, 45, 0.94), rgba(20, 53, 63, 0.9));
+}
+html.dark .plan-card--enterprise {
+  border-color: rgba(87, 174, 232, 0.46);
+  background: linear-gradient(140deg, rgba(17, 135, 246, 0.22), rgba(19, 33, 38, 0.96) 34%, rgba(13, 185, 242, 0.18) 100%);
+}
+html.dark .enterprise-pills span {
+  background: rgba(255, 255, 255, 0.08);
+}
+html.dark .roi-shell {
+  background: linear-gradient(145deg, rgba(21, 36, 41, 0.95), rgba(16, 30, 34, 0.92));
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.28);
+}
+@media (min-width: 768px) {
+  .pricing-ribbon {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .roi-grid {
+    grid-template-columns: 1.1fr 1.9fr;
+    align-items: end;
+  }
+  .roi-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .pricing-hero {
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  }
+  .enterprise-layout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    align-items: end;
+  }
+  .plan-card--featured {
+    transform: translateY(-10px);
+  }
+  .plan-card--enterprise {
+    transform: translateY(-4px);
+  }
+}
+@media (max-width: 767px) {
+  .plan-meta-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-guide,
+  .plan-card,
+  .roi-shell {
+    padding: 24px;
+  }
+}
 </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark">
@@ -84,95 +602,209 @@ body { font-family: "Inter", "-apple-system", "Segoe UI", "Microsoft YaHei", "No
     </div>
   </nav>
   <section class="py-16 bg-gradient-to-br from-background-light to-blue-50 dark:from-background-dark dark:to-surface-dark">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">选择适合您的方案</h1>
-      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">无论是单次项目还是长期合作，SnapTab 都有匹配的方案。所有方案均提供 14 天免费试用。</p>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="pricing-hero">
+        <div>
+          <span class="pricing-eyebrow">方案总览</span>
+          <h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mt-5 mb-6">选择适合您的方案</h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">从单次项目试跑，到研究团队的长期订阅，再到多席位企业部署，SnapTab 把价格、支持强度和 AI 能力都放在一张页面里讲清楚。</p>
+          <div class="pricing-pill-row">
+            <div class="pricing-pill"><span class="material-symbols-outlined">bolt</span><span>14 天全功能试用</span></div>
+            <div class="pricing-pill"><span class="material-symbols-outlined">finance_mode</span><span>支持单次项目和长期订阅</span></div>
+            <div class="pricing-pill"><span class="material-symbols-outlined">group</span><span>企业版支持多席位与定制服务</span></div>
+          </div>
+        </div>
+        <aside class="pricing-guide">
+          <div class="pricing-guide-label">选型建议</div>
+          <div class="pricing-guide-list">
+            <div class="pricing-guide-item">
+              <div class="pricing-guide-step">01</div>
+              <div>
+                <div class="font-semibold text-gray-900 dark:text-white">先试跑一个真实项目</div>
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">还在验证团队接受度时，先用体验版或项目版把流程跑通。</p>
+              </div>
+            </div>
+            <div class="pricing-guide-item">
+              <div class="pricing-guide-step">02</div>
+              <div>
+                <div class="font-semibold text-gray-900 dark:text-white">年频次超过 4-5 次，直接看标准版</div>
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">持续做调研的团队，订阅比反复单买更划算，也更稳定。</p>
+              </div>
+            </div>
+            <div class="pricing-guide-item">
+              <div class="pricing-guide-step">03</div>
+              <div>
+                <div class="font-semibold text-gray-900 dark:text-white">多人协作与部署支持，优先看专业版或企业版</div>
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">当团队开始追求更快响应、更强服务与多人协同时，可以升级到更高方案。</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
     </div>
   </section>
-  <section class="py-16 bg-white dark:bg-background-dark">
+  <section class="py-16 bg-white dark:bg-background-dark pricing-shell">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- 体验版 -->
-        <div class="rounded-2xl border border-gray-200 dark:border-border-dark bg-gray-50 dark:bg-surface-dark p-6 flex flex-col">
-          <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-gray-400">card_giftcard</span><span class="text-sm font-medium text-gray-500 dark:text-gray-400">免费</span></div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">体验版</h3>
-          <div class="text-sm text-gray-400 mb-4">14 天全功能试用，不需绑定支付方式。</div>
-          <div class="text-xs text-gray-400 mb-6">交叉表 ≤20 个，数据行 ≤500 行</div>
-          <a href="trial.html" class="mt-auto py-2.5 px-4 bg-gray-200 dark:bg-border-dark text-gray-700 dark:text-gray-200 font-medium rounded-full text-center hover:bg-gray-300 dark:hover:bg-gray-600 transition text-sm">申请试用</a>
-        </div>
-        <!-- 项目版 -->
-        <div class="rounded-2xl border border-gray-200 dark:border-border-dark bg-white dark:bg-background-dark p-6 flex flex-col">
-          <div class="flex items-center gap-2 mb-2"><span class="text-sm font-medium text-gray-500 dark:text-gray-400">¥4,999</span><span class="text-xs text-gray-400">/项目</span></div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">项目版</h3>
-          <div class="text-sm text-gray-400 mb-4">适合单次或短周期项目需求</div>
-          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-6 flex-1">
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 单机 1 席位授权</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 90 天有效期</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 无限交叉表和数据行</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 完整 SPSS 导入导出</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 项目周期内基础答疑</li>
-            <li class="flex items-center gap-2"><span class="text-gray-300 dark:text-gray-600 text-sm">remove</span><span class="text-gray-400">不含 AI 功能</span></li>
+      <div class="pricing-ribbon">
+        <div class="pricing-ribbon-item"><span class="material-symbols-outlined">tactic</span><span>标准版适合持续开展项目的团队，兼顾功能、服务与成本控制。</span></div>
+        <div class="pricing-ribbon-item"><span class="material-symbols-outlined">rocket_launch</span><span>专业版适合高频交付团队，提供更强 AI 能力与更快响应支持。</span></div>
+        <div class="pricing-ribbon-item"><span class="material-symbols-outlined">apartment</span><span>企业版提供多席位协作、培训部署与定制支持，适合组织化落地。</span></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+        <article class="plan-card plan-card--trial lg:col-span-3">
+          <div class="plan-kicker"><span class="material-symbols-outlined text-base">card_giftcard</span><span>免费试跑</span></div>
+          <h3 class="plan-title">体验版</h3>
+          <p class="plan-caption">14 天全功能试用，不绑支付方式，适合先验证流程与团队接受度。</p>
+          <div class="plan-price-row">
+            <div class="plan-price">¥0</div>
+            <div class="plan-period">/ 14 天</div>
+          </div>
+          <div class="plan-note">交叉表 ≤20 个，数据行 ≤500 行</div>
+          <ul class="plan-list">
+            <li><span class="material-symbols-outlined">check_circle</span><span>完整体验核心流程与导入导出能力</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>无需先采购，先让项目成员上手</span></li>
+            <li><span class="material-symbols-outlined is-muted">remove</span><span class="is-muted">适合验证，不适合正式长期交付</span></li>
           </ul>
-          <a href="trial.html" class="mt-auto py-2.5 px-4 border border-gray-200 dark:border-border-dark text-gray-700 dark:text-gray-200 font-medium rounded-full text-center hover:bg-gray-50 dark:hover:bg-surface-dark transition text-sm">立即购买</a>
-        </div>
-        <!-- 标准版 -->
-        <div class="rounded-2xl border-2 border-primary bg-primary/5 p-6 flex flex-col relative">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-primary text-white text-xs font-medium rounded-full">推荐方案</div>
-          <div class="flex items-center gap-2 mb-2"><span class="text-sm font-medium text-primary">¥1,280</span><span class="text-xs text-gray-400">/月</span></div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">标准版</h3>
-          <div class="text-sm text-gray-400 mb-1">有连续项目需求的团队首选</div>
-          <div class="text-xs text-gray-400 mb-4">年付 ¥12,800 省2个月</div>
-          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-6 flex-1">
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 包含项目版所有功能</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 月付授权，年付更优惠</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> AI 辅助生成（50 次/月）</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 功能更新与问题修复</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 远程培训 1 次</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 工作日支持（48h 响应）</li>
+          <div class="plan-foot">
+            <a href="trial.html" class="plan-button plan-button--ghost">申请试用</a>
+          </div>
+        </article>
+        <article class="plan-card plan-card--project lg:col-span-3">
+          <div class="plan-kicker"><span>一次买断</span></div>
+          <h3 class="plan-title">项目版</h3>
+          <p class="plan-caption">给单次项目一个干净利落的入口，预算清晰，周期内直接交付。</p>
+          <div class="plan-price-row">
+            <div class="plan-price">¥4,999</div>
+            <div class="plan-period">/ 项目</div>
+          </div>
+          <div class="plan-note">90 天有效，适合单次或短周期项目</div>
+          <ul class="plan-list">
+            <li><span class="material-symbols-outlined">check_circle</span><span>单机 1 席位授权</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>无限交叉表和数据行</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>完整 SPSS 导入导出</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>项目周期内基础答疑</span></li>
+            <li><span class="material-symbols-outlined is-muted">remove</span><span class="is-muted">不含 AI 功能</span></li>
           </ul>
-          <a href="trial.html" class="mt-auto py-2.5 px-4 bg-primary text-white font-medium rounded-full text-center hover:bg-primary/90 transition shadow-lg shadow-primary/25 text-sm">开始 14 天免费试用</a>
-        </div>
-        <!-- 专业版 -->
-        <div class="rounded-2xl border border-gray-200 dark:border-border-dark bg-white dark:bg-background-dark p-6 flex flex-col">
-          <div class="flex items-center gap-2 mb-2"><span class="text-sm font-medium text-gray-500 dark:text-gray-400">¥1,980</span><span class="text-xs text-gray-400">/月</span></div>
-          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">专业版</h3>
-          <div class="text-sm text-gray-400 mb-1">更快支持和上线陪跑</div>
-          <div class="text-xs text-gray-400 mb-4">年付 ¥19,800 省2个月</div>
-          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-6 flex-1">
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 包含标准版所有功能</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> AI 无限使用</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> AI NET 分组 / AI DP-Spec</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 优先支持（24h 响应）</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 远程培训 2 次</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-success text-sm">check_circle</span> 项目配置协助 2 次</li>
+          <div class="plan-foot">
+            <a href="trial.html" class="plan-button plan-button--ghost">立即购买</a>
+          </div>
+        </article>
+        <article class="plan-card plan-card--featured md:col-span-2 lg:col-span-6">
+          <div class="plan-kicker"><span class="material-symbols-outlined text-base">workspace_premium</span><span>推荐方案</span></div>
+          <h3 class="plan-title">标准版</h3>
+          <p class="plan-caption">适合持续开展调研项目的团队，兼顾 AI 能力、培训支持与长期使用成本。</p>
+          <div class="plan-price-row">
+            <div class="plan-price">¥1,280</div>
+            <div class="plan-period">/ 月</div>
+          </div>
+          <div class="plan-note">年付 ¥12,800，等于省下 2 个月</div>
+          <div class="plan-meta-grid">
+            <div class="plan-meta-chip">
+              <strong>适合团队</strong>
+              <span>每年有多次项目、需要标准化交付</span>
+            </div>
+            <div class="plan-meta-chip">
+              <strong>AI 能力</strong>
+              <span>AI 辅助生成 50 次 / 月</span>
+            </div>
+            <div class="plan-meta-chip">
+              <strong>支持强度</strong>
+              <span>工作日支持，48h 内响应</span>
+            </div>
+            <div class="plan-meta-chip">
+              <strong>落地服务</strong>
+              <span>含 1 次远程培训与持续更新</span>
+            </div>
+          </div>
+          <ul class="plan-list">
+            <li><span class="material-symbols-outlined">check_circle</span><span>包含项目版所有功能</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>月付授权，预算更平滑，年付更划算</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>功能更新与问题修复持续可用</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>非常适合 4-5 次以上的年度调研节奏</span></li>
           </ul>
-          <a href="trial.html" class="mt-auto py-2.5 px-4 border border-gray-200 dark:border-border-dark text-gray-700 dark:text-gray-200 font-medium rounded-full text-center hover:bg-gray-50 dark:hover:bg-surface-dark transition text-sm">立即升级</a>
-        </div>
-        <!-- 企业版 -->
-        <div class="rounded-2xl border border-gray-200 dark:border-border-dark bg-gray-900 text-white p-6 flex flex-col">
-          <div class="flex items-center gap-2 mb-2"><span class="text-sm font-medium text-gray-300">¥30,000 ~ ¥80,000</span><span class="text-xs text-gray-500">/年</span></div>
-          <h3 class="text-xl font-bold mb-1">企业版</h3>
-          <div class="text-sm text-gray-400 mb-6">多席位团队定制化部署</div>
-          <ul class="space-y-2 text-sm text-gray-300 mb-6 flex-1">
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-sm">check_circle</span> 包含专业版所有功能</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-sm">check_circle</span> 2-10+ 席位授权</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-sm">check_circle</span> 专属服务群</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-sm">check_circle</span> 集中培训 + 上线协助</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-sm">check_circle</span> 定制化功能开发</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-blue-400 text-sm">check_circle</span> 专属 1 对 1 技术支持</li>
+          <div class="plan-foot">
+            <a href="trial.html" class="plan-button plan-button--primary">开始 14 天免费试用</a>
+          </div>
+        </article>
+        <article class="plan-card plan-card--pro lg:col-span-4">
+          <div class="plan-kicker"><span>高频交付</span></div>
+          <h3 class="plan-title">专业版</h3>
+          <p class="plan-caption">适合高频交付团队，提供更高 AI 能力、更快响应和更深入的项目陪跑支持。</p>
+          <div class="plan-price-row">
+            <div class="plan-price">¥1,980</div>
+            <div class="plan-period">/ 月</div>
+          </div>
+          <div class="plan-note">年付 ¥19,800，适合核心研究交付团队</div>
+          <ul class="plan-list">
+            <li><span class="material-symbols-outlined">check_circle</span><span>包含标准版所有功能</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>AI 无限使用，含 AI NET 分组 / AI DP-Spec</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>优先支持，24h 响应</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>远程培训 2 次，项目配置协助 2 次</span></li>
           </ul>
-          <a href="trial.html" class="mt-auto py-2.5 px-4 bg-gray-700 text-white font-medium rounded-full text-center hover:bg-gray-600 transition text-sm">联系获取报价</a>
-        </div>
+          <div class="plan-foot">
+            <a href="trial.html" class="plan-button plan-button--secondary">立即升级</a>
+          </div>
+        </article>
+        <article class="plan-card plan-card--enterprise md:col-span-2 lg:col-span-8">
+          <div class="enterprise-layout">
+            <div>
+              <div class="plan-kicker"><span class="material-symbols-outlined text-base">apartment</span><span>企业解决方案</span></div>
+              <h3 class="plan-title">企业版</h3>
+              <p class="plan-caption">适合需要多席位协作、培训部署、专属支持与定制化能力的企业团队。</p>
+              <div class="plan-price-row">
+                <div class="plan-price">¥30,000 ~ ¥80,000</div>
+                <div class="plan-period">/ 年</div>
+              </div>
+              <div class="plan-note">多席位团队定制化部署，适合研究中台、咨询团队与内部洞察部门</div>
+              <ul class="plan-list">
+                <li><span class="material-symbols-outlined">check_circle</span><span>包含专业版所有功能与多席位授权</span></li>
+                <li><span class="material-symbols-outlined">check_circle</span><span>专属服务群、集中培训、上线协助</span></li>
+                <li><span class="material-symbols-outlined">check_circle</span><span>定制化功能开发与 1 对 1 技术支持</span></li>
+              </ul>
+              <div class="enterprise-pills">
+                <span>2-10+ 席位</span>
+                <span>私有化沟通流程</span>
+                <span>定制交付节奏</span>
+                <span>部署与培训打包</span>
+              </div>
+            </div>
+            <div class="enterprise-side">
+              <h4>企业版通常解决什么问题</h4>
+              <ul>
+                <li>同一团队里有多位研究员要同时作业，不能再靠单机串行。</li>
+                <li>需要把培训、支持、配置和上线陪跑打包成一个采购动作。</li>
+                <li>希望和现有研究流程对齐，甚至需要部分功能做定制化适配。</li>
+              </ul>
+              <a href="trial.html" class="plan-button plan-button--primary mt-6">联系获取报价</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
   <section class="py-16 bg-gray-50 dark:bg-surface-dark">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">投资回报参考</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-white dark:bg-background-dark rounded-2xl p-6"><div class="text-3xl font-bold text-primary mb-2">¥2,500</div><div class="text-sm text-gray-500 dark:text-gray-400">人工制表平均单次成本</div></div>
-        <div class="bg-white dark:bg-background-dark rounded-2xl p-6"><div class="text-3xl font-bold text-primary mb-2">4~5 次</div><div class="text-sm text-gray-500 dark:text-gray-400">年付 ¥12,800 ≈ 5 次人工成本</div></div>
-        <div class="bg-white dark:bg-background-dark rounded-2xl p-6"><div class="text-3xl font-bold text-primary mb-2">分钟级</div><div class="text-sm text-gray-500 dark:text-gray-400">SnapTab 完成原本数天的工作</div></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="roi-shell">
+        <div class="roi-grid">
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">投资回报参考</h2>
+            <p class="mt-4 text-base text-gray-600 dark:text-gray-300 leading-relaxed">如果你的团队一年内会重复做调研，真正贵的不是软件，而是把同样的制表、核对、返工和解释工作一遍遍交给人工完成。</p>
+          </div>
+          <div class="roi-stats">
+            <div class="roi-stat">
+              <strong>¥2,500</strong>
+              <span>人工制表的平均单次成本，通常还不含返工与沟通损耗。</span>
+            </div>
+            <div class="roi-stat">
+              <strong>4~5 次</strong>
+              <span>标准版一年的投入，大致等于 4-5 次人工制表成本。</span>
+            </div>
+            <div class="roi-stat">
+              <strong>分钟级</strong>
+              <span>SnapTab 可把原本数天的整理与制表压缩到分钟级完成。</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

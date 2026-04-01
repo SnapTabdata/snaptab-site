@@ -11,7 +11,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("inter-400.ttf") format("truetype");
+  src: url("inter.ttf") format("truetype");
 }
 @font-face {
   font-family: "Inter";
