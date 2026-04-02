@@ -1,14 +1,14 @@
 {
-  "version": "1.0.1-test1",
+  "version": "1.0.2",
   "release_date": "2026-04-02",
   "download_url": "https://snaptabdata.github.io/snaptab-site/download.html",
-  "download_url_installer": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1-test1/SnapTab_Setup_1.0.1-test1.exe",
-  "download_url_onedir": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1-test1/SnapTab_test_latest_20260402_101116.zip",
+  "download_url_installer": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.2/SnapTab_Setup_1.0.2.exe",
+  "download_url_onedir": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.2/SnapTab_v1.0.2_webui.zip",
   "downloads": {
     "installer": {
       "title": "安装版下载",
       "size": "202 MB",
-      "primary_url": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1-test1/SnapTab_Setup_1.0.1-test1.exe",
+      "primary_url": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.2/SnapTab_Setup_1.0.2.exe",
       "primary_label": "GitHub 主下载",
       "backup_url": "",
       "backup_label": ""
@@ -16,11 +16,11 @@
     "portable": {
       "title": "便携版下载",
       "size": "282 MB",
-      "primary_url": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.1-test1/SnapTab_test_latest_20260402_101116.zip",
+      "primary_url": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.2/SnapTab_v1.0.2_webui.zip",
       "primary_label": "GitHub 主下载",
       "backup_url": "",
       "backup_label": ""
     }
   },
-  "notes": "- 测试版：修复试用激活链路\n- 新增首页授权管理入口\n- 优化未激活与试用提示文案\n- 修复 GitCode 下载地址问题（本次测试版临时走 GitHub 下载）"
+  "notes": "- 修复试用激活链路与服务端签名校验\n- 新增首页授权管理入口\n- 优化未激活、试用激活与授权提示文案\n- 一机一码：一个激活码仅可绑定一台设备"
 }
