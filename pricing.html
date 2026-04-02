@@ -1,241 +1,861 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>价格方案 - SnapTab | 项目版 ¥1,499，标准版 ¥1,280/月</title>
-  <meta name="description" content="SnapTab 价格方案：体验版 14 天免费试用，项目版 ¥1,499 / 项目，标准版 ¥1,280 / 月，专业版 ¥1,980 / 月，企业版按席位定制。"/>
-  <meta name="keywords" content="SnapTab 价格, 项目版, 标准版, 市场调研软件报价"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://snaptabdata.github.io/snaptab-site/pricing.html"/>
-  <meta property="og:title" content="SnapTab 价格方案"/>
-  <meta property="og:description" content="先试跑一个真实项目，再决定是否切长期订阅。"/>
-  <meta property="og:image" content="https://snaptabdata.github.io/snaptab-site/assets/og-image.png"/>
-  <link rel="canonical" href="https://snaptabdata.github.io/snaptab-site/pricing.html"/>
-  <link rel="icon" type="image/svg+xml" href="assets/snaptab-mark.svg"/>
-  <link href="assets/site.css" rel="stylesheet"/>
-  <link href="assets/theme.css" rel="stylesheet"/>
-  <script src="assets/site.js"></script>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>价格方案 - SnapTab | 体验版免费、项目版 ¥1,499、标准版 ¥1,280/月</title>
+    <meta name="description" content="SnapTab 价格方案：体验版 14天免费试用（≤20个交叉表），项目版 ¥1,499/项目（90天有效，适合单次试跑），标准版 ¥1,280/月（含 AI 辅助 50次/月），专业版 ¥1,980/月（AI 无限使用），企业版 ¥30,000~80,000/年（多席位定制）。"/>
+    <meta name="keywords" content="SnapTab价格, 市场调研工具报价, SPSS制表软件价格, AI交叉表费用, 调研自动化订阅"/>
+    <meta name="author" content="SnapTab"/>
+    <meta name="robots" content="index, follow"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://snaptabdata.github.io/snaptab-site/pricing.html"/>
+    <meta property="og:title" content="SnapTab 价格方案 - 体验版免费 | 项目版 ¥1,499"/>
+    <meta property="og:description" content="SnapTab 价格透明：体验版 14天免费，项目版 ¥1,499/项目，标准版 ¥1,280/月，企业版定制报价。"/>
+    <meta property="og:image" content="https://snaptabdata.github.io/snaptab-site/assets/og-image.png"/>
+    <meta property="og:locale" content="zh_CN"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="https://snaptabdata.github.io/snaptab-site/pricing.html"/>
+    <meta name="twitter:title" content="SnapTab 价格方案 - 体验版免费 | 项目版 ¥1,499"/>
+    <meta name="twitter:description" content="14天免费体验。AI 自动生成交叉表，分钟级完成原本数天的工作。"/>
+    <meta name="twitter:image" content="https://snaptabdata.github.io/snaptab-site/assets/og-image.png"/>
+    <link rel="canonical" href="https://snaptabdata.github.io/snaptab-site/pricing.html"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link rel="icon" type="image/svg+xml" href="assets/snaptab-mark.svg"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="assets/site.css" rel="stylesheet"/>
+    <link href="assets/theme.css" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0db9f2",
+              "background-light": "#f5f8f8",
+              "background-dark": "#101e22",
+              "surface-dark": "#162a30",
+              "border-dark": "#223f49",
+              "success": "#14b87d",
+            },
+            fontFamily: { "display": ["Inter", "-apple-system", "Segoe UI", "Microsoft YaHei", "Noto Sans SC", "sans-serif"] },
+            borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+          },
+        },
+      }
+    </script>
+    <script src="assets/site.js"></script>
+<style>
+body { font-family: "Inter", "-apple-system", "Segoe UI", "Microsoft YaHei", "Noto Sans SC", sans-serif; }
+.material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
+.pricing-hero {
+  display: grid;
+  gap: 24px;
+  align-items: end;
+}
+.pricing-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(13, 185, 242, 0.18);
+  background: rgba(255, 255, 255, 0.72);
+  color: #0c87c8;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.pricing-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.pricing-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(255, 255, 255, 0.76);
+  color: #334155;
+  font-size: 14px;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.06);
+}
+.pricing-guide {
+  position: relative;
+  overflow: hidden;
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid rgba(13, 185, 242, 0.2);
+  background: linear-gradient(155deg, rgba(13, 185, 242, 0.14), rgba(255, 255, 255, 0.9));
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+}
+.pricing-guide::after {
+  content: "";
+  position: absolute;
+  right: -48px;
+  top: -48px;
+  width: 140px;
+  height: 140px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(13, 185, 242, 0.24), rgba(13, 185, 242, 0));
+}
+.pricing-guide-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0c87c8;
+}
+.pricing-guide-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 18px;
+}
+.pricing-guide-item {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+.pricing-guide-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #0c87c8;
+  font-weight: 800;
+  box-shadow: inset 0 0 0 1px rgba(13, 185, 242, 0.12);
+}
+.pricing-shell {
+  position: relative;
+  overflow: hidden;
+}
+.pricing-shell::before,
+.pricing-shell::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+.pricing-shell::before {
+  width: 360px;
+  height: 360px;
+  top: -180px;
+  right: -120px;
+  background: radial-gradient(circle, rgba(13, 185, 242, 0.12), rgba(13, 185, 242, 0));
+}
+.pricing-shell::after {
+  width: 280px;
+  height: 280px;
+  bottom: -180px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(17, 135, 246, 0.09), rgba(17, 135, 246, 0));
+}
+.pricing-ribbon {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  margin-bottom: 28px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.05);
+}
+.pricing-ribbon-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #334155;
+  font-size: 14px;
+}
+.pricing-ribbon-item .material-symbols-outlined {
+  font-size: 20px;
+  color: #0db9f2;
+  font-variation-settings: "FILL" 1, "wght" 500, "GRAD" 0, "opsz" 20;
+}
+.plan-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(16px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.plan-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(13, 185, 242, 0.8), transparent);
+  opacity: 0.75;
+}
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 72px rgba(15, 23, 42, 0.1);
+}
+.plan-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(13, 185, 242, 0.1);
+  color: #0c87c8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.plan-title {
+  margin-top: 18px;
+  color: #0f172a;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.plan-caption {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.plan-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 22px;
+}
+.plan-price {
+  color: #0f172a;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.plan-period {
+  color: #64748b;
+  font-size: 14px;
+}
+.plan-note {
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 13px;
+}
+.plan-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+.plan-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.plan-list .material-symbols-outlined {
+  margin-top: 1px;
+  font-size: 18px;
+  color: #14b87d;
+  font-variation-settings: "FILL" 1, "wght" 560, "GRAD" 0, "opsz" 20;
+}
+.plan-list .is-muted {
+  color: #94a3b8;
+}
+.plan-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+.plan-meta-chip {
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(13, 185, 242, 0.14);
+  background: rgba(255, 255, 255, 0.78);
+}
+.plan-meta-chip strong {
+  display: block;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 700;
+}
+.plan-meta-chip span {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 12px;
+}
+.plan-foot {
+  margin-top: auto;
+  padding-top: 24px;
+}
+.plan-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.plan-button:hover {
+  transform: translateY(-1px);
+}
+.plan-button--ghost {
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(255, 255, 255, 0.7);
+  color: #0f172a;
+}
+.plan-button--secondary {
+  border: 1px solid rgba(13, 185, 242, 0.22);
+  background: rgba(13, 185, 242, 0.12);
+  color: #0c6b9c;
+}
+.plan-button--primary {
+  background: linear-gradient(135deg, #0db9f2, #1187f6);
+  color: #ffffff;
+  box-shadow: 0 16px 36px rgba(17, 135, 246, 0.28);
+}
+.plan-card--trial {
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.96), rgba(255, 255, 255, 0.92));
+}
+.plan-card--project {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.92));
+}
+.plan-card--featured {
+  border-color: rgba(13, 185, 242, 0.34);
+  background: linear-gradient(160deg, rgba(13, 185, 242, 0.14), rgba(255, 255, 255, 0.96) 44%, rgba(13, 185, 242, 0.08) 100%);
+  box-shadow: 0 28px 72px rgba(13, 185, 242, 0.18);
+}
+.plan-card--featured .plan-title {
+  font-size: 30px;
+}
+.plan-card--pro {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(239, 248, 255, 0.94));
+}
+.plan-card--enterprise {
+  border-color: rgba(17, 135, 246, 0.24);
+  background: linear-gradient(135deg, rgba(17, 135, 246, 0.08), rgba(255, 255, 255, 0.96) 32%, rgba(13, 185, 242, 0.14) 100%);
+}
+.enterprise-layout {
+  display: grid;
+  gap: 22px;
+}
+.enterprise-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+.enterprise-pills span {
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 135, 246, 0.16);
+  background: rgba(255, 255, 255, 0.78);
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 600;
+}
+.enterprise-side {
+  padding: 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(255, 255, 255, 0.72);
+}
+.enterprise-side h4 {
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 700;
+}
+.enterprise-side ul {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+.enterprise-side li {
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.roi-shell {
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  border-radius: 32px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(240, 249, 255, 0.9));
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.08);
+}
+.roi-grid {
+  display: grid;
+  gap: 18px;
+}
+.roi-stats {
+  display: grid;
+  gap: 16px;
+}
+.roi-stat {
+  padding: 22px;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(255, 255, 255, 0.76);
+}
+.roi-stat strong {
+  display: block;
+  color: #0f172a;
+  font-size: 34px;
+  line-height: 1.1;
+}
+.roi-stat span {
+  display: block;
+  margin-top: 10px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+html.dark .pricing-eyebrow,
+html.dark .pricing-pill,
+html.dark .pricing-ribbon,
+html.dark .pricing-guide,
+html.dark .plan-card,
+html.dark .plan-meta-chip,
+html.dark .enterprise-pills span,
+html.dark .enterprise-side,
+html.dark .roi-shell,
+html.dark .roi-stat {
+  border-color: rgba(85, 118, 128, 0.42);
+}
+html.dark .pricing-eyebrow {
+  background: rgba(13, 185, 242, 0.16);
+  color: #88ddff;
+}
+html.dark .pricing-pill,
+html.dark .pricing-ribbon {
+  background: rgba(22, 42, 48, 0.62);
+  color: #d4e7eb;
+}
+html.dark .pricing-guide {
+  background: linear-gradient(150deg, rgba(13, 185, 242, 0.2), rgba(22, 42, 48, 0.92));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.24);
+}
+html.dark .pricing-guide-label,
+html.dark .pricing-guide-step {
+  color: #88ddff;
+}
+html.dark .pricing-guide-step {
+  background: rgba(255, 255, 255, 0.08);
+}
+html.dark .pricing-ribbon-item {
+  color: #d4e7eb;
+}
+html.dark .plan-card {
+  background: linear-gradient(180deg, rgba(22, 42, 48, 0.94), rgba(16, 30, 34, 0.92));
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.28);
+}
+html.dark .plan-kicker {
+  background: rgba(13, 185, 242, 0.18);
+  color: #88ddff;
+}
+html.dark .plan-title,
+html.dark .plan-price,
+html.dark .plan-meta-chip strong,
+html.dark .enterprise-pills span,
+html.dark .enterprise-side h4,
+html.dark .roi-stat strong {
+  color: #f8fbff;
+}
+html.dark .plan-caption,
+html.dark .plan-period,
+html.dark .plan-note,
+html.dark .plan-meta-chip span,
+html.dark .roi-stat span {
+  color: #a9c1c8;
+}
+html.dark .plan-list li,
+html.dark .enterprise-side li {
+  color: #d6e4e8;
+}
+html.dark .plan-list .is-muted {
+  color: #7f98a1;
+}
+html.dark .plan-meta-chip,
+html.dark .enterprise-side,
+html.dark .roi-stat {
+  background: rgba(255, 255, 255, 0.06);
+}
+html.dark .plan-button--ghost {
+  border-color: rgba(126, 158, 168, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8fbff;
+}
+html.dark .plan-button--secondary {
+  border-color: rgba(13, 185, 242, 0.3);
+  background: rgba(13, 185, 242, 0.14);
+  color: #88ddff;
+}
+html.dark .plan-card--featured {
+  border-color: rgba(72, 184, 225, 0.46);
+  background: linear-gradient(160deg, rgba(10, 123, 160, 0.42), rgba(18, 34, 40, 0.95) 50%, rgba(18, 34, 40, 0.96));
+}
+html.dark .plan-card--pro {
+  background: linear-gradient(180deg, rgba(24, 39, 45, 0.94), rgba(20, 53, 63, 0.9));
+}
+html.dark .plan-card--enterprise {
+  border-color: rgba(87, 174, 232, 0.46);
+  background: linear-gradient(140deg, rgba(17, 135, 246, 0.22), rgba(19, 33, 38, 0.96) 34%, rgba(13, 185, 242, 0.18) 100%);
+}
+html.dark .enterprise-pills span {
+  background: rgba(255, 255, 255, 0.08);
+}
+html.dark .roi-shell {
+  background: linear-gradient(145deg, rgba(21, 36, 41, 0.95), rgba(16, 30, 34, 0.92));
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.28);
+}
+@media (min-width: 768px) {
+  .pricing-ribbon {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .roi-grid {
+    grid-template-columns: 1.1fr 1.9fr;
+    align-items: end;
+  }
+  .roi-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) {
+  .pricing-hero {
+    grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+  }
+  .enterprise-layout {
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    align-items: end;
+  }
+  .plan-card--featured {
+    transform: translateY(-10px);
+  }
+  .plan-card--enterprise {
+    transform: translateY(-4px);
+  }
+}
+@media (max-width: 767px) {
+  .plan-meta-grid {
+    grid-template-columns: 1fr;
+  }
+  .pricing-guide,
+  .plan-card,
+  .roi-shell {
+    padding: 24px;
+  }
+}
+</style>
 </head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-mark"><img class="brand-mark-img" src="assets/snaptab-mark.svg" alt="SnapTab"/></span>
-        <span>SnapTab<small>市场调研交叉表自动化工具</small></span>
-      </a>
-      <button class="nav-toggle" type="button" data-nav-toggle aria-label="切换导航">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-      <nav class="site-nav" data-nav>
-        <a href="index.html">首页</a>
-        <a href="features.html">功能介绍</a>
-        <a class="active" href="pricing.html">价格方案</a>
-        <a href="download.html">下载</a>
-        <a href="trial.html">免费试用</a>
-        <a href="about.html">关于</a>
-      </nav>
-      <div class="nav-cta">
-        <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="切换主题">
-          <span class="material-symbols-outlined theme-toggle-icon">dark_mode</span>
-        </button>
-        <a class="btn btn-primary" href="trial.html">先试用</a>
+<body class="bg-background-light dark:bg-background-dark">
+  <nav class="sticky top-0 z-50 bg-white/90 dark:bg-surface-dark/90 backdrop-blur border-b border-gray-200 dark:border-border-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center gap-2"><span class="text-primary text-2xl font-bold tracking-tight">SnapTab</span></div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">首页</a>
+          <a href="features.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">功能介绍</a>
+          <a href="pricing.html" class="text-sm font-medium text-primary">价格方案</a>
+          <a href="download.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">下载</a>
+          <a href="about.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">关于</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-surface-dark"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span></button>
+          <a href="trial.html" class="hidden sm:inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary/90 transition">免费试用</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 dark:text-gray-300"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
     </div>
-  </header>
-
-  <main>
-    <section class="page-hero">
-      <div class="container section-split">
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+      <div class="flex flex-col gap-2">
+        <a href="index.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">首页</a>
+        <a href="features.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">功能介绍</a>
+        <a href="pricing.html" class="text-sm font-medium text-primary px-3 py-2">价格方案</a>
+        <a href="download.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">下载</a>
+        <a href="about.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">关于</a>
+        <a href="trial.html" class="inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-full w-fit">免费试用</a>
+      </div>
+    </div>
+  </nav>
+  <section class="py-16 bg-gradient-to-br from-background-light to-blue-50 dark:from-background-dark dark:to-surface-dark">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="pricing-hero">
         <div>
-          <span class="eyebrow">
-            <span class="material-symbols-outlined">tactic</span>
-            价格逻辑
-          </span>
-          <h1>项目版负责“先跑通一次”，标准版负责“长期更划算”。</h1>
-          <p class="lead">
-            项目版不是标准版的低配替代，而是给低频团队、单次项目和第一次采购的客户一个低门槛入口。标准版则保留订阅逻辑，适合持续交付的团队。
-          </p>
-          <div class="tag-row">
-            <span class="tag">项目版：低门槛试跑</span>
-            <span class="tag">标准版：长期订阅更顺</span>
-            <span class="tag">专业版：高频交付团队</span>
+          <span class="pricing-eyebrow">方案总览</span>
+          <h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mt-5 mb-6">选择适合您的方案</h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">从单次项目试跑，到研究团队的长期订阅，再到多席位企业部署，SnapTab 把价格、支持强度和 AI 能力都放在一张页面里讲清楚。</p>
+          <div class="pricing-pill-row">
+            <div class="pricing-pill"><span class="material-symbols-outlined">bolt</span><span>14 天全功能试用</span></div>
+            <div class="pricing-pill"><span class="material-symbols-outlined">finance_mode</span><span>支持单次项目和长期订阅</span></div>
+            <div class="pricing-pill"><span class="material-symbols-outlined">group</span><span>企业版支持多席位与定制服务</span></div>
           </div>
         </div>
-        <div class="spotlight">
-          <h3>怎么选更直接</h3>
-          <ul class="feature-list">
-            <li>一年只做 1-2 次项目：先看项目版</li>
-            <li>一年 4-5 次以上项目：直接看标准版</li>
-            <li>高频交付 + 更高 AI 需求：看专业版</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="price-grid">
-          <article class="price-card">
-            <div class="price-badge">试用入口</div>
-            <h3>体验版</h3>
-            <div class="price">¥0 <small>/ 14 天</small></div>
-            <p>适合先熟悉界面与流程，不绑支付方式。</p>
-            <ul class="list">
-              <li>完整体验核心流程</li>
-              <li>默认下载后未激活</li>
-              <li>适合先看界面再申请激活码</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="btn btn-secondary" href="trial.html">申请试用</a>
+        <aside class="pricing-guide">
+          <div class="pricing-guide-label">选型建议</div>
+          <div class="pricing-guide-list">
+            <div class="pricing-guide-item">
+              <div class="pricing-guide-step">01</div>
+              <div>
+                <div class="font-semibold text-gray-900 dark:text-white">先用低门槛把第一个项目跑通</div>
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">项目版不是标准版的低配替代，而是给低频、单次项目一个更容易决策的试跑入口。</p>
+              </div>
             </div>
-          </article>
-
-          <article class="price-card">
-            <div class="price-badge">低门槛试跑</div>
-            <h3>项目版</h3>
-            <div class="price">¥1,499 <small>/ 项目</small></div>
-            <p>适合单次、低频或短周期项目，先把一个真实项目跑通。</p>
-            <ul class="list">
-              <li>90 天有效</li>
-              <li>单机 1 席位</li>
-              <li>不含 AI 与长期订阅服务</li>
-              <li>适合替代人工全包前的内部试跑</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="btn btn-secondary" href="trial.html">先试跑一个项目</a>
+            <div class="pricing-guide-item">
+              <div class="pricing-guide-step">02</div>
+              <div>
+                <div class="font-semibold text-gray-900 dark:text-white">年频次超过 4-5 次，直接看标准版</div>
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">持续做调研的团队，标准版的订阅逻辑更划算，AI、更新和培训也都更完整。</p>
+              </div>
             </div>
-          </article>
-
-          <article class="price-card popular">
-            <div class="price-badge">推荐方案</div>
-            <h3>标准版</h3>
-            <div class="price">¥1,280 <small>/ 月</small></div>
-            <p>适合持续开展调研项目的团队，兼顾 AI、支持与长期成本。</p>
-            <ul class="list">
-              <li>年付优惠：¥12,800 / 年</li>
-              <li>AI 辅助生成 50 次 / 月</li>
-              <li>持续更新与问题修复</li>
-              <li>远程培训 1 次</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="trial.html">从试用开始</a>
-            </div>
-          </article>
-
-          <article class="price-card">
-            <div class="price-badge">高频交付</div>
-            <h3>专业版</h3>
-            <div class="price">¥1,980 <small>/ 月</small></div>
-            <p>适合高频交付团队，提供更高 AI 能力与更深入的支持。</p>
-            <ul class="list">
-              <li>年付优惠：¥19,800 / 年</li>
-              <li>AI 无限使用</li>
-              <li>优先支持</li>
-              <li>项目配置协助 2 次</li>
-            </ul>
-            <div class="hero-actions">
-              <a class="btn btn-secondary" href="trial.html">咨询升级</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container section-split">
-        <div class="surface-card">
-          <h3>项目版为什么存在</h3>
-          <ul class="feature-list">
-            <li>很多客户不是不需要工具，而是第一次采购不愿直接上长期订阅</li>
-            <li>项目版的作用是用更低门槛把第一次真实项目跑通</li>
-            <li>如果试跑后团队节奏稳定，再切标准版更自然</li>
-          </ul>
-        </div>
-        <div class="surface-card">
-          <h3>和人工全包怎么比</h3>
-          <div class="stat-strip">
-            <div class="stat-box">
-              <strong>¥2,500</strong>
-              <span>常见人工全包单项目成本</span>
-            </div>
-            <div class="stat-box">
-              <strong>¥1,499</strong>
-              <span>项目版更适合做内部试跑</span>
-            </div>
-            <div class="stat-box">
-              <strong>4-5 次</strong>
-              <span>标准版年付约等于 4-5 次人工成本</span>
+            <div class="pricing-guide-item">
+              <div class="pricing-guide-step">03</div>
+              <div>
+                <div class="font-semibold text-gray-900 dark:text-white">多人协作与部署支持，优先看专业版或企业版</div>
+                <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">当团队开始追求更快响应、更强服务与多人协同时，可以升级到更高方案。</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container faq-grid">
-        <article class="faq-item">
-          <h3>项目版和标准版有什么区别？</h3>
-          <p>项目版是低频团队的单项目入口，重点是先跑通一个真实项目；标准版保留订阅逻辑，适合持续开展项目的团队，并包含 AI、更新和培训。</p>
-        </article>
-        <article class="faq-item">
-          <h3>项目版能升级到标准版吗？</h3>
-          <p>可以。项目版用户在 30 天内升级标准版，可按项目版实付金额抵扣首年标准版部分费用，最多抵扣 ¥1,499。</p>
-        </article>
-        <article class="faq-item">
-          <h3>什么时候直接推标准版？</h3>
-          <p>当客户年频次超过 4-5 次，或者需要 AI、持续更新和培训时，标准版通常比项目版更划算。</p>
-        </article>
-        <article class="faq-item">
-          <h3>企业版适合谁？</h3>
-          <p>适合多席位协作、培训部署、流程定制和组织化落地的团队，按席位与支持强度定制报价。</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container cta-band">
-        <div class="section-head">
-          <h2>如果你还没确定版本，最稳的方式就是先试跑一个真实项目。</h2>
-          <p>先试用，再决定是项目版还是长期订阅，比空谈价格更有效。</p>
-        </div>
-        <div class="hero-actions">
-          <a class="btn btn-secondary" href="trial.html">申请试用</a>
-          <a class="btn btn-secondary" href="download.html">先去下载</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand">
-          <span class="brand-mark"><img class="brand-mark-img" src="assets/snaptab-mark.svg" alt="SnapTab"/></span>
-          <span>SnapTab<small>把价格逻辑讲清楚，客户才更容易决策</small></span>
-        </div>
-        <p class="foot-note">项目版负责低门槛试跑，标准版负责长期更划算。</p>
-      </div>
-      <div>
-        <h4>产品</h4>
-        <ul>
-          <li><a href="features.html">功能介绍</a></li>
-          <li><a href="download.html">下载中心</a></li>
-          <li><a href="trial.html">免费试用</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>联系</h4>
-        <ul>
-          <li>微信：Changtouyaoguai</li>
-          <li><a href="about.html">关于我们</a></li>
-        </ul>
+        </aside>
       </div>
     </div>
-    <div class="container">
-      <div class="divider"></div>
-      <p class="foot-note">&copy; 2026 SnapTab. All rights reserved.</p>
+  </section>
+  <section class="py-16 bg-white dark:bg-background-dark pricing-shell">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="pricing-ribbon">
+        <div class="pricing-ribbon-item"><span class="material-symbols-outlined">tactic</span><span>项目版负责“先把单个项目跑通”，标准版负责“长期连续交付更划算”。</span></div>
+        <div class="pricing-ribbon-item"><span class="material-symbols-outlined">rocket_launch</span><span>专业版适合高频交付团队，提供更强 AI 能力与更快响应支持。</span></div>
+        <div class="pricing-ribbon-item"><span class="material-symbols-outlined">apartment</span><span>企业版提供多席位协作、培训部署与定制支持，适合组织化落地。</span></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+        <article class="plan-card plan-card--trial lg:col-span-3">
+          <div class="plan-kicker"><span class="material-symbols-outlined text-base">card_giftcard</span><span>免费试跑</span></div>
+          <h3 class="plan-title">体验版</h3>
+          <p class="plan-caption">14 天全功能试用，不绑支付方式，适合先验证流程与团队接受度。</p>
+          <div class="plan-price-row">
+            <div class="plan-price">¥0</div>
+            <div class="plan-period">/ 14 天</div>
+          </div>
+          <div class="plan-note">交叉表 ≤20 个，数据行 ≤500 行</div>
+          <ul class="plan-list">
+            <li><span class="material-symbols-outlined">check_circle</span><span>完整体验核心流程与导入导出能力</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>无需先采购，先让项目成员上手</span></li>
+            <li><span class="material-symbols-outlined is-muted">remove</span><span class="is-muted">适合验证，不适合正式长期交付</span></li>
+          </ul>
+          <div class="plan-foot">
+            <a href="trial.html" class="plan-button plan-button--ghost">申请试用</a>
+          </div>
+        </article>
+        <article class="plan-card plan-card--project lg:col-span-3">
+          <div class="plan-kicker"><span>一次买断</span></div>
+          <h3 class="plan-title">项目版</h3>
+          <p class="plan-caption">给低频客户和单次项目一个低门槛入口，先把内部流程跑通，再决定要不要上长期订阅。</p>
+          <div class="plan-price-row">
+            <div class="plan-price">¥1,499</div>
+            <div class="plan-period">/ 项目</div>
+          </div>
+          <div class="plan-note">90 天有效，适合单次试跑、短周期项目或年频次较低的团队</div>
+          <ul class="plan-list">
+            <li><span class="material-symbols-outlined">check_circle</span><span>单机 1 席位授权</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>无限交叉表和数据行</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>完整 SPSS 导入导出</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>项目周期内基础答疑与上手指导</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>比人工全包约 ¥2,500 / 项目更适合先做内部试跑</span></li>
+            <li><span class="material-symbols-outlined is-muted">remove</span><span class="is-muted">不含 AI 与长期订阅服务</span></li>
+          </ul>
+          <div class="plan-foot">
+            <a href="trial.html" class="plan-button plan-button--ghost">立即购买</a>
+          </div>
+        </article>
+        <article class="plan-card plan-card--featured md:col-span-2 lg:col-span-6">
+          <div class="plan-kicker"><span class="material-symbols-outlined text-base">workspace_premium</span><span>推荐方案</span></div>
+          <h3 class="plan-title">标准版</h3>
+          <p class="plan-caption">适合持续开展调研项目的团队，兼顾 AI 能力、培训支持与长期使用成本。</p>
+          <div class="plan-price-row">
+            <div class="plan-price">¥1,280</div>
+            <div class="plan-period">/ 月</div>
+          </div>
+          <div class="plan-note">年付 ¥12,800，等于省下 2 个月</div>
+          <div class="plan-meta-grid">
+            <div class="plan-meta-chip">
+              <strong>适合团队</strong>
+              <span>每年有多次项目、需要标准化交付</span>
+            </div>
+            <div class="plan-meta-chip">
+              <strong>AI 能力</strong>
+              <span>AI 辅助生成 50 次 / 月</span>
+            </div>
+            <div class="plan-meta-chip">
+              <strong>支持强度</strong>
+              <span>工作日支持，48h 内响应</span>
+            </div>
+            <div class="plan-meta-chip">
+              <strong>落地服务</strong>
+              <span>含 1 次远程培训与持续更新</span>
+            </div>
+          </div>
+          <ul class="plan-list">
+            <li><span class="material-symbols-outlined">check_circle</span><span>包含项目版所有功能</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>月付授权，预算更平滑，年付更划算</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>功能更新与问题修复持续可用</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>非常适合 4-5 次以上的年度调研节奏</span></li>
+          </ul>
+          <div class="plan-foot">
+            <a href="trial.html" class="plan-button plan-button--primary">开始 14 天免费试用</a>
+          </div>
+        </article>
+        <article class="plan-card plan-card--pro lg:col-span-4">
+          <div class="plan-kicker"><span>高频交付</span></div>
+          <h3 class="plan-title">专业版</h3>
+          <p class="plan-caption">适合高频交付团队，提供更高 AI 能力、更快响应和更深入的项目陪跑支持。</p>
+          <div class="plan-price-row">
+            <div class="plan-price">¥1,980</div>
+            <div class="plan-period">/ 月</div>
+          </div>
+          <div class="plan-note">年付 ¥19,800，适合核心研究交付团队</div>
+          <ul class="plan-list">
+            <li><span class="material-symbols-outlined">check_circle</span><span>包含标准版所有功能</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>AI 无限使用，含 AI NET 分组 / AI DP-Spec</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>优先支持，24h 响应</span></li>
+            <li><span class="material-symbols-outlined">check_circle</span><span>远程培训 2 次，项目配置协助 2 次</span></li>
+          </ul>
+          <div class="plan-foot">
+            <a href="trial.html" class="plan-button plan-button--secondary">立即升级</a>
+          </div>
+        </article>
+        <article class="plan-card plan-card--enterprise md:col-span-2 lg:col-span-8">
+          <div class="enterprise-layout">
+            <div>
+              <div class="plan-kicker"><span class="material-symbols-outlined text-base">apartment</span><span>企业解决方案</span></div>
+              <h3 class="plan-title">企业版</h3>
+              <p class="plan-caption">适合需要多席位协作、培训部署、专属支持与定制化能力的企业团队。</p>
+              <div class="plan-price-row">
+                <div class="plan-price">¥30,000 ~ ¥80,000</div>
+                <div class="plan-period">/ 年</div>
+              </div>
+              <div class="plan-note">多席位团队定制化部署，适合研究中台、咨询团队与内部洞察部门</div>
+              <ul class="plan-list">
+                <li><span class="material-symbols-outlined">check_circle</span><span>包含专业版所有功能与多席位授权</span></li>
+                <li><span class="material-symbols-outlined">check_circle</span><span>专属服务群、集中培训、上线协助</span></li>
+                <li><span class="material-symbols-outlined">check_circle</span><span>定制化功能开发与 1 对 1 技术支持</span></li>
+              </ul>
+              <div class="enterprise-pills">
+                <span>2-10+ 席位</span>
+                <span>私有化沟通流程</span>
+                <span>定制交付节奏</span>
+                <span>部署与培训打包</span>
+              </div>
+            </div>
+            <div class="enterprise-side">
+              <h4>企业版通常解决什么问题</h4>
+              <ul>
+                <li>同一团队里有多位研究员要同时作业，不能再靠单机串行。</li>
+                <li>需要把培训、支持、配置和上线陪跑打包成一个采购动作。</li>
+                <li>希望和现有研究流程对齐，甚至需要部分功能做定制化适配。</li>
+              </ul>
+              <a href="trial.html" class="plan-button plan-button--primary mt-6">联系获取报价</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-gray-50 dark:bg-surface-dark">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="roi-shell">
+        <div class="roi-grid">
+          <div>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">投资回报参考</h2>
+            <p class="mt-4 text-base text-gray-600 dark:text-gray-300 leading-relaxed">如果你的团队一年内会重复做调研，真正贵的不是软件，而是把同样的制表、核对、返工和解释工作一遍遍交给人工完成。</p>
+          </div>
+          <div class="roi-stats">
+            <div class="roi-stat">
+              <strong>¥2,500</strong>
+              <span>人工制表的平均单次成本，通常还不含返工与沟通损耗。</span>
+            </div>
+            <div class="roi-stat">
+              <strong>¥1,499</strong>
+              <span>项目版更适合拿来先试跑一个真实项目，现金投入比人工全包更轻。</span>
+            </div>
+            <div class="roi-stat">
+              <strong>4~5 次</strong>
+              <span>标准版一年的投入，大致等于 4-5 次人工制表成本，适合持续团队。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 bg-white dark:bg-background-dark">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">常见问题解答</h2>
+      <div class="space-y-4">
+        <details class="bg-gray-50 dark:bg-surface-dark rounded-xl p-5 cursor-pointer group">
+          <summary class="font-medium text-gray-900 dark:text-white list-none flex justify-between items-center">如何激活我的授权码？<span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">官网下载安装包后，软件默认处于未激活状态。打开 SnapTab 后，在授权管理页面输入您收到的激活码（形式为 ACT1-XXXX-XXXX-XXXX-XXXX），点击激活即可立即生效。</p>
+        </details>
+        <details class="bg-gray-50 dark:bg-surface-dark rounded-xl p-5 cursor-pointer group">
+          <summary class="font-medium text-gray-900 dark:text-white list-none flex justify-between items-center">可以先试用再决定吗？<span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">当然可以！您可以先从官网下载未激活版本，然后通过免费试用页面或微信联系我们。我们审核后会为您发放 14 天试用激活码，试用期内可体验全部功能（交叉表 ≤20 个，数据行 ≤500 行）。</p>
+        </details>
+        <details class="bg-gray-50 dark:bg-surface-dark rounded-xl p-5 cursor-pointer group">
+          <summary class="font-medium text-gray-900 dark:text-white list-none flex justify-between items-center">项目版和标准版有什么区别？<span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">项目版是给单次项目和低频团队准备的“先试跑一个项目”方案，90 天有效，价格更低，不含 AI 和长期订阅服务。标准版保留按月订阅逻辑，适合持续开展调研项目的团队，包含 AI 辅助生成（每月 50 次）、持续更新和远程培训。如果年项目频次超过 4-5 次，标准版通常更划算。</p>
+        </details>
+        <details class="bg-gray-50 dark:bg-surface-dark rounded-xl p-5 cursor-pointer group">
+          <summary class="font-medium text-gray-900 dark:text-white list-none flex justify-between items-center">项目版能升级到标准版吗？<span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">可以。项目版用户在 30 天内升级标准版，可按项目版实付金额抵扣首年标准版部分费用，最多抵扣 ¥1,499。建议先用项目版把真实项目跑通，确认团队节奏后再切到长期订阅。</p>
+        </details>
+        <details class="bg-gray-50 dark:bg-surface-dark rounded-xl p-5 cursor-pointer group">
+          <summary class="font-medium text-gray-900 dark:text-white list-none flex justify-between items-center">如何联系获取企业版报价？<span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span></summary>
+          <p class="mt-3 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">请通过<a href="trial.html" class="text-primary hover:underline mx-1">免费试用页面</a>提交您的需求，或直接添加微信 Changtouyaoguai 与我们联系，我们会在 24 小时内回复。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-white dark:bg-surface-dark border-t border-gray-200 dark:border-border-dark py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+        <div><div class="flex items-center gap-2 mb-3"><span class="text-primary text-xl font-bold">SnapTab</span></div><p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs">专业的市场研究自动化工具，让调研分析回归洞察本身。</p></div>
+        <div class="grid grid-cols-2 gap-8">
+          <div><h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-3">产品</h4><div class="flex flex-col gap-2"><a href="features.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">功能介绍</a><a href="pricing.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">价格方案</a><a href="download.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">下载中心</a></div></div>
+          <div><h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-3">支持</h4><div class="flex flex-col gap-2"><a href="trial.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">免费试用</a><a href="about.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">关于我们</a></div></div>
+        </div>
+      </div>
+      <div class="mt-8 pt-6 border-t border-gray-100 dark:border-border-dark flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-gray-400">&copy; 2026 SnapTab. All rights reserved.</p>
+        <p class="text-sm text-gray-400">联系方式：微信：Changtouyaoguai</p>
+      </div>
     </div>
   </footer>
+  <script>
+    const themeToggle = document.getElementById('theme-toggle'); const html = document.documentElement;
+    themeToggle.addEventListener('click', () => { html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) { html.classList.add('dark'); }
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('hidden'); });
+  </script>
 </body>
 </html>
