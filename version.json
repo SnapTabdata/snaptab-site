@@ -1,6 +1,6 @@
 {
   "version": "1.0.2",
-  "release_date": "2026-04-02",
+  "release_date": "2026-04-03",
   "download_url": "https://snaptabdata.github.io/snaptab-site/download.html",
   "download_url_installer": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.2/SnapTab_Setup_1.0.2.exe",
   "download_url_onedir": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.2/SnapTab_v1.0.2_webui.zip",
@@ -22,5 +22,5 @@
       "backup_label": ""
     }
   },
-  "notes": "- 修复试用激活链路与服务端签名校验\n- 新增首页授权管理入口\n- 优化未激活、试用激活与授权提示文案\n- 一机一码：一个激活码仅可绑定一台设备"
+  "notes": "- 修复新安装环境默认缺少授权服务地址的问题\n- 激活失败时自动回退到飞书激活链路\n- 保留发码与填码成功后的飞书群提醒\n- 安装包与便携包继续内置示例 data / dp_spec / 报表示例"
 }
