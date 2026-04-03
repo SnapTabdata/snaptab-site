@@ -9,7 +9,7 @@
       "title": "安装版下载",
       "size": "202 MB",
       "primary_url": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.2/SnapTab_Setup_1.0.2.exe",
-      "primary_label": "GitHub 主下载",
+      "primary_label": "官方主线路",
       "backup_url": "",
       "backup_label": ""
     },
@@ -17,7 +17,7 @@
       "title": "便携版下载",
       "size": "282 MB",
       "primary_url": "https://github.com/SnapTabdata/snaptab-site/releases/download/v1.0.2/SnapTab_v1.0.2_webui.zip",
-      "primary_label": "GitHub 主下载",
+      "primary_label": "官方主线路",
       "backup_url": "",
       "backup_label": ""
     }
