@@ -3,8 +3,76 @@ const LOCAL_DOWNLOAD_PAGE = "download.html";
 
 let releaseConfigPromise = null;
 
+const MATERIAL_SYMBOL_FALLBACKS = {
+  analytics: "▥",
+  apartment: "▦",
+  arrow_forward: "→",
+  bolt: "⚡",
+  card_giftcard: "🎁",
+  chat: "✉",
+  cloud_download: "↓",
+  dark_mode: "☾",
+  database: "◫",
+  description: "▤",
+  expand_more: "⌄",
+  finance_mode: "¥",
+  folder_zip: "🗀",
+  group: "👥",
+  history: "⏱",
+  hourglass_empty: "⌛",
+  info: "i",
+  install_desktop: "⤓",
+  light_mode: "☀",
+  mail: "@",
+  monetization_on: "¥",
+  psychology: "◎",
+  remove: "−",
+  restart_alt: "↻",
+  rocket_launch: "↗",
+  security: "🛡",
+  shield: "🛡",
+  support_agent: "☎",
+  system_update: "↻",
+  table_chart: "▤",
+  tactic: "◈",
+  verified: "✓",
+  verified_user: "✓",
+  vpn_key: "🔑",
+  workspace_premium: "★",
+};
+
+function applyMaterialSymbolFallbacks() {
+  const icons = document.querySelectorAll(".material-symbols-outlined");
+  icons.forEach((icon) => {
+    const ligature = String(icon.textContent || "").trim();
+    if (!ligature) {
+      return;
+    }
+    const fallback = MATERIAL_SYMBOL_FALLBACKS[ligature] || "•";
+    icon.setAttribute("data-fallback", fallback);
+    icon.setAttribute("aria-hidden", "true");
+  });
+}
+
+async function markIconFontReady() {
+  if (!document.fonts || typeof document.fonts.load !== "function") {
+    return;
+  }
+  try {
+    const loaded = await Promise.race([
+      document.fonts.load('16px "Material Symbols Outlined"'),
+      new Promise((resolve) => setTimeout(() => resolve([]), 1800)),
+    ]);
+    if (Array.isArray(loaded) && loaded.length > 0) {
+      document.documentElement.classList.add("icon-font-ready");
+    }
+  } catch (_error) {
+    // Keep fallbacks visible when the icon font is unavailable.
+  }
+}
+
 function initTheme() {
-  const saved = localStorage.getItem("snaptab-theme");
+  const saved = localStorage.getItem("snaptab-theme") || localStorage.getItem("theme");
   if (saved === "dark") {
     document.documentElement.classList.add("dark");
   } else {
@@ -16,7 +84,9 @@ function initTheme() {
 function toggleTheme() {
   const html = document.documentElement;
   html.classList.toggle("dark");
-  localStorage.setItem("snaptab-theme", html.classList.contains("dark") ? "dark" : "light");
+  const value = html.classList.contains("dark") ? "dark" : "light";
+  localStorage.setItem("snaptab-theme", value);
+  localStorage.setItem("theme", value);
   updateThemeIcon();
 }
 
@@ -25,7 +95,42 @@ function updateThemeIcon() {
   const isDark = document.documentElement.classList.contains("dark");
   icons.forEach((icon) => {
     icon.textContent = isDark ? "light_mode" : "dark_mode";
+    icon.setAttribute("data-fallback", isDark ? "☀" : "☾");
   });
+}
+
+function resetNodeListeners(node) {
+  if (!node || !node.parentNode) {
+    return node;
+  }
+  const clone = node.cloneNode(true);
+  node.parentNode.replaceChild(clone, node);
+  return clone;
+}
+
+function normalizeThemeToggleButton(button) {
+  if (!button) {
+    return button;
+  }
+  button.classList.add("theme-toggle");
+  const icons = button.querySelectorAll(".material-symbols-outlined");
+  if (icons.length > 1) {
+    icons.forEach((icon, index) => {
+      if (index === 0) {
+        icon.classList.add("theme-toggle-icon");
+      } else {
+        icon.remove();
+      }
+    });
+  } else if (icons.length === 1) {
+    icons[0].classList.add("theme-toggle-icon");
+  } else {
+    const icon = document.createElement("span");
+    icon.className = "material-symbols-outlined text-xl theme-toggle-icon";
+    icon.textContent = "dark_mode";
+    button.appendChild(icon);
+  }
+  return button;
 }
 
 function normalizeCnMobile(rawValue) {
@@ -300,11 +405,26 @@ function buildTrialDownloadLinksHtml(config) {
 initTheme();
 
 document.addEventListener("DOMContentLoaded", async () => {
+  let themeToggle = resetNodeListeners(document.getElementById("theme-toggle"));
+  themeToggle = normalizeThemeToggleButton(themeToggle);
+  let navToggle =
+    document.querySelector("[data-nav-toggle]") || document.getElementById("mobile-menu-btn");
+  navToggle = resetNodeListeners(navToggle);
+
+  if (themeToggle && navToggle && themeToggle.parentElement && navToggle.parentElement !== themeToggle.parentElement) {
+    const actions = themeToggle.parentElement;
+    actions.classList.add("ml-auto");
+    actions.appendChild(navToggle);
+  }
+
+  applyMaterialSymbolFallbacks();
+  markIconFontReady();
   updateThemeIcon();
+  if (themeToggle) {
+    themeToggle.addEventListener("click", toggleTheme);
+  }
   const releaseConfig = await applyReleaseConfigToPage();
 
-  const navToggle =
-    document.querySelector("[data-nav-toggle]") || document.getElementById("mobile-menu-btn");
   const nav = document.querySelector("[data-nav]") || document.getElementById("mobile-menu");
   if (navToggle && nav) {
     navToggle.addEventListener("click", () => {
