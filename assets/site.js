@@ -452,7 +452,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const webhook =
-      trialForm.getAttribute("data-webhook") || "https://snaptab-trial-submit.liujing1359.workers.dev";
+      trialForm.getAttribute("data-webhook") || "https://snaptab-license-verify.liujing1359.workers.dev/trial-submit";
     const name = trialForm.querySelector('input[name="name"]')?.value?.trim() || "";
     const company = trialForm.querySelector('input[name="company"]')?.value?.trim() || "";
     const contact = phoneCheck.normalized;
