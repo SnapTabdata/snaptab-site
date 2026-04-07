@@ -250,6 +250,7 @@ function normalizeReleaseConfig(data) {
     version: trimString(data?.version),
     releaseDate: trimString(data?.release_date),
     downloadPageUrl: trimString(data?.download_url) || LOCAL_DOWNLOAD_PAGE,
+    trialSubmitUrl: trimString(data?.trial_submit_url),
     installer: normalizeDownloadEntry(data?.downloads?.installer, installerFallback, {
       title: "安装版下载",
       size: "202 MB",
@@ -462,8 +463,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    const webhook =
-      trialForm.getAttribute("data-webhook") || "https://1407357969-iijabc7uup.ap-guangzhou.tencentscf.com/trial-submit";
+    const configuredWebhook = trimString(trialForm.getAttribute("data-webhook"));
+    const currentReleaseConfig = releaseConfig || (await getReleaseConfig());
+    const webhook = configuredWebhook || trimString(currentReleaseConfig?.trialSubmitUrl);
     const name = trialForm.querySelector('input[name="name"]')?.value?.trim() || "";
     const company = trialForm.querySelector('input[name="company"]')?.value?.trim() || "";
     const contact = phoneCheck.normalized;
