@@ -42,7 +42,7 @@
     <link rel="preload" href="assets/material-symbols.woff2" as="font" type="font/woff2" crossorigin/>
     <link rel="icon" type="image/svg+xml" href="assets/snaptab-mark.svg"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="assets/site.css?v=20260407-1" rel="stylesheet"/>
+    <link href="assets/site.css?v=20260407-2" rel="stylesheet"/>
     <link href="assets/theme.css" rel="stylesheet"/>
     <script>
       tailwind.config = {
@@ -63,7 +63,7 @@
         },
       }
     </script>
-    <script src="assets/site.js?v=20260407-1"></script>
+    <script src="assets/site.js?v=20260407-2"></script>
     <style>
 body { font-family: "Inter", "-apple-system", "Segoe UI", "Microsoft YaHei", "Noto Sans SC", sans-serif; }
 .material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
@@ -112,37 +112,77 @@ body { font-family: "Inter", "-apple-system", "Segoe UI", "Microsoft YaHei", "No
   <!-- Hero -->
   <section class="relative overflow-hidden bg-gradient-to-br from-background-light to-blue-50 dark:from-background-dark dark:to-surface-dark py-20 lg:py-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto">
-        <div class="hero-kicker inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-primary/10 text-primary text-xs font-medium mb-6">
-          <span class="material-symbols-outlined text-sm">bolt</span> AI 驱动的交叉表自动化
-        </div>
-        <h1 class="hero-title text-4xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">
-          SnapTab: 重新定义市场研究<br/>交叉表自动化
-        </h1>
-        <p class="hero-description text-lg text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
-          专为市场调研设计的桌面端自动化制表工具。深度支持 SPSS .sav 文件，AI 辅助生成 Tables 与 Header 规格，一键导出专业级 Excel 交叉表。
-        </p>
-        <div class="hero-actions flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="trial.html" class="hero-cta-primary inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary text-white font-medium rounded-full hover:bg-primary/90 transition shadow-lg shadow-primary/25">
-            免费开始使用 <span class="material-symbols-outlined text-sm">arrow_forward</span>
-          </a>
-          <a href="download.html" class="hero-cta-secondary inline-flex items-center justify-center gap-2 px-8 py-3 bg-white dark:bg-surface-dark text-gray-700 dark:text-gray-200 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-border-dark transition border border-gray-200 dark:border-border-dark">
-            立即下载
-          </a>
-        </div>
-        <div class="hero-proof-grid mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
-        <div class="hero-proof-card flex items-center gap-3 bg-white dark:bg-surface-dark rounded-xl px-4 py-3 shadow-sm">
-          <span class="material-symbols-outlined text-primary">check_circle</span>
-          <span class="text-sm text-gray-600 dark:text-gray-300">免费试用</span>
-        </div>
-        <div class="hero-proof-card flex items-center gap-3 bg-white dark:bg-surface-dark rounded-xl px-4 py-3 shadow-sm">
-          <span class="material-symbols-outlined text-primary">check_circle</span>
-          <span class="text-sm text-gray-600 dark:text-gray-300">无需安装，解压即用</span>
-        </div>
-        <div class="hero-proof-card flex items-center gap-3 bg-white dark:bg-surface-dark rounded-xl px-4 py-3 shadow-sm">
-          <span class="material-symbols-outlined text-primary">check_circle</span>
-          <span class="text-sm text-gray-600 dark:text-gray-300">本地处理，数据不上云</span>
-        </div>
+      <div class="hero-home-shell">
+        <div class="hero-home-grid">
+          <div class="hero-home-copy">
+            <div class="hero-home-kicker">
+              <span class="material-symbols-outlined text-sm">bolt</span>
+              AI 驱动的交叉表自动化
+            </div>
+            <h1 class="hero-home-title">
+              SnapTab: 重新定义市场研究<br/>
+              <span>交叉表自动化</span>
+            </h1>
+            <p class="hero-home-description">
+              专为市场调研团队设计的桌面端自动化制表工具。深度支持 SPSS .sav 文件，AI 辅助生成 Tables 与 Header 规格，一键导出专业级 Excel 交叉表。
+            </p>
+            <div class="hero-home-actions">
+              <a href="trial.html" class="hero-home-cta hero-home-cta-primary">
+                免费开始使用
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+              <a href="download.html" class="hero-home-cta hero-home-cta-secondary">
+                立即下载
+              </a>
+            </div>
+            <div class="hero-home-chip-grid">
+              <div class="hero-home-chip">
+                <span class="material-symbols-outlined text-primary">check_circle</span>
+                <div>
+                  <strong>14 天免费试用</strong>
+                  <span>先跑通一轮真实项目，再决定是否采购</span>
+                </div>
+              </div>
+              <div class="hero-home-chip">
+                <span class="material-symbols-outlined text-primary">inventory_2</span>
+                <div>
+                  <strong>无需安装，解压即用</strong>
+                  <span>适合试跑、演示和交付环境快速上线</span>
+                </div>
+              </div>
+              <div class="hero-home-chip">
+                <span class="material-symbols-outlined text-primary">shield</span>
+                <div>
+                  <strong>本地处理，数据不上云</strong>
+                  <span>样本和问卷数据全程留在客户本机</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-home-showcase">
+            <div class="hero-home-window">
+              <div class="hero-home-window-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <img src="assets/screenshot-dashboard.png" alt="SnapTab 仪表盘界面预览" class="hero-home-window-image" loading="eager" />
+            </div>
+            <div class="hero-home-float hero-home-float-top">
+              <span class="material-symbols-outlined text-primary">description</span>
+              <div>
+                <strong>从 .sav 到交叉表</strong>
+                <span>规格生成、跑表、导出一条线完成</span>
+              </div>
+            </div>
+            <div class="hero-home-float hero-home-float-bottom">
+              <span class="material-symbols-outlined text-primary">task_alt</span>
+              <div>
+                <strong>显著性 / TGI / 均值</strong>
+                <span>直接输出可汇报的专业 Excel 报表</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
