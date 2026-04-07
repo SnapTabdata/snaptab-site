@@ -265,6 +265,112 @@ img {
   margin-top: 26px;
 }
 
+.hero-kicker {
+  border-color: rgba(44, 146, 255, 0.18);
+  background: linear-gradient(135deg, rgba(44, 146, 255, 0.08), rgba(102, 200, 255, 0.14));
+  box-shadow: 0 14px 30px rgba(44, 146, 255, 0.08);
+}
+
+.hero-title {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+}
+
+.hero-description {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(20px, 2vw, 25px);
+  line-height: 1.6;
+  color: #46617f;
+  text-wrap: balance;
+}
+
+.hero-cta-primary,
+.hero-cta-secondary {
+  min-height: 84px;
+  padding: 0 36px;
+  border-radius: 30px;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+
+.hero-cta-primary {
+  position: relative;
+  overflow: hidden;
+  color: #0b2340 !important;
+  font-weight: 800;
+  border: 1px solid rgba(11, 35, 64, 0.06);
+  background: linear-gradient(135deg, #38d0ff 0%, #17a9ec 52%, #1097da 100%);
+  box-shadow:
+    0 22px 45px rgba(23, 123, 235, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.hero-cta-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.24), transparent 46%);
+  pointer-events: none;
+}
+
+.hero-cta-primary .material-symbols-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(11, 35, 64, 0.08);
+  font-size: 18px;
+}
+
+.hero-cta-secondary {
+  color: #19324f;
+  font-weight: 750;
+  border: 1px solid rgba(41, 116, 214, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 36px rgba(34, 93, 179, 0.08);
+}
+
+.hero-cta-secondary:hover {
+  border-color: rgba(44, 146, 255, 0.26);
+  background: #ffffff;
+}
+
+.hero-proof-grid {
+  max-width: 1180px !important;
+  margin-top: 22px;
+}
+
+.hero-proof-card {
+  min-height: 78px;
+  padding: 18px 22px;
+  border: 1px solid rgba(41, 116, 214, 0.12);
+  background: rgba(255, 255, 255, 0.94) !important;
+  box-shadow: 0 16px 34px rgba(34, 93, 179, 0.08);
+}
+
+.hero-proof-card .material-symbols-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: rgba(44, 146, 255, 0.1);
+  font-size: 17px;
+}
+
+.hero-proof-card span:last-child {
+  font-size: 16px !important;
+  font-weight: 700;
+  color: #2f4b68 !important;
+}
+
 .hero-metrics,
 .metric-grid,
 .stats-grid {
