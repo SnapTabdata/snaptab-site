@@ -117,12 +117,14 @@ function normalizeThemeToggleButton(button) {
   if (icons.length > 1) {
     icons.forEach((icon, index) => {
       if (index === 0) {
+        icon.classList.remove("dark:hidden", "hidden", "dark:block");
         icon.classList.add("theme-toggle-icon");
       } else {
         icon.remove();
       }
     });
   } else if (icons.length === 1) {
+    icons[0].classList.remove("dark:hidden", "hidden", "dark:block");
     icons[0].classList.add("theme-toggle-icon");
   } else {
     const icon = document.createElement("span");
@@ -431,6 +433,15 @@ document.addEventListener("DOMContentLoaded", async () => {
       nav.classList.toggle("open");
       nav.classList.toggle("hidden");
     });
+  }
+
+  const desktopNav = document.querySelector("nav .hidden.md\\:flex.items-center.gap-8");
+  if (desktopNav) {
+    desktopNav.classList.add("md:ml-10", "lg:ml-16", "xl:ml-20", "shrink-0");
+  }
+  const actions = themeToggle ? themeToggle.parentElement : null;
+  if (actions) {
+    actions.classList.add("shrink-0", "ml-auto");
   }
 
   const trialForm = document.querySelector("[data-trial-form]");
