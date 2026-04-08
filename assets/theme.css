@@ -251,17 +251,35 @@ html:not(.dark) .bg-green-500\/50 {
 
 /* Theme toggle button */
 .theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0 !important;
   border-radius: 8px;
   border: 1px solid transparent;
   cursor: pointer;
   transition: all 0.2s ease;
   background: transparent;
   color: #94a3b8;
+}
+.theme-toggle-icon {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  line-height: 1;
+  font-size: 20px !important;
+  vertical-align: middle;
+}
+.theme-toggle .material-symbols-outlined::before {
+  align-items: center;
+  justify-content: center;
+}
+html.icon-font-ready .theme-toggle .material-symbols-outlined {
+  line-height: 1;
 }
 html.dark .theme-toggle {
   color: #94a3b8;

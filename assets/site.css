@@ -278,11 +278,24 @@ img {
     linear-gradient(180deg, #102126 0%, #10262b 54%, #12292f 100%);
 }
 
+html:not(.dark) .hero-stitch {
+  background:
+    radial-gradient(circle at top center, rgba(13, 185, 242, 0.12), transparent 24%),
+    radial-gradient(circle at left bottom, rgba(44, 146, 255, 0.08), transparent 28%),
+    linear-gradient(180deg, #f6fbff 0%, #eef6ff 52%, #f7fbff 100%);
+}
+
 .hero-kicker-dark {
   border-color: rgba(81, 197, 255, 0.2);
   background: rgba(13, 185, 242, 0.12);
   color: #28c5ff;
   box-shadow: 0 16px 34px rgba(13, 185, 242, 0.08);
+}
+
+html:not(.dark) .hero-kicker-dark {
+  border-color: rgba(44, 146, 255, 0.16);
+  background: rgba(44, 146, 255, 0.08);
+  color: #1097da;
 }
 
 .hero-title {
@@ -299,8 +312,16 @@ img {
   letter-spacing: -0.055em;
 }
 
+html:not(.dark) .hero-title-dark {
+  color: #112035;
+}
+
 .hero-title-dark span {
   color: #28c5ff;
+}
+
+html:not(.dark) .hero-title-dark span {
+  color: #12a8ec;
 }
 
 .hero-description {
@@ -318,6 +339,10 @@ img {
   color: rgba(235, 244, 249, 0.9);
   font-size: clamp(22px, 2.2vw, 28px);
   line-height: 1.62;
+}
+
+html:not(.dark) .hero-description-dark {
+  color: #4a6480;
 }
 
 .hero-cta-primary,
@@ -352,6 +377,13 @@ img {
   box-shadow:
     0 28px 60px rgba(13, 185, 242, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.34);
+}
+
+html:not(.dark) .hero-cta-primary-dark {
+  color: #0b2538 !important;
+  box-shadow:
+    0 26px 54px rgba(13, 185, 242, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.36);
 }
 
 .hero-cta-primary::before {
@@ -406,9 +438,20 @@ img {
   backdrop-filter: blur(8px);
 }
 
+html:not(.dark) .hero-cta-secondary-dark {
+  color: #1f3854;
+  border-color: rgba(41, 116, 214, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+}
+
 .hero-cta-secondary-dark:hover {
   background: rgba(24, 49, 56, 0.78);
   border-color: rgba(120, 173, 196, 0.28);
+}
+
+html:not(.dark) .hero-cta-secondary-dark:hover {
+  background: #ffffff;
+  border-color: rgba(44, 146, 255, 0.24);
 }
 
 .hero-proof-grid {
@@ -452,6 +495,12 @@ img {
   border-color: rgba(166, 202, 219, 0.12);
   background: rgba(249, 252, 255, 0.98) !important;
   box-shadow: 0 24px 48px rgba(5, 17, 23, 0.18);
+}
+
+html:not(.dark) .hero-proof-card-dark {
+  border-color: rgba(41, 116, 214, 0.12);
+  background: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 18px 38px rgba(34, 93, 179, 0.1);
 }
 
 .hero-proof-card-dark .material-symbols-outlined {
