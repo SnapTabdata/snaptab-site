@@ -4,14 +4,14 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>价格方案 - SnapTab | 体验版免费、项目版 ¥1,499、标准版 ¥1,280/月</title>
-    <meta name="description" content="SnapTab 价格方案：体验版 14天免费试用（≤20个交叉表），项目版 ¥1,499/项目（90天有效，适合单次试跑），标准版 ¥1,280/月（含 AI 辅助 50次/月），专业版 ¥1,980/月（AI 无限使用），企业版 ¥30,000~80,000/年（多席位定制）。"/>
+    <meta name="description" content="SnapTab 价格方案：体验版 14天免费试用（≤20个交叉表，含 20 次 AI 体验），项目版 ¥1,499/项目（90天有效，适合单次试跑），标准版 ¥1,280/月（含 AI 辅助 50次/月），专业版 ¥1,980/月（AI 无限使用），企业版 ¥30,000~80,000/年（多席位定制）。"/>
     <meta name="keywords" content="SnapTab价格, 市场调研工具报价, SPSS制表软件价格, AI交叉表费用, 调研自动化订阅"/>
     <meta name="author" content="SnapTab"/>
     <meta name="robots" content="index, follow"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://snaptabdata.github.io/snaptab-site/pricing.html"/>
     <meta property="og:title" content="SnapTab 价格方案 - 体验版免费 | 项目版 ¥1,499"/>
-    <meta property="og:description" content="SnapTab 价格透明：体验版 14天免费，项目版 ¥1,499/项目，标准版 ¥1,280/月，企业版定制报价。"/>
+    <meta property="og:description" content="SnapTab 价格透明：体验版 14天免费并含 20 次 AI 体验，项目版 ¥1,499/项目，标准版 ¥1,280/月，企业版定制报价。"/>
     <meta property="og:image" content="https://snaptabdata.github.io/snaptab-site/assets/og-image.png"/>
     <meta property="og:locale" content="zh_CN"/>
     <meta name="twitter:card" content="summary_large_image"/>
@@ -24,8 +24,8 @@
     <link rel="preload" href="assets/material-symbols.woff2" as="font" type="font/woff2" crossorigin/>
     <link rel="icon" type="image/svg+xml" href="assets/snaptab-mark.svg"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="assets/site.css?v=20260408-2" rel="stylesheet"/>
-    <link href="assets/theme.css?v=20260408-1" rel="stylesheet"/>
+    <link href="assets/site.css?v=20260409-1" rel="stylesheet"/>
+    <link href="assets/theme.css?v=20260409-1" rel="stylesheet"/>
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -570,7 +570,7 @@ html.dark .roi-shell {
 </style>
 </head>
 <body class="bg-background-light dark:bg-background-dark">
-  <nav class="sticky top-0 z-50 bg-white/90 dark:bg-surface-dark/90 backdrop-blur border-b border-gray-200 dark:border-border-dark">
+  <nav class="site-nav-shell sticky top-0 z-50 bg-white/90 dark:bg-surface-dark/90 backdrop-blur border-b border-gray-200 dark:border-border-dark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center gap-2"><span class="text-primary text-2xl font-bold tracking-tight">SnapTab</span></div>
@@ -582,8 +582,8 @@ html.dark .roi-shell {
           <a href="about.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">关于</a>
         </div>
         <div class="flex items-center gap-3 shrink-0">
-          <button id="theme-toggle" class="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-surface-dark"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span></button>
-          <a href="trial.html" class="hidden sm:inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary/90 transition">免费试用</a>
+          <button id="theme-toggle" class="site-theme-toggle p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-surface-dark"><span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span><span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span></button>
+          <a href="trial.html" class="site-trial-cta hidden sm:inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary/90 transition">免费试用</a>
         </div>
         <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 dark:text-gray-300"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
       </div>
@@ -595,7 +595,7 @@ html.dark .roi-shell {
         <a href="pricing.html" class="text-sm font-medium text-primary px-3 py-2">价格方案</a>
         <a href="download.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">下载</a>
         <a href="about.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">关于</a>
-        <a href="trial.html" class="inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-full w-fit">免费试用</a>
+        <a href="trial.html" class="site-trial-cta inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-full w-fit">免费试用</a>
       </div>
     </div>
   </nav>
@@ -607,7 +607,7 @@ html.dark .roi-shell {
           <h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 dark:text-white mt-5 mb-6">选择适合您的方案</h1>
           <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">从单次项目试跑，到研究团队的长期订阅，再到多席位企业部署，SnapTab 把价格、支持强度和 AI 能力都放在一张页面里讲清楚。</p>
           <div class="pricing-pill-row">
-            <div class="pricing-pill"><span class="material-symbols-outlined">bolt</span><span>14 天全功能试用</span></div>
+            <div class="pricing-pill"><span class="material-symbols-outlined">bolt</span><span>14 天试用 + 20 次 AI</span></div>
             <div class="pricing-pill"><span class="material-symbols-outlined">finance_mode</span><span>支持单次项目和长期订阅</span></div>
             <div class="pricing-pill"><span class="material-symbols-outlined">group</span><span>企业版支持多席位与定制服务</span></div>
           </div>
@@ -652,12 +652,12 @@ html.dark .roi-shell {
         <article class="plan-card plan-card--trial lg:col-span-3">
           <div class="plan-kicker"><span class="material-symbols-outlined text-base">card_giftcard</span><span>免费试跑</span></div>
           <h3 class="plan-title">体验版</h3>
-          <p class="plan-caption">14 天全功能试用，不绑支付方式，适合先验证流程与团队接受度。</p>
+          <p class="plan-caption">14 天全功能试用，不绑支付方式，适合先验证流程与团队接受度，并体验 20 次核心 AI 能力。</p>
           <div class="plan-price-row">
             <div class="plan-price">¥0</div>
             <div class="plan-period">/ 14 天</div>
           </div>
-          <div class="plan-note">交叉表 ≤20 个，数据行 ≤500 行</div>
+          <div class="plan-note">交叉表 ≤20 个，数据行 ≤500 行，含 20 次 AI 调用</div>
           <ul class="plan-list">
             <li><span class="material-symbols-outlined">check_circle</span><span>完整体验核心流程与导入导出能力</span></li>
             <li><span class="material-symbols-outlined">check_circle</span><span>无需先采购，先让项目成员上手</span></li>
@@ -817,7 +817,7 @@ html.dark .roi-shell {
         </details>
         <details class="bg-gray-50 dark:bg-surface-dark rounded-xl p-5 cursor-pointer group">
           <summary class="font-medium text-gray-900 dark:text-white list-none flex justify-between items-center">可以先试用再决定吗？<span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span></summary>
-          <p class="mt-3 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">当然可以！您可以先从官网下载未激活版本，然后通过免费试用页面或微信联系我们。我们审核后会为您发放 14 天试用激活码，试用期内可体验全部功能（交叉表 ≤20 个，数据行 ≤500 行）。</p>
+          <p class="mt-3 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">当然可以！您可以先从官网下载未激活版本，然后通过免费试用页面或微信联系我们。我们审核后会为您发放 14 天试用激活码，试用期内可体验全部功能（交叉表 ≤20 个，数据行 ≤500 行），并附带 20 次 AI 体验额度。</p>
         </details>
         <details class="bg-gray-50 dark:bg-surface-dark rounded-xl p-5 cursor-pointer group">
           <summary class="font-medium text-gray-900 dark:text-white list-none flex justify-between items-center">项目版和标准版有什么区别？<span class="material-symbols-outlined text-gray-400 group-open:rotate-180 transition-transform">expand_more</span></summary>

@@ -58,6 +58,11 @@ html:not(.dark) body {
   color: #1e293b !important;
 }
 
+html.dark body {
+  background: linear-gradient(180deg, #0f1c22 0%, #101e22 52%, #13242b 100%) !important;
+  color: #e7f1f6 !important;
+}
+
 /* ===== Navigation / Header ===== */
 html:not(.dark) .bg-background-dark\/80 {
   background-color: rgba(255, 255, 255, 0.88) !important;
@@ -129,9 +134,6 @@ html:not(.dark) .bg-slate-700 {
 }
 
 /* ===== Text colors ===== */
-html:not(.dark) .text-white {
-  color: #0f172a !important;
-}
 html:not(.dark) .text-slate-100 {
   color: #1e293b !important;
 }
@@ -182,19 +184,9 @@ html:not(.dark) .text-background-dark {
   color: #101e22 !important;
 }
 
-/* CTA section with primary bg — keep dark text */
-html:not(.dark) .bg-primary .text-white,
-html:not(.dark) .bg-gradient-to-br .text-white,
-html:not(.dark) [class*="bg-primary"] > .text-white {
-  color: #0f172a !important;
-}
-
 /* Footer on light mode */
 html:not(.dark) footer {
   background-color: #f8faff !important;
-}
-html:not(.dark) footer .text-white {
-  color: #1e293b !important;
 }
 
 /* Hover states */
@@ -296,6 +288,133 @@ html:not(.dark) .theme-toggle {
 html:not(.dark) .theme-toggle:hover {
   background: #f1f5f9;
   color: #0db9f2;
+}
+
+.site-nav-shell {
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+html:not(.dark) .site-nav-shell {
+  background: rgba(255, 255, 255, 0.84) !important;
+  border-bottom-color: rgba(148, 163, 184, 0.18) !important;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.05);
+}
+
+html.dark .site-nav-shell {
+  background: rgba(15, 31, 37, 0.86) !important;
+  border-bottom-color: rgba(82, 113, 124, 0.42) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+.site-theme-toggle,
+.site-trial-cta {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.site-trial-cta {
+  background: linear-gradient(135deg, #49d8ff 0%, #18b0f1 58%, #1292df 100%) !important;
+  color: #082031 !important;
+  font-weight: 800 !important;
+  border: 1px solid rgba(10, 34, 49, 0.06);
+  box-shadow: 0 14px 34px rgba(13, 185, 242, 0.2);
+}
+
+.site-trial-cta:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #60e0ff 0%, #22bcf4 58%, #1499e4 100%) !important;
+  color: #082031 !important;
+}
+
+body.home-page .site-nav-shell {
+  background: rgba(255, 255, 255, 0.72) !important;
+  border-bottom-color: rgba(186, 211, 224, 0.4) !important;
+  box-shadow: 0 16px 38px rgba(60, 117, 152, 0.08);
+}
+
+body.home-page .site-nav-shell .text-gray-600,
+body.home-page .site-nav-shell .text-gray-500 {
+  color: #58718b !important;
+}
+
+body.home-page .site-nav-shell .text-primary {
+  color: #16acee !important;
+}
+
+body.home-page .site-nav-shell .hover\:text-primary:hover {
+  color: #0d9ad9 !important;
+}
+
+body.home-page .site-nav-shell .hover\:bg-gray-100:hover {
+  background: rgba(19, 149, 214, 0.08) !important;
+}
+
+body.home-page .site-theme-toggle,
+body.home-page .theme-toggle {
+  border-color: rgba(197, 219, 230, 0.86) !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  color: #58718b !important;
+  box-shadow: 0 10px 20px rgba(60, 117, 152, 0.08);
+}
+
+body.home-page .site-theme-toggle:hover,
+body.home-page .theme-toggle:hover {
+  background: rgba(244, 251, 255, 0.96) !important;
+  color: #16acee !important;
+}
+
+body.home-page .site-nav-shell #mobile-menu {
+  margin-top: 1px;
+  border-top: 1px solid rgba(197, 219, 230, 0.72);
+  background: linear-gradient(180deg, rgba(253, 254, 255, 0.98), rgba(243, 249, 255, 0.98));
+}
+
+body.home-page .site-nav-shell #mobile-menu a:not(.site-trial-cta) {
+  color: #58718b !important;
+}
+
+html.dark body.home-page .site-nav-shell {
+  background: rgba(8, 25, 31, 0.74) !important;
+  border-bottom-color: rgba(112, 156, 174, 0.18) !important;
+  box-shadow: 0 18px 48px rgba(4, 12, 18, 0.18);
+}
+
+html.dark body.home-page .site-nav-shell .text-gray-600,
+html.dark body.home-page .site-nav-shell .text-gray-500 {
+  color: rgba(223, 236, 243, 0.78) !important;
+}
+
+html.dark body.home-page .site-nav-shell .text-primary {
+  color: #2dc8ff !important;
+}
+
+html.dark body.home-page .site-nav-shell .hover\:text-primary:hover {
+  color: #5ad7ff !important;
+}
+
+html.dark body.home-page .site-nav-shell .hover\:bg-gray-100:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark body.home-page .site-theme-toggle,
+html.dark body.home-page .theme-toggle {
+  border-color: rgba(118, 165, 183, 0.18) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: #d9eaf2 !important;
+}
+
+html.dark body.home-page .site-theme-toggle:hover,
+html.dark body.home-page .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #5cdcff !important;
+}
+
+html.dark body.home-page .site-nav-shell #mobile-menu {
+  border-top: 1px solid rgba(112, 156, 174, 0.14);
+  background: linear-gradient(180deg, rgba(8, 25, 31, 0.98), rgba(10, 28, 35, 0.96));
+}
+
+html.dark body.home-page .site-nav-shell #mobile-menu a:not(.site-trial-cta) {
+  color: rgba(224, 236, 243, 0.82) !important;
 }
 
 /* Smooth transition for theme switch */
