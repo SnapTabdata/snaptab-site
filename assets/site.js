@@ -248,7 +248,6 @@ function normalizeReleaseConfig(data) {
 
   return {
     version: trimString(data?.version),
-    releaseDate: trimString(data?.release_date),
     downloadPageUrl: trimString(data?.download_url) || LOCAL_DOWNLOAD_PAGE,
     trialSubmitUrl: trimString(data?.trial_submit_url),
     installer: normalizeDownloadEntry(data?.downloads?.installer, installerFallback, {
@@ -367,7 +366,7 @@ async function applyReleaseConfigToPage() {
     return null;
   }
 
-  const versionBadge = config.version ? `最新版本 v${config.version} 现已发布` : "最新版本现已发布";
+  const versionBadge = config.version ? `当前稳定版 v${config.version}` : "当前稳定版";
   document.querySelectorAll("[data-release-version-badge]").forEach((node) => {
     node.textContent = versionBadge;
   });
