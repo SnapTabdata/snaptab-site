@@ -1,187 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>关于我们 - SnapTab | 让市场研究回归洞察本质</title>
-    <meta name="description" content="了解 SnapTab 团队与使命。我们致力于通过 AI 自动化技术，解决传统市场调研中效率低、成本高、周期长的痛点，让每一位研究员都能拥有高效的工具。创始人刘靖，深耕市场研究行业多年。"/>
-    <meta name="keywords" content="SnapTab团队, 市场调研工具公司, AI制表软件公司, 问卷分析自动化, 调研行业AI"/>
-    <meta name="author" content="SnapTab"/>
-    <meta name="robots" content="index, follow"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://snaptabdata.github.io/snaptab-site/about.html"/>
-    <meta property="og:title" content="关于我们 - SnapTab | 让市场研究回归洞察本质"/>
-    <meta property="og:description" content="了解 SnapTab 团队。我们致力于用 AI 自动化解决传统市场调研效率低、成本高的问题。"/>
-    <meta property="og:image" content="https://snaptabdata.github.io/snaptab-site/assets/og-image.png"/>
-    <meta property="og:locale" content="zh_CN"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:url" content="https://snaptabdata.github.io/snaptab-site/about.html"/>
-    <meta name="twitter:title" content="关于我们 - SnapTab | 让市场研究回归洞察本质"/>
-    <meta name="twitter:description" content="用 AI 自动化解决传统市场调研效率问题。"/>
-    <meta name="twitter:image" content="https://snaptabdata.github.io/snaptab-site/assets/og-image.png"/>
-    <link rel="canonical" href="https://snaptabdata.github.io/snaptab-site/about.html"/>
-    <link rel="preload" href="assets/inter.ttf" as="font" type="font/ttf" crossorigin/>
-    <link rel="preload" href="assets/material-symbols.woff2" as="font" type="font/woff2" crossorigin/>
-    <link rel="icon" type="image/svg+xml" href="assets/snaptab-mark.svg"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="assets/site.css?v=20260409-1" rel="stylesheet"/>
-    <link href="assets/theme.css?v=20260409-1" rel="stylesheet"/>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#0db9f2",
-              "background-light": "#f5f8f8",
-              "background-dark": "#101e22",
-              "surface-dark": "#162a30",
-              "border-dark": "#223f49",
-              "success": "#14b87d",
-            },
-            fontFamily: { "display": ["Inter", "-apple-system", "Segoe UI", "Microsoft YaHei", "Noto Sans SC", "sans-serif"] },
-            borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-          },
-        },
-      }
-    </script>
-    <script src="assets/site.js?v=20260407-1"></script>
-    <style>
-body { font-family: "Inter", "-apple-system", "Segoe UI", "Microsoft YaHei", "Noto Sans SC", sans-serif; }
-.material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
-</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>关于 SnapTab - 让市场研究回到洞察本身</title>
+<meta name="description" content="SnapTab 由用户研究从业者刘靖创立，希望把研究员从重复的制表、核对和返工里解放出来，把时间留给洞察。">
+<link rel="canonical" href="https://snaptabdata.github.io/snaptab-site/about.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://snaptabdata.github.io/snaptab-site/about.html">
+<meta property="og:title" content="关于 SnapTab - 让市场研究回到洞察本身">
+<meta property="og:description" content="SnapTab 由用户研究从业者刘靖创立，希望把研究员从重复的制表、核对和返工里解放出来，把时间留给洞察。">
+<meta property="og:image" content="https://snaptabdata.github.io/snaptab-site/assets/og-image.png">
+<meta property="og:locale" content="zh_CN">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/snaptab-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/snaptab-mark.png">
+<link rel="stylesheet" href="assets/snaptab.css?v=202611101742">
 </head>
-<body class="bg-background-light dark:bg-background-dark">
-  <nav class="site-nav-shell sticky top-0 z-50 bg-white/90 dark:bg-surface-dark/90 backdrop-blur border-b border-gray-200 dark:border-border-dark">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <div class="flex items-center gap-2"><span class="text-primary text-2xl font-bold tracking-tight">SnapTab</span></div>
-        <div class="hidden md:flex items-center gap-8 md:ml-10 lg:ml-16 xl:ml-20">
-          <a href="index.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">首页</a>
-          <a href="features.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">功能介绍</a>
-          <a href="pricing.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">价格方案</a>
-          <a href="download.html" class="text-sm text-gray-600 dark:text-gray-300 hover:text-primary">下载</a>
-          <a href="about.html" class="text-sm font-medium text-primary">关于</a>
-        </div>
-        <div class="flex items-center gap-3 shrink-0">
-          <button id="theme-toggle" class="site-theme-toggle p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-surface-dark">
-            <span class="material-symbols-outlined text-xl dark:hidden">dark_mode</span>
-            <span class="material-symbols-outlined text-xl hidden dark:block">light_mode</span>
-          </button>
-          <a href="trial.html" class="site-trial-cta hidden sm:inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-full hover:bg-primary/90 transition">免费试用</a>
-        </div>
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 dark:text-gray-300">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
+<body>
+<header class="nav">
+  <div class="nav-in wide">
+    <a class="brand" href="index.html"><img src="assets/snaptab-mark.svg" alt="" width="22" height="22">SnapTab</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">概览</a></li>
+      <li><a href="features.html">功能</a></li>
+      <li><a href="pricing.html">价格</a></li>
+      <li><a href="download.html">下载</a></li>
+      <li><a href="about.html" aria-current="page">关于</a></li>
+    </ul>
+    <a class="btn small nav-cta" href="trial.html">免费试用</a>
+    <button class="nav-toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="打开菜单">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h14M3 13h14"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+<section class="page-hero">
+  <div class="wrap">
+    <h1>让研究员把时间<br>花在洞察上。</h1>
+    <p class="lede">制表、核对、返工，占掉了研究员太多时间。SnapTab 想把这部分交给机器。</p>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:24px">
+  <div class="story">
+    <p>传统调研里，拿到数据之后往往要花好几天处理：写规格、跑表、对数、改了再跑。真正用来想“这些数字意味着什么”的时间，反而被挤得最少。</p>
+    <p>SnapTab 一开始是一个桌面软件。现在，大家越来越多地在 AI 工具里工作，所以我们把它做成了 AI 工具能直接调用的形式：<strong>你说要什么，AI 去安排，SnapTab 把每个数算准。</strong></p>
+    <p>我们相信 AI 不会替代研究员。它会把研究员从重复劳动里解放出来，留出时间去做判断和建议。</p>
+  </div>
+</section>
+
+<section class="sec alt">
+  <figure class="pull wrap">
+    <blockquote>“这些年我看到太多研究员困在海量数据和繁琐的手工流程里。做 SnapTab，就是想让调研回到洞察本身。”</blockquote>
+    <figcaption>刘靖，SnapTab 创始人。多年市场调研和用户研究经验，最清楚研究员每天在制表上卡在哪里。</figcaption>
+  </figure>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>联系我们</h2>
+      <p>购买、报价、合作，或者用的时候遇到问题，都可以直接找我们。</p>
+    </div>
+    <div class="contact">
+      <img src="assets/wechat-qr.jpg" alt="微信二维码，微信号 Changtouyaoguai" width="160" height="160">
+      <div>
+        <b>微信 Changtouyaoguai</b>
+        <span>扫码或搜索微信号添加，一般 24 小时内回复。</span>
+        <div class="actions" style="justify-content:flex-start;margin-top:20px"><a class="btn" href="trial.html">申请免费试用</a></div>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
-      <div class="flex flex-col gap-2">
-        <a href="index.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">首页</a>
-        <a href="features.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">功能介绍</a>
-        <a href="pricing.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">价格方案</a>
-        <a href="download.html" class="text-sm text-gray-600 dark:text-gray-300 px-3 py-2">下载</a>
-        <a href="about.html" class="text-sm font-medium text-primary px-3 py-2">关于</a>
-        <a href="trial.html" class="site-trial-cta inline-flex items-center gap-1 px-4 py-2 bg-primary text-white text-sm font-medium rounded-full w-fit">免费试用</a>
-      </div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wide">
+    <div class="foot-cols">
+      <div><b>SnapTab</b><p>装进 AI 工具里使用的市场研究交叉表工具。</p></div>
+      <div><b>产品</b><ul><li><a href="features.html">功能</a></li><li><a href="pricing.html">价格</a></li><li><a href="download.html">下载</a></li></ul></div>
+      <div><b>支持</b><ul><li><a href="trial.html">免费试用</a></li><li><a href="about.html">关于我们</a></li><li><a href="download-v1.html">旧版桌面端</a></li></ul></div>
     </div>
-  </nav>
-  <section class="py-20 bg-gradient-to-br from-background-light to-blue-50 dark:from-background-dark dark:to-surface-dark">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-sm font-medium text-primary mb-4 tracking-widest uppercase">我们的使命</h2>
-      <h1 class="text-4xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white mb-6">重塑市场研究的<br/>未来</h1>
-      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">我们致力于通过 AI 自动化技术，解决传统市场调研中效率低、成本高、周期长的痛点，让每一位研究员都能拥有高效的工具。</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-        <a href="trial.html" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary text-white font-medium rounded-full hover:bg-primary/90 transition shadow-lg">申请试用</a>
-        <a href="features.html" class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white dark:bg-surface-dark text-gray-700 dark:text-gray-200 font-medium rounded-full hover:bg-gray-50 dark:hover:bg-border-dark transition border border-gray-200 dark:border-border-dark">了解功能</a>
-      </div>
-    </div>
-  </section>
-  <section class="py-16 bg-white dark:bg-background-dark">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-12">为什么创立 SnapTab？</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-primary/10 flex items-center justify-center mx-auto mb-4">
-            <span class="material-symbols-outlined text-primary text-2xl">hourglass_empty</span>
-          </div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">打破低效周期</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">传统调研往往需要数天时间处理数据，我们利用 AI 将流程缩短至分钟级，让决策不再等待。</p>
-        </div>
-        <div class="text-center">
-          <div class="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-primary/10 flex items-center justify-center mx-auto mb-4">
-            <span class="material-symbols-outlined text-primary text-2xl">database</span>
-          </div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">释放数据价值</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">自动化处理海量问卷数据，精准生成交叉表，避免人工分析带来的偏差和遗漏。</p>
-        </div>
-        <div class="text-center">
-          <div class="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-primary/10 flex items-center justify-center mx-auto mb-4">
-            <span class="material-symbols-outlined text-primary text-2xl">monetization_on</span>
-          </div>
-          <h3 class="font-semibold text-gray-900 dark:text-white mb-2">降低使用门槛</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">大幅降低专业制表的技术门槛，让每一位研究员都能快速产出高质量的分析报告。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="py-16 bg-gray-50 dark:bg-surface-dark">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="bg-white dark:bg-background-dark rounded-3xl p-8 md:p-12 shadow-sm">
-        <div class="flex flex-col md:flex-row items-center gap-8">
-          <div class="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-blue-400 flex items-center justify-center text-white text-3xl font-bold shrink-0">LJ</div>
-          <div>
-            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-1">刘靖</h3>
-            <div class="text-sm text-primary font-medium mb-4">SnapTab 创始人</div>
-            <blockquote class="text-gray-600 dark:text-gray-300 italic leading-relaxed mb-4">"在深耕市场研究行业多年间，我目睹了无数研究员在海量数据和繁琐的手工流程中挣扎。SnapTab 的诞生，正是为了让调研回归洞察本质。"</blockquote>
-            <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">资深用户研究专家，拥有多年市场调研与数据分析经验。深刻理解研究员在日常制表工作中的痛点，致力于用技术手段提升调研效率。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="py-16 bg-white dark:bg-background-dark">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-6">AI 赋能每一位研究者</h2>
-      <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">我们相信，AI 不会替代研究者，而是会将他们从重复性工作中解放出来。SnapTab 将成为每一位分析师的超级助手，让他们能够投入更多精力在战略构思与商业决策上。</p>
-    </div>
-  </section>
-  <section class="py-16 bg-gray-50 dark:bg-surface-dark">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">联系我们</h2>
-      <p class="text-gray-500 dark:text-gray-400 mb-8">有任何问题或合作意向，欢迎随时联系</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <div class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-background-dark rounded-full shadow-sm">
-          <span class="material-symbols-outlined text-primary">chat</span>
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-200">微信：Changtouyaoguai</span>
-        </div>
-        <a href="trial.html" class="flex items-center gap-2 px-6 py-3 bg-primary text-white rounded-full shadow-sm hover:bg-primary/90 transition">
-          <span class="material-symbols-outlined text-sm">mail</span>
-          <span class="text-sm font-medium">提交试用申请</span>
-        </a>
-      </div>
-    </div>
-  </section>
-  <footer class="bg-white dark:bg-surface-dark border-t border-gray-200 dark:border-border-dark py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row justify-between items-start gap-8">
-        <div><div class="flex items-center gap-2 mb-3"><span class="text-primary text-xl font-bold">SnapTab</span></div><p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs">专业的市场研究自动化工具，让调研分析回归洞察本身。</p></div>
-        <div class="grid grid-cols-2 gap-8">
-          <div><h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-3">产品</h4><div class="flex flex-col gap-2"><a href="features.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">功能介绍</a><a href="pricing.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">价格方案</a><a href="download.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">下载中心</a></div></div>
-          <div><h4 class="text-sm font-semibold text-gray-900 dark:text-white mb-3">支持</h4><div class="flex flex-col gap-2"><a href="trial.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">免费试用</a><a href="about.html" class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary">关于我们</a></div></div>
-        </div>
-      </div>
-      <div class="mt-8 pt-6 border-t border-gray-100 dark:border-border-dark flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="text-sm text-gray-400">&copy; 2026 SnapTab. All rights reserved.</p>
-        <p class="text-sm text-gray-400">联系方式：微信：Changtouyaoguai</p>
-      </div>
-    </div>
-  </footer>
-  <script>
-    const themeToggle = document.getElementById('theme-toggle'); const html = document.documentElement;
-    themeToggle.addEventListener('click', () => { html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light'); });
-    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) { html.classList.add('dark'); }
-    document.getElementById('mobile-menu-btn').addEventListener('click', () => { document.getElementById('mobile-menu').classList.toggle('hidden'); });
-  </script>
+    <div class="foot-legal"><span>© 2026 SnapTab 保留所有权利。</span><span>联系我们：微信 Changtouyaoguai</span></div>
+  </div>
+</footer>
+<script src="assets/snaptab.js?v=202611101742" defer></script>
 </body>
 </html>
