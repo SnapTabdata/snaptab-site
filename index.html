@@ -16,7 +16,7 @@
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="assets/snaptab-mark.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/snaptab-mark.png">
-<link rel="stylesheet" href="assets/snaptab.css?v=202611101742">
+<link rel="stylesheet" href="assets/snaptab.css?v=202611101812">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SnapTab","applicationCategory":"BusinessApplication",
 "operatingSystem":"Windows 10, Windows 11, macOS","description":"装进 AI 工具里使用的市场研究交叉表工具：读 SPSS .sav 数据，生成 Spec，导出带显著性标记的 Excel 交叉表，支持往期对比。",
@@ -44,11 +44,11 @@
 <section class="hero">
   <div class="wrap">
     <p class="kicker">SnapTab</p>
-    <h1>说一句话，<br>交叉表就做好了。</h1>
-    <p class="lede">装进你常用的 AI 工具里。读 SPSS 数据、写 Spec、跑显著性检验、导出 Excel 交叉表，用中文说清楚要什么就行。</p>
+    <h1>用中文跑交叉表</h1>
+    <p class="lede">在 Claude、Codex 等 AI 工具里调用。读取 SPSS 数据，生成 Spec，输出带显著性标记的 Excel 交叉表。</p>
     <div class="actions">
       <a class="btn" href="download.html">下载 SnapTab</a>
-      <a class="more" href="features.html">看看能做什么</a>
+      <a class="more" href="features.html">了解功能</a>
     </div>
   </div>
 
@@ -63,21 +63,21 @@
         <p class="sheet-title">Q3. 整体满意度</p>
         <table class="xt">
           <thead>
-            <tr class="grp"><th></th><th></th><th colspan="2">性别</th><th colspan="3">城市级别</th></tr>
-            <tr><th scope="col"><span class="sr-only">选项</span></th><th scope="col">总体</th><th scope="col">男<em>A</em></th><th scope="col">女<em>B</em></th><th scope="col">一线<em>C</em></th><th scope="col">二线<em>D</em></th><th scope="col">三线及以下<em>E</em></th></tr>
+            <tr class="grp"><th></th><th></th><th colspan="2" class="gs">性别</th><th colspan="3" class="gs">城市级别</th></tr>
+            <tr><th scope="col"><span class="sr-only">选项</span></th><th scope="col">总体</th><th scope="col" class="gs">男<em>A</em></th><th scope="col">女<em>B</em></th><th scope="col" class="gs">一线<em>A</em></th><th scope="col">二线<em>B</em></th><th scope="col">三线及以下<em>C</em></th></tr>
           </thead>
           <tbody>
-            <tr><td>非常满意</td><td>19%</td><td>18%</td><td>19%</td><td class="hi">26%<sup>DE</sup></td><td>16%</td><td>12%</td></tr>
-            <tr><td>比较满意</td><td>34%</td><td>35%</td><td>33%</td><td>37%</td><td>34%</td><td>31%</td></tr>
-            <tr><td>一般</td><td>29%</td><td>29%</td><td>29%</td><td>24%</td><td>31%<sup>C</sup></td><td>33%<sup>C</sup></td></tr>
-            <tr><td>比较不满意</td><td>12%</td><td>12%</td><td>13%</td><td>9%</td><td>13%</td><td>16%<sup>C</sup></td></tr>
-            <tr><td>非常不满意</td><td>6%</td><td>6%</td><td>6%</td><td>4%</td><td>6%</td><td>8%</td></tr>
-            <tr class="sum"><td>满意（T2B）</td><td>53%</td><td>53%</td><td>52%</td><td class="hi">63%<sup>DE</sup></td><td>50%</td><td>43%</td></tr>
-            <tr class="sum"><td>均值</td><td>3.48</td><td>3.47</td><td>3.46</td><td class="hi">3.72<sup>DE</sup></td><td>3.41</td><td>3.23</td></tr>
-            <tr class="base"><td>样本量</td><td>1,200</td><td>660</td><td>540</td><td>420</td><td>480</td><td>300</td></tr>
+            <tr><td>非常满意</td><td>19%</td><td class="gs">18%</td><td>19%</td><td class="gs hi">26%<sup>BC</sup></td><td>16%</td><td>12%</td></tr>
+            <tr><td>比较满意</td><td>34%</td><td class="gs">35%</td><td>33%</td><td class="gs">37%</td><td>34%</td><td>31%</td></tr>
+            <tr><td>一般</td><td>29%</td><td class="gs">29%</td><td>29%</td><td class="gs">24%</td><td>31%<sup>A</sup></td><td>33%<sup>A</sup></td></tr>
+            <tr><td>比较不满意</td><td>12%</td><td class="gs">12%</td><td>13%</td><td class="gs">9%</td><td>13%</td><td>16%<sup>A</sup></td></tr>
+            <tr><td>非常不满意</td><td>6%</td><td class="gs">6%</td><td>6%</td><td class="gs">4%</td><td>6%</td><td>8%</td></tr>
+            <tr class="sum"><td>满意（T2B）</td><td>53%</td><td class="gs">53%</td><td>52%</td><td class="gs hi">63%<sup>BC</sup></td><td>50%</td><td>43%</td></tr>
+            <tr class="sum"><td>均值</td><td>3.48</td><td class="gs">3.47</td><td>3.46</td><td class="gs hi">3.72<sup>BC</sup></td><td>3.41</td><td>3.23</td></tr>
+            <tr class="base"><td>样本量</td><td>1,200</td><td class="gs">660</td><td>540</td><td class="gs">420</td><td>480</td><td>300</td></tr>
           </tbody>
         </table>
-        <p class="sheet-note">红色字母表示这一列在 95% 置信水平下显著高于字母对应的列。示例数据为虚构。</p>
+        <p class="sheet-note">字母在每个分组内单独编号。红色字母表示该列在 95% 置信水平下显著高于同组中对应字母的列。示例数据为虚构。</p>
       </div>
     </figure>
   </div>
@@ -86,8 +86,8 @@
 <section class="sec alt tight">
   <div class="wide">
     <div class="sec-head">
-      <h2>就在你已经在用的 AI 里。</h2>
-      <p>不用再学一个新软件。SnapTab 是一个 MCP 工具，装好后，这些 AI 都能直接调用它。</p>
+      <h2>支持的 AI 工具</h2>
+      <p>SnapTab 是 MCP 工具，安装后以下工具可直接调用。</p>
     </div>
     <ul class="hosts">
       <li>Claude 桌面版</li>
@@ -103,28 +103,28 @@
 <section class="sec">
   <div class="wide">
     <div class="sec-head">
-      <h2>研究员的活，它都懂。</h2>
-      <p>不是把表格丢给 AI 去猜。统计由 SnapTab 的引擎来算，每个数都算得出、对得上。</p>
+      <h2>核心功能</h2>
+      <p>AI 负责理解需求，统计计算由 SnapTab 引擎完成，结果可复核。</p>
     </div>
     <div class="bento">
       <article class="tile w4">
-        <h3>显著性检验，字母直接标好。</h3>
-        <p>比例用 Z 检验，均值用 Welch T 检验。加权数据按有效样本量计算，不会把显著性算虚。</p>
+        <h3>显著性检验</h3>
+        <p>比例用 Z 检验，均值用 Welch T 检验，加权数据按有效样本量计算。结果以字母标在表内。</p>
         <div class="art">
-          <p class="big-cell">63%<sup>DE</sup></p>
-          <p class="mini-cap">一线城市满意度，显著高于二线和三线及以下</p>
+          <p class="big-cell">63%<sup>BC</sup></p>
+          <p class="mini-cap">一线城市满意度，显著高于二线、三线及以下</p>
         </div>
       </article>
       <article class="tile w2">
-        <h3>SPSS 数据，打开就读。</h3>
-        <p>.sav 里的变量标签、选项标签都认得，单选、多选、量表、评分矩阵自动分清。</p>
+        <h3>SPSS 数据读取</h3>
+        <p>读取 .sav 的变量标签和选项标签，自动识别单选、多选、量表和评分矩阵。</p>
         <div class="art vars" aria-hidden="true">
           <span><b>Q1</b>最常用的品牌</span><span><b>Q2</b>品牌认知</span><span><b>Q3</b>整体满意度</span><span><b>Q4</b>推荐意愿</span>
         </div>
       </article>
       <article class="tile w2">
-        <h3>Spec 先起草，再检查。</h3>
-        <p>按数据生成 Spec 初稿，跑表前逐条检查。Spec 是一份 Excel，你也可以自己改。</p>
+        <h3>Spec 起草与检查</h3>
+        <p>按数据生成 Spec 初稿，跑表前逐条检查。Spec 为 Excel 格式，可手动修改。</p>
         <div class="art specrows" aria-hidden="true">
           <div><span>Q1</span><span>单选</span><span>最常用的品牌</span><span class="ok">通过</span></div>
           <div><span>Q2</span><span>多选</span><span>品牌认知</span><span class="ok">通过</span></div>
@@ -132,8 +132,8 @@
         </div>
       </article>
       <article class="tile w4">
-        <h3>往期对比，题号变了也能对上。</h3>
-        <p>几期数据散在不同文件里也没关系。AI 找出同一道题，你确认，SnapTab 逐期做显著性检验。选项改了、量表方向反了，都能处理。</p>
+        <h3>往期对比</h3>
+        <p>多期数据分散在不同文件中也可合并。AI 匹配同一道题，确认后逐期做显著性检验。支持题号变更、选项增减和量表反向。</p>
         <div class="art waves" aria-hidden="true">
           <div><em>35%</em><b style="height:42%"></b><span>2025H1</span></div>
           <div><em>45%</em><b style="height:56%"></b><span>2025H2</span></div>
@@ -141,8 +141,8 @@
         </div>
       </article>
       <article class="tile w3">
-        <h3>加权，一句话说清楚。</h3>
-        <p>按性别、年龄这类目标占比加权，支持多个维度同时调整。加权和未加权的样本量一起输出。</p>
+        <h3>加权</h3>
+        <p>按目标占比加权，支持多维度同时调整。同时输出加权和未加权样本量。</p>
         <div class="art weights" aria-hidden="true">
           <p class="mini-cap" style="margin:0 0 4px">男性占比，目标 50%</p>
           <div><span>加权前</span><i style="width:55%"></i><span>55%</span></div>
@@ -150,8 +150,8 @@
         </div>
       </article>
       <article class="tile w3">
-        <h3>跑完就能读结论。</h3>
-        <p>报表生成后，AI 可以直接读表，帮你找出显著变化、写成文字，再决定下一步怎么切。</p>
+        <h3>结果解读</h3>
+        <p>报表生成后，AI 可直接读取结果，列出显著变化，整理成文字。</p>
         <div class="art">
           <p class="quote">“和上期相比，品牌C 的认知度从 45% 升到 62%，<span>显著上升</span>。”</p>
         </div>
@@ -163,20 +163,20 @@
 <section class="sec alt">
   <div class="wrap">
     <div class="sec-head">
-      <h2>三步开始。</h2>
+      <h2>使用步骤</h2>
     </div>
     <ol class="steps">
-      <li><h3>下载并安装</h3><p>用 Claude 桌面版的下载 .mcpb，双击安装。用 Codex 等工具的下载通用版，解压后双击“配置到AI工具”。</p></li>
-      <li><h3>激活</h3><p>重启 AI 工具，在对话里说：<code>激活 SnapTab，激活码是 ACT1-……</code></p></li>
-      <li><h3>说出你的需求</h3><p>比如：<code>给这个文件夹里的数据跑一版交叉表，按城市级别分列</code></p></li>
+      <li><h3>安装</h3><p>Claude 桌面版用户下载 .mcpb，双击安装。Codex 等工具的用户下载通用版，解压后运行“配置到AI工具”。</p></li>
+      <li><h3>激活</h3><p>重启 AI 工具，在对话中输入：<code>激活 SnapTab，激活码是 ACT1-……</code></p></li>
+      <li><h3>提需求</h3><p>例如：<code>给这个文件夹里的数据跑一版交叉表，按城市级别分列</code></p></li>
     </ol>
   </div>
 </section>
 
 <section class="sec">
   <div class="wrap closer">
-    <h2>先免费试用 14 天。</h2>
-    <p>提交申请后，我们会发给你试用激活码。</p>
+    <h2>免费试用 14 天</h2>
+    <p>提交申请，获取试用激活码。</p>
     <div class="actions">
       <a class="btn" href="trial.html">申请免费试用</a>
       <a class="more" href="pricing.html">查看价格</a>
@@ -194,6 +194,6 @@
     <div class="foot-legal"><span>© 2026 SnapTab 保留所有权利。</span><span>联系我们：微信 Changtouyaoguai</span></div>
   </div>
 </footer>
-<script src="assets/snaptab.js?v=202611101742" defer></script>
+<script src="assets/snaptab.js?v=202611101812" defer></script>
 </body>
 </html>

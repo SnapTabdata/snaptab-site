@@ -192,6 +192,8 @@ h1, h2, .lede, .sec-head p, .closer p { text-wrap: balance; }
 .xt thead .grp th[colspan] { text-align: center; }
 .xt thead em { display: block; font-style: normal; font-weight: 400; color: var(--ink-3); font-size: 12px; }
 .xt tbody tr + tr td { border-top: 1px solid var(--hair); }
+.xt .gs { border-left: 1px solid var(--line); padding-left: 14px; }
+.xt thead .grp th.gs { border-bottom: 1px solid var(--line); text-align: center; padding-bottom: 6px; }
 .xt .sum td { font-weight: 600; color: var(--ink); }
 .xt .base td { color: var(--ink-3); font-size: 13px; }
 .xt sup { color: var(--sig); font-weight: 600; font-size: 11px; margin-left: 3px; vertical-align: 2px; }
