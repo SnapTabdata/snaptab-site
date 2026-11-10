@@ -22,5 +22,17 @@
       "backup_label": ""
     }
   },
-  "notes": "- 修复新安装环境默认缺少授权服务地址的问题\n- 激活失败时自动回退到飞书激活链路\n- 保留发码与填码成功后的飞书群提醒\n- 安装包与便携包继续内置示例 data / dp_spec / 报表示例"
+  "notes": "- 修复新安装环境默认缺少授权服务地址的问题\n- 激活失败时自动回退到飞书激活链路\n- 保留发码与填码成功后的飞书群提醒\n- 安装包与便携包继续内置示例 data / dp_spec / 报表示例",
+  "mcp": {
+    "version": "2.1.1",
+    "release_date": "2026-11-10",
+    "release_page": "https://github.com/SnapTabdata/snaptab-site/releases/tag/v2.1.1",
+    "download_page": "https://snaptabdata.github.io/snaptab-site/download.html",
+    "files": {
+      "win_mcpb": "https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-win.mcpb",
+      "win_zip": "https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-win.zip",
+      "mac_mcpb": "https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-mac-arm64.mcpb",
+      "mac_zip": "https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-mac-arm64.zip"
+    }
+  }
 }
