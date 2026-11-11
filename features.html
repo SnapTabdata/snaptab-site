@@ -3,20 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>功能 - SnapTab | SPSS 交叉表、显著性检验、加权、往期对比</title>
-<meta name="description" content="SnapTab 在 AI 工具里读 SPSS .sav 数据，起草和检查 Spec，跑带显著性检验的 Excel 交叉表，支持加权、T2B、均值、NET 分组和多期往期对比。">
+<title>功能 - SnapTab | 问卷统计表、差异检验、加权、往期对比</title>
+<meta name="description" content="SnapTab 读取 SPSS 问卷数据，自动生成出表方案，输出 Excel 统计表（交叉表），标出差别是否可靠，支持按比例校正（加权）和往期对比。">
 <link rel="canonical" href="https://snaptabdata.github.io/snaptab-site/features.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://snaptabdata.github.io/snaptab-site/features.html">
-<meta property="og:title" content="功能 - SnapTab | SPSS 交叉表、显著性检验、加权、往期对比">
-<meta property="og:description" content="SnapTab 在 AI 工具里读 SPSS .sav 数据，起草和检查 Spec，跑带显著性检验的 Excel 交叉表，支持加权、T2B、均值、NET 分组和多期往期对比。">
+<meta property="og:title" content="功能 - SnapTab | 问卷统计表、差异检验、加权、往期对比">
+<meta property="og:description" content="SnapTab 读取 SPSS 问卷数据，自动生成出表方案，输出 Excel 统计表（交叉表），标出差别是否可靠，支持按比例校正（加权）和往期对比。">
 <meta property="og:image" content="https://snaptabdata.github.io/snaptab-site/assets/og-image.png">
 <meta property="og:locale" content="zh_CN">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="assets/snaptab-mark.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/snaptab-mark.png">
-<link rel="stylesheet" href="assets/snaptab.css?v=202611101812">
+<link rel="stylesheet" href="assets/snaptab.css?v=202611110907">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!document.documentElement.hasAttribute("data-ready"))document.documentElement.classList.remove("js")},2500)</script>
 </head>
 <body>
 <header class="nav">
@@ -39,147 +40,125 @@
 <section class="page-hero">
   <div class="wrap">
     <h1>功能</h1>
-    <p class="lede">从 .sav 数据到 Excel 交叉表。AI 理解需求、匹配变量、起草 Spec，统计计算由 SnapTab 引擎完成。</p>
+    <p class="lede">从问卷数据到 Excel 统计表。</p>
   </div>
 </section>
 
 <section class="sec" style="padding-top:24px">
   <div class="wide">
-    <div class="feature">
+    <div class="feature" data-reveal>
       <div>
-        <h2>数据读取</h2>
-        <p>读取项目文件夹中的 SPSS 数据，列出变量、选项和样本量，无需打开 SPSS。</p>
+        <h2>读问卷数据</h2>
+        <p>读取 SPSS 格式（.sav）的问卷数据，不用打开 SPSS。</p>
         <ul>
-          <li>认得变量标签和选项标签</li>
-          <li>自动分清单选、多选、量表和评分矩阵</li>
-          <li>多选题的三种编码方式自动统一</li>
-          <li>“不知道”“说不清”这类选项默认不算进均值</li>
+          <li>题目和选项名称自动读出</li>
+          <li>单选、多选、打分题自动分清</li>
+          <li>多选题的各种记录方式自动统一</li>
+          <li>“不知道”“说不清”默认不算进平均分</li>
         </ul>
       </div>
       <div class="feature-art">
         <div class="vars" aria-hidden="true">
-          <span><b>gender</b>性别</span><span><b>age_group</b>年龄段</span><span><b>city_tier</b>城市级别</span>
-          <span><b>Q1</b>最常用的品牌</span><span><b>Q2_1–Q2_6</b>品牌认知（多选）</span><span><b>Q3</b>整体满意度</span>
-          <span><b>Q4</b>推荐意愿 0–10</span><span><b>Q6</b>是否考虑换车</span>
+          <span><b>gender</b>性别</span><span><b>age_group</b>年龄段</span><span><b>city_tier</b>城市</span>
+          <span><b>Q1</b>最常用的品牌</span><span><b>Q2</b>知道哪些品牌（多选）</span><span><b>Q3</b>满意度</span>
+          <span><b>Q4</b>推荐意愿 0–10 分</span><span><b>Q6</b>是否考虑换车</span>
         </div>
       </div>
     </div>
 
-    <div class="feature flip">
+    <div class="feature flip" data-reveal>
       <div>
-        <h2>Spec 编写</h2>
-        <p>Spec 为 Excel 格式，定义出表内容、表头分组和加权方案。SnapTab 按数据起草，AI 按需求修改，跑表前逐条检查。</p>
+        <h2>出表方案</h2>
+        <p>一份 Excel，写明出哪些表、按哪些人群分、要不要按比例校正。</p>
         <ul>
-          <li>表头、表格、加权方案各一张页签</li>
-          <li>变量名写错、编码对不上，跑表前就会指出来</li>
-          <li>改之前自动备份，随时可以退回</li>
-          <li>你也可以直接用 Excel 打开自己改</li>
+          <li>按数据自动生成</li>
+          <li>要改哪里，用中文说</li>
+          <li>出表前自动检查错误</li>
+          <li>改之前自动备份</li>
         </ul>
       </div>
       <div class="feature-art">
         <div class="specrows" aria-hidden="true">
-          <div><span>Q1</span><span>单选</span><span>最常用的品牌</span><span class="ok">通过</span></div>
-          <div><span>Q2</span><span>多选</span><span>品牌认知，按选中降序</span><span class="ok">通过</span></div>
-          <div><span>Q3</span><span>量表</span><span>T2B 4,5 和均值</span><span class="ok">通过</span></div>
-          <div><span>Q4</span><span>量表</span><span>推荐 9,10 和均值</span><span class="ok">通过</span></div>
+          <div><span>Q1</span><span>单选</span><span>最常用的品牌</span><span class="ok">没问题</span></div>
+          <div><span>Q2</span><span>多选</span><span>知道哪些品牌</span><span class="ok">没问题</span></div>
+          <div><span>Q3</span><span>打分</span><span>满意比例、平均分</span><span class="ok">没问题</span></div>
+          <div><span>Q4</span><span>打分</span><span>推荐比例、平均分</span><span class="ok">没问题</span></div>
         </div>
       </div>
     </div>
 
-    <div class="feature">
+    <div class="feature" data-reveal>
       <div>
-        <h2>交叉表输出</h2>
-        <p>输出 Excel 交叉表，包含百分比、样本量和显著性字母。修改 Spec 后可重新运行。</p>
+        <h2>统计表</h2>
+        <p>Excel 格式，每道题按人群列出百分比和人数。</p>
         <ul>
-          <li>比例用 Z 检验，均值用 Welch T 检验</li>
-          <li>加权数据按有效样本量检验，显著性不会算虚</li>
-          <li>单变量加权和多维度轮换加权</li>
-          <li>T2B、均值、TGI、NET 分组、排序</li>
-          <li>没生成的表会写明原因</li>
+          <li>差别是否可靠，用红色字母标出</li>
+          <li>满意度类题目自动算满意比例和平均分</li>
+          <li>可按真实人口比例校正（加权）</li>
+          <li>做不出来的表会写明原因</li>
         </ul>
       </div>
       <div class="feature-art">
-        <p style="font-size:15px;color:var(--ink-3)">Q3. 整体满意度：满意（T2B）</p>
-        <p class="big-cell" style="font-size:clamp(56px,7vw,88px);font-weight:700;letter-spacing:-0.04em;line-height:1.05;margin-top:8px">63%<sup style="font-size:.3em;color:var(--sig);vertical-align:1.7em;margin-left:6px">BC</sup></p>
-        <p style="margin-top:10px;color:var(--ink-2)">一线城市，样本量 420。显著高于二线（50%）和三线及以下（43%）。</p>
+        <p style="font-size:15px;color:var(--ink-3)">Q3. 满意度：满意比例</p>
+        <p class="big-cell" data-count-to="63" style="font-size:clamp(56px,7vw,88px);font-weight:700;letter-spacing:-0.04em;line-height:1.05;margin-top:8px">63%<sup style="font-size:.3em;color:var(--sig);vertical-align:1.7em;margin-left:6px">BC</sup></p>
+        <p style="margin-top:10px;color:var(--ink-2)">一线城市 420 人。明显高于二线（50%）和三线及以下（43%）。</p>
       </div>
     </div>
 
-    <div class="feature flip">
+    <div class="feature flip" data-reveal>
       <div>
-        <h2>往期对比</h2>
-        <p>适用于追踪调研。AI 在各期数据中匹配同一道题，经确认后，SnapTab 合并数据并逐期做显著性检验。</p>
+        <h2>和往期比</h2>
+        <p>每季度、每年做的同类问卷，自动找出相同的题，看变化可不可靠。</p>
         <ul>
-          <li>不限期数，零散的 .sav 文件也能对</li>
-          <li>选项重新编码、量表反向自动处理</li>
-          <li>每期可以用各自的权重</li>
-          <li>自动列出本期比上期、比第一期的显著变化</li>
+          <li>几期都行，文件分开放也行</li>
+          <li>题号改了、选项增减了，也能对上</li>
+          <li>每期可以分别按比例校正</li>
+          <li>自动列出和上期、第一期相比的明显变化</li>
         </ul>
       </div>
       <div class="feature-art">
         <div class="waves" aria-hidden="true" style="height:200px">
-          <div><em>35%</em><b style="height:42%"></b><span>2025H1</span></div>
-          <div><em>45%</em><b style="height:56%"></b><span>2025H2</span></div>
-          <div><em>62%<sup>AB</sup></em><b style="height:78%"></b><span>2026H1</span></div>
+          <div><em>35%</em><b style="height:42%"></b><span>2025 上半年</span></div>
+          <div><em>45%</em><b style="height:56%"></b><span>2025 下半年</span></div>
+          <div><em>62%<sup>AB</sup></em><b style="height:78%"></b><span>2026 上半年</span></div>
         </div>
-        <p style="margin-top:18px;font-size:14px;color:var(--ink-3);text-align:center">品牌C 认知度，三期对比</p>
+        <p style="margin-top:18px;font-size:14px;color:var(--ink-3);text-align:center">知道品牌C 的人，三期对比</p>
       </div>
     </div>
 
-    <div class="feature">
+    <div class="feature" data-reveal>
       <div>
-        <h2>结果解读</h2>
-        <p>报表生成后，AI 可直接读取结果表，列出显著差异，并建议进一步拆分的维度。</p>
+        <h2>帮你读结果</h2>
+        <p>表做好后，AI 读表并告诉你哪些差别值得注意，下一步还可以怎么看。</p>
       </div>
       <div class="feature-art">
-        <p style="font-size:21px;line-height:1.45;font-weight:600;letter-spacing:-0.015em">“一线城市满意度显著高于其他城市，差异主要来自‘非常满意’。建议再按年龄段拆分一线城市。”</p>
+        <p style="font-size:21px;line-height:1.45;font-weight:600;letter-spacing:-0.015em">“一线城市的人明显更满意，主要多在‘非常满意’。可以再按年龄看看一线城市。”</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="sec alt">
-  <div class="wide">
-    <div class="sec-head">
-      <h2>工具清单</h2>
-      <p>共 15 个工具。用中文描述需求即可，AI 会自动选择。</p>
-    </div>
-    <div class="tool-list">
-      <div><b>查看状态和激活</b><span>看版本、授权状态，用激活码激活。</span></div>
-      <div><b>使用说明</b><span>项目文件夹怎么放、Spec 怎么写、往期对比怎么做。</span></div>
-      <div><b>读数据</b><span>列出变量、标签、选项和样本量。</span></div>
-      <div><b>起草 Spec</b><span>按数据生成 Spec 初稿。</span></div>
-      <div><b>读和改 Spec</b><span>按你的话修改，改前自动备份。</span></div>
-      <div><b>检查 Spec</b><span>跑表前找出写错和对不上的地方。</span></div>
-      <div><b>跑表和查进度</b><span>在后台跑表，大项目也不会卡住对话。</span></div>
-      <div><b>读报表</b><span>读出结果表和显著性标记。</span></div>
-      <div><b>往期对比</b><span>起草和修改对照表、检查、合并并逐期跑表。</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="sec">
   <div class="wrap">
-    <div class="sec-head">
-      <h2>数据与授权</h2>
-      <p>读取、加权、检验和导出均在本机完成，SnapTab 不收集调研数据。</p>
+    <div class="sec-head" data-reveal>
+      <h2>数据安全</h2>
     </div>
-    <dl class="specs">
-      <div><dt>计算在哪里</dt><dd>全部在本机运行，不经过我们的服务器。</dd></div>
-      <div><dt>AI 看到什么</dt><dd>AI 工具会看到变量名、题目标签和结果表，用来理解你的需求。原始数据文件由 SnapTab 在本机读取。</dd></div>
-      <div><dt>联网</dt><dd>只用来验证授权。至少每 14 天联网一次。</dd></div>
-      <div><dt>授权</dt><dd>一个激活码对应一台电脑。</dd></div>
+    <dl class="specs" data-reveal>
+      <div><dt>统计在哪里做</dt><dd>在你自己的电脑上，不经过 SnapTab 的服务器</dd></div>
+      <div><dt>AI 能看到什么</dt><dd>题目名称和统计结果。原始数据由 SnapTab 在你电脑上读取</dd></div>
+      <div><dt>联网</dt><dd>只用来确认授权，至少每 14 天联网一次</dd></div>
+      <div><dt>授权</dt><dd>一个激活码对应一台电脑</dd></div>
     </dl>
   </div>
 </section>
 
-<section class="sec alt">
-  <div class="wrap closer">
+<section class="sec">
+  <div class="wrap closer" data-reveal>
     <h2>免费试用 14 天</h2>
-    <p>提交申请，获取试用激活码。</p>
+    <p>试用结束后每月 ¥25。</p>
     <div class="actions">
-      <a class="btn" href="trial.html">申请免费试用</a>
-      <a class="more" href="download.html">下载 SnapTab</a>
+      <a class="btn" href="trial.html">申请试用</a>
+      <a class="more" href="download.html">下载</a>
     </div>
   </div>
 </section>
@@ -187,13 +166,13 @@
 <footer class="foot">
   <div class="wide">
     <div class="foot-cols">
-      <div><b>SnapTab</b><p>装进 AI 工具里使用的市场研究交叉表工具。</p></div>
+      <div><b>SnapTab</b><p>用中文做问卷统计表</p></div>
       <div><b>产品</b><ul><li><a href="features.html">功能</a></li><li><a href="pricing.html">价格</a></li><li><a href="download.html">下载</a></li></ul></div>
       <div><b>支持</b><ul><li><a href="trial.html">免费试用</a></li><li><a href="about.html">关于我们</a></li><li><a href="download-v1.html">旧版桌面端</a></li></ul></div>
     </div>
-    <div class="foot-legal"><span>© 2026 SnapTab 保留所有权利。</span><span>联系我们：微信 Changtouyaoguai</span></div>
+    <div class="foot-legal"><span>© 2026 SnapTab</span><span>微信 Changtouyaoguai</span></div>
   </div>
 </footer>
-<script src="assets/snaptab.js?v=202611101812" defer></script>
+<script src="assets/snaptab.js?v=202611110907" defer></script>
 </body>
 </html>

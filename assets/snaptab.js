@@ -11,6 +11,62 @@
     });
   }
 
+  // ───────── 动效：滚动到位置时显示、首屏产品图随滚动放大、数字滚动 ─────────
+  var root = document.documentElement;
+  root.setAttribute("data-ready", "1");
+  var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function countUp(el) {
+    var target = el.getAttribute("data-count-to");
+    if (!target || still) return;
+    var end = parseFloat(target), t0 = null, dur = 1200;
+    var node = el.firstChild;
+    function step(t) {
+      if (t0 === null) t0 = t;
+      var k = Math.min(1, (t - t0) / dur);
+      k = 1 - Math.pow(1 - k, 3);
+      node.nodeValue = Math.round(end * k) + "%";
+      if (k < 1) requestAnimationFrame(step);
+    }
+    node.nodeValue = "0%";
+    requestAnimationFrame(step);
+  }
+
+  var watched = document.querySelectorAll("[data-reveal], [data-stagger]");
+  if ("IntersectionObserver" in window && !still) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("in");
+        e.target.querySelectorAll("[data-count-to]").forEach(countUp);
+        io.unobserve(e.target);
+      });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.12 });
+    watched.forEach(function (el) { io.observe(el); });
+  } else {
+    watched.forEach(function (el) { el.classList.add("in"); });
+  }
+
+  var shot = document.querySelector(".stage .shot");
+  if (shot && !still) {
+    var ticking = false;
+    var zoom = function () {
+      ticking = false;
+      var r = shot.getBoundingClientRect(), vh = window.innerHeight || 800;
+      var p = Math.max(0, Math.min(1, (vh - r.top) / (vh * 0.75)));
+      shot.style.setProperty("--zoom", (0.9 + 0.1 * p).toFixed(4));
+    };
+    window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(zoom); } }, { passive: true });
+    window.addEventListener("resize", zoom);
+    zoom();
+  }
+
+  // 下载页：按访问者的系统预先选好 Windows 或 Mac
+  var macRadio = document.getElementById("os-mac");
+  if (macRadio && /Mac/i.test(navigator.platform || navigator.userAgent) && !/iPhone|iPad/i.test(navigator.userAgent)) {
+    macRadio.checked = true;
+  }
+
   var form = document.querySelector("[data-trial-form]");
   if (!form) return;
 
@@ -84,7 +140,7 @@
     };
 
     submitUrl().then(function (url) {
-      if (!url) return { sent: false, error: "试用申请通道暂时没有开通，请直接加微信 " + WECHAT + "。" };
+      if (!url) return { sent: false, error: "申请通道暂未开通，请添加微信 " + WECHAT + "。" };
       return fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
         .then(function (r) {
           if (r.ok) return { sent: true };
@@ -98,22 +154,22 @@
           try {
             if (navigator.sendBeacon(url, new Blob([JSON.stringify(payload)], { type: "application/json" }))) return { sent: true };
           } catch (_) { /* 忽略 */ }
-          return { sent: false, error: (err && err.message) || "网络连接失败，请稍后再试。" };
+          return { sent: false, error: (err && err.message) || "网络连接失败。" };
         });
     }).then(function (res) {
       if (result) {
         if (res.sent) {
           result.innerHTML =
-            '<div class="card"><h3>' + esc(name || "你好") + "，申请已收到</h3>" +
-            "<p>扫码加微信，我们会尽快发给你 14 天试用激活码。</p>" +
+            '<div class="card"><h3>' + (name ? esc(name) + "，" : "") + "申请已提交</h3>" +
+            "<p>扫码添加微信，获取 14 天试用激活码。</p>" +
             '<img src="assets/wechat-qr.jpg" alt="微信二维码，微信号 ' + WECHAT + '" width="180" height="180">' +
             "<p>微信号：" + WECHAT + "</p>" +
             '<div class="actions"><a class="btn" href="download.html">下载 SnapTab</a></div></div>';
           form.reset();
         } else {
           result.innerHTML =
-            '<div class="card err"><h3>申请没有提交成功</h3><p>' + esc(res.error) + "</p>" +
-            "<p>你填的内容还在，可以直接再提交一次，或者加微信 " + WECHAT + " 联系我们。</p></div>";
+            '<div class="card err"><h3>提交失败</h3><p>' + esc(res.error) + "</p>" +
+            "<p>已填内容保留，可重新提交，或添加微信 " + WECHAT + "。</p></div>";
         }
         result.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }

@@ -3,20 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>下载 SnapTab v2.1.1 - 在 AI 工具里跑交叉表</title>
-<meta name="description" content="下载 SnapTab v2.1.1。支持 Windows 10/11 和 M 系列芯片的 Mac，可装进 Claude 桌面版、Claude Code、Codex、DeepSeek Harness 使用。">
+<title>下载 SnapTab v2.1.1</title>
+<meta name="description" content="下载 SnapTab v2.1.1。支持 Windows 10/11 和 M 系列芯片的 Mac，可在 Claude 桌面版、Claude Code、Codex、DeepSeek Harness 中使用。">
 <link rel="canonical" href="https://snaptabdata.github.io/snaptab-site/download.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://snaptabdata.github.io/snaptab-site/download.html">
-<meta property="og:title" content="下载 SnapTab v2.1.1 - 在 AI 工具里跑交叉表">
-<meta property="og:description" content="下载 SnapTab v2.1.1。支持 Windows 10/11 和 M 系列芯片的 Mac，可装进 Claude 桌面版、Claude Code、Codex、DeepSeek Harness 使用。">
+<meta property="og:title" content="下载 SnapTab v2.1.1">
+<meta property="og:description" content="下载 SnapTab v2.1.1。支持 Windows 10/11 和 M 系列芯片的 Mac，可在 Claude 桌面版、Claude Code、Codex、DeepSeek Harness 中使用。">
 <meta property="og:image" content="https://snaptabdata.github.io/snaptab-site/assets/og-image.png">
 <meta property="og:locale" content="zh_CN">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
 <link rel="icon" href="assets/snaptab-mark.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/snaptab-mark.png">
-<link rel="stylesheet" href="assets/snaptab.css?v=202611101812">
+<link rel="stylesheet" href="assets/snaptab.css?v=202611110907">
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!document.documentElement.hasAttribute("data-ready"))document.documentElement.classList.remove("js")},2500)</script>
 </head>
 <body>
 <header class="nav">
@@ -39,67 +40,75 @@
 <section class="page-hero">
   <div class="wrap">
     <h1>下载 SnapTab</h1>
-    <p class="lede">版本 2.1.1，2026-11-10 发布。请按电脑系统和 AI 工具选择。</p>
+    <p class="lede">版本 2.1.1，2026-11-10</p>
   </div>
 </section>
 
 <section class="sec" style="padding-top:0">
-  <div class="wrap">
-    <p class="notice">装好后需要<b>激活码</b>才能跑表。还没有的话，先<a href="trial.html">申请免费试用</a>。</p>
-    <div class="dl-grid">
+  <div class="wrap picker">
+    <input type="radio" name="os" id="os-win" class="sr-only" checked>
+    <input type="radio" name="os" id="os-mac" class="sr-only">
+
+    <p class="pick-label">1. 电脑</p>
+    <div class="seg" role="group" aria-label="选择电脑系统">
+      <label for="os-win">Windows</label>
+      <label for="os-mac">Mac（M 芯片）</label>
+    </div>
+
+    <p class="pick-label">2. AI 工具</p>
+    <div class="dl-grid" data-stagger>
       <article class="dl">
-        <p class="os"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></svg>Windows 10 / 11</p>
         <h3>Claude 桌面版</h3>
-        <p>双击下载的文件，Claude 会弹出安装页面，点“安装”。</p>
-        <p class="file">SnapTab-2.1.1-win.mcpb，93 MB</p>
-        <a class="btn" href="https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-win.mcpb" data-file="SnapTab-2.1.1-win.mcpb" data-size="93 MB">下载</a>
+        <p>双击下载的文件，在 Claude 中点“安装”。</p>
+        <div class="dl-foot win">
+          <a class="btn" href="https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-win.mcpb" data-file="SnapTab-2.1.1-win.mcpb" data-size="93 MB">下载 Windows 版</a>
+          <span class="file">SnapTab-2.1.1-win.mcpb，93 MB</span>
+        </div>
+        <div class="dl-foot mac">
+          <a class="btn" href="https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-mac-arm64.mcpb" data-file="SnapTab-2.1.1-mac-arm64.mcpb" data-size="87 MB">下载 Mac 版</a>
+          <span class="file">SnapTab-2.1.1-mac-arm64.mcpb，87 MB</span>
+        </div>
       </article>
       <article class="dl">
-        <p class="os"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M9 20h6M12 16v4"/></svg>Windows 10 / 11</p>
-        <h3>通用版</h3>
-        <p>适用于 Codex、DeepSeek Harness、Claude Code。解压后双击“配置到AI工具”，会自动配好电脑上已装的这几个工具。</p>
-        <p class="file">SnapTab-2.1.1-win.zip，93 MB</p>
-        <a class="btn" href="https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-win.zip" data-file="SnapTab-2.1.1-win.zip" data-size="93 MB">下载</a>
-      </article>
-      <article class="dl">
-        <p class="os"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="5" width="15" height="10.5" rx="1.6"/><path d="M2.5 18.5h19"/></svg>Mac，M 系列芯片</p>
-        <h3>Claude 桌面版</h3>
-        <p>双击下载的文件，Claude 会弹出安装页面，点“安装”。</p>
-        <p class="file">SnapTab-2.1.1-mac-arm64.mcpb，87 MB</p>
-        <a class="btn" href="https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-mac-arm64.mcpb" data-file="SnapTab-2.1.1-mac-arm64.mcpb" data-size="87 MB">下载</a>
-      </article>
-      <article class="dl">
-        <p class="os"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="5" width="15" height="10.5" rx="1.6"/><path d="M2.5 18.5h19"/></svg>Mac，M 系列芯片</p>
-        <h3>通用版</h3>
-        <p>适用于 Codex、DeepSeek Harness、Claude Code。解压后右键点“配置到AI工具.command”，选“打开”。</p>
-        <p class="file">SnapTab-2.1.1-mac-arm64.zip，87 MB</p>
-        <a class="btn" href="https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-mac-arm64.zip" data-file="SnapTab-2.1.1-mac-arm64.zip" data-size="87 MB">下载</a>
+        <h3>其他 AI 工具</h3>
+        <p>Codex、DeepSeek Harness、Claude Code</p>
+        <p><span class="win">解压后双击“配置到AI工具”。</span><span class="mac">解压后右键“配置到AI工具.command”，选“打开”。</span></p>
+        <div class="dl-foot win">
+          <a class="btn" href="https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-win.zip" data-file="SnapTab-2.1.1-win.zip" data-size="93 MB">下载 Windows 版</a>
+          <span class="file">SnapTab-2.1.1-win.zip，93 MB</span>
+        </div>
+        <div class="dl-foot mac">
+          <a class="btn" href="https://github.com/SnapTabdata/snaptab-site/releases/download/v2.1.1/SnapTab-2.1.1-mac-arm64.zip" data-file="SnapTab-2.1.1-mac-arm64.zip" data-size="87 MB">下载 Mac 版</a>
+          <span class="file">SnapTab-2.1.1-mac-arm64.zip，87 MB</span>
+        </div>
       </article>
     </div>
-    <p class="hosts-note">用 WorkBuddy 或其他支持 MCP 的工具？下载通用版，在工具的 MCP 设置里添加解压后的 snaptab-mcp 程序即可。</p>
+    <p class="hosts-note">WorkBuddy 等其他 MCP 工具：下载“其他 AI 工具”版本，在该工具的 MCP 设置中添加 snaptab-mcp 程序。</p>
+    <p class="hosts-note">需要激活码才能使用。<a href="trial.html">免费试用 14 天</a>，之后每月 ¥25。</p>
   </div>
 </section>
 
 <section class="sec alt">
   <div class="wrap">
-    <div class="sec-head"><h2>安装后</h2></div>
-    <ol class="steps">
-      <li><h3>重启 AI 工具</h3><p>把 Claude、Codex 或 DeepSeek Harness 完全退出再打开，它才能找到 SnapTab。</p></li>
-      <li><h3>激活</h3><p>在对话里说：<code>激活 SnapTab，激活码是 ACT1-……</code></p></li>
-      <li><h3>提需求</h3><p>例如：<code>和往期数据对比，告诉我哪些指标显著变化</code></p></li>
+    <div class="sec-head" data-reveal><h2>安装后</h2></div>
+    <ol class="steps" data-stagger>
+      <li><h3>重启 AI 工具</h3><p>完全退出后重新打开。</p></li>
+      <li><h3>激活</h3><p>输入：<code>激活 SnapTab，激活码 ACT1-……</code></p></li>
+      <li><h3>开始使用</h3><p>例如：<code>和上次的问卷比，有哪些明显变化</code></p></li>
     </ol>
-    <p class="hosts-note" style="margin-top:56px">Mac 提示“无法验证开发者”时，打开“系统设置”里的“隐私与安全性”，拉到最下面点“仍要打开”。</p>
+    <p class="hosts-note" style="margin-top:56px">Mac 提示“无法验证开发者”：系统设置 → 隐私与安全性 → 仍要打开。</p>
   </div>
 </section>
 
 <section class="sec">
   <div class="wrap">
-    <div class="sec-head"><h2>系统要求</h2></div>
-    <dl class="specs">
-      <div><dt>电脑</dt><dd>Windows 10 / 11（64 位），或 M 系列芯片的 Mac</dd></div>
-      <div><dt>AI 工具</dt><dd>Claude 桌面版、Claude Code、Codex、DeepSeek Harness，或其他支持 MCP 的工具</dd></div>
-      <div><dt>磁盘空间</dt><dd>至少 600 MB</dd></div>
-      <div><dt>网络</dt><dd>激活和使用时需要联网，至少每 14 天联网一次</dd></div>
+    <div class="sec-head" data-reveal><h2>系统要求</h2></div>
+    <dl class="specs" data-reveal>
+      <div><dt>电脑</dt><dd>Windows 10 / 11（64 位）；M 系列芯片的 Mac</dd></div>
+      <div><dt>AI 工具</dt><dd>Claude 桌面版、Claude Code、Codex、DeepSeek Harness 或其他 MCP 工具</dd></div>
+      <div><dt>磁盘空间</dt><dd>600 MB 以上</dd></div>
+      <div><dt>网络</dt><dd>用于验证授权，至少每 14 天联网一次</dd></div>
+      <div><dt>问卷数据</dt><dd>SPSS 格式（.sav 文件）</dd></div>
       <div><dt>授权</dt><dd>一个激活码对应一台电脑</dd></div>
     </dl>
   </div>
@@ -107,39 +116,38 @@
 
 <section class="sec alt">
   <div class="wrap">
-    <div class="sec-head"><h2>更新记录</h2></div>
-    <div class="log">
+    <div class="sec-head" data-reveal><h2>更新记录</h2></div>
+    <div class="log" data-stagger>
       <article>
         <div><h3>2.1.1</h3><time>2026-11-10</time></div>
-        <ul><li>修复 Mac 上激活和联网验证失败的问题</li></ul>
+        <ul><li>修复 Mac 上激活与联网验证失败</li></ul>
       </article>
       <article>
         <div><h3>2.1.0</h3></div>
-        <ul><li>新增往期对比：多期数据里同一道题自动对上，逐期并排做显著性检验。题号改了、选项变了、量表方向反了都能处理</li></ul>
+        <ul><li>新增往期对比：几期问卷自动找出相同的题，比较变化是否可靠</li></ul>
       </article>
       <article>
         <div><h3>2.0.0</h3></div>
         <ul>
-          <li>改为装进 AI 工具使用，Claude、Codex、DeepSeek Harness、Claude Code 都能直接调用</li>
+          <li>改为在 AI 软件里使用：Claude、Codex、DeepSeek Harness、Claude Code</li>
           <li>支持 M 系列芯片的 Mac</li>
-          <li>统一项目文件夹规范，Spec 固定为 specs/dp_spec.xlsx</li>
         </ul>
       </article>
     </div>
-    <p class="hosts-note" style="margin-top:48px">需要旧版 Windows 桌面端 1.0.2？<a href="download-v1.html">在这里下载</a>。</p>
+    <p class="hosts-note" style="margin-top:48px">旧版 Windows 桌面端 1.0.2：<a href="download-v1.html">下载页</a></p>
   </div>
 </section>
 </main>
 <footer class="foot">
   <div class="wide">
     <div class="foot-cols">
-      <div><b>SnapTab</b><p>装进 AI 工具里使用的市场研究交叉表工具。</p></div>
+      <div><b>SnapTab</b><p>用中文做问卷统计表</p></div>
       <div><b>产品</b><ul><li><a href="features.html">功能</a></li><li><a href="pricing.html">价格</a></li><li><a href="download.html">下载</a></li></ul></div>
       <div><b>支持</b><ul><li><a href="trial.html">免费试用</a></li><li><a href="about.html">关于我们</a></li><li><a href="download-v1.html">旧版桌面端</a></li></ul></div>
     </div>
-    <div class="foot-legal"><span>© 2026 SnapTab 保留所有权利。</span><span>联系我们：微信 Changtouyaoguai</span></div>
+    <div class="foot-legal"><span>© 2026 SnapTab</span><span>微信 Changtouyaoguai</span></div>
   </div>
 </footer>
-<script src="assets/snaptab.js?v=202611101812" defer></script>
+<script src="assets/snaptab.js?v=202611110907" defer></script>
 </body>
 </html>
